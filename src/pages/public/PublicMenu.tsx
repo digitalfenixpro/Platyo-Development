@@ -424,6 +424,7 @@ useEffect(() => {
                 onClick={() => setShowHoursModal(true)}
                 className="hidden  md:flex  md:h-[45px] items-center gap-2 p-3 rounded-lg transition-all hover:opacity-90 shadow-lg" /*DF:PARA QUE EL BOTON DE ABIERTO SOLO APAREZCA EN EL HEADER EN VERSION PC*/
                 style={{
+                  fontFamily: theme.primary_font || 'Poppins',
                   backgroundColor: (() => {
                     const now = new Date();
                     const dayNames = [
@@ -447,6 +448,7 @@ useEffect(() => {
                     return currentTime >= openTime && currentTime <= closeTime
                       ? '#AFFEBF'
                       : '#fcaeae'; // abierto o cerrado
+                    
                   })(),
                 }}
               >
