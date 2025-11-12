@@ -779,7 +779,7 @@ useEffect(() => {
                       )}
                       <div className="flex-1 flex flex-col justify-center p-2">
                         <h2
-                          className="font-bold mb-3 text-2xl"
+                          className="font-bold mb-3"
                           style={{
                             fontFamily: theme.primary_font || 'Poppins',
                             color: primaryColor,
