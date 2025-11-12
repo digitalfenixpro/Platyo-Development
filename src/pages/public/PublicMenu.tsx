@@ -271,7 +271,7 @@ useEffect(() => {
           md:-translate-y-[15%]
           md:-translate-x-[10%]
         "
-      />
+      /> 
       )}
       {theme?.pathform &&  (
       <Pathbottom
