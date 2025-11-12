@@ -369,7 +369,7 @@ export const PublicMenu: React.FC = () => {
       >
         {' '}
         {/* DF: SE QUITÓ EL BLUR */}
-        <div className="w-full mx-auto px-5 py-2"
+        <div className="w-full mx-auto px-4 py-2 rounded-lg"
           style={internalDivStyle} // <-- ¡AQUÍ ESTÁ EL BLUR!
         >
           
