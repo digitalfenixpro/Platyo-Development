@@ -88,6 +88,7 @@ export const PublicMenu: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollY]);
+  
 
 
 
@@ -203,6 +204,20 @@ export const PublicMenu: React.FC = () => {
         (prev - 1 + featuredProducts.length) %
         Math.max(1, featuredProducts.length)
     );
+  };
+  const internalDivStyle = scrolled ? {
+    // 1. Fondo semi-transparente
+    backgroundColor: `${primaryColor}CC`, 
+    // 2. Aplicación del Glassmorphism (blur al fondo de lo que hay detrás)
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)', // Para compatibilidad
+    transition: 'background-color 300ms, backdrop-filter 300ms' 
+  } : {
+    // Transparente cuando está en la parte superior
+    backgroundColor: 'transparent',
+    backdropFilter: 'none',
+    WebkitBackdropFilter: 'none',
+    transition: 'background-color 300ms, backdrop-filter 300ms'
   };
 
   if (loading) {
@@ -353,7 +368,11 @@ export const PublicMenu: React.FC = () => {
       >
         {' '}
         {/* DF: SE QUITÓ EL BLUR */}
-        <div className="w-full mx-auto px-5 py-2">
+        <div className="w-full mx-auto px-5 py-2"
+          style={internalDivStyle} // <-- ¡AQUÍ ESTÁ EL BLUR!
+        >
+          
+          
           {' '}
           {/* DF: SE REDUJO EL PADDING PARA QUE QUEDE MAS DELGADO */}
           <div className="flex items-center justify-between gap-4">
