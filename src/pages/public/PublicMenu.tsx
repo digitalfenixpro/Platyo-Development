@@ -272,7 +272,7 @@ useEffect(() => {
           md:-translate-x-[10%]
         "
       />
-      )}
+      {theme?.pathform &&  (
       <Pathbottom
         color={primaryColor}
         className="
@@ -297,7 +297,8 @@ useEffect(() => {
           translate-x-[0%]
 
         "
-      />
+      />)}
+     {theme?.pathform &&  (
       <Pathtop
         color={primaryColor}
         className="
@@ -324,7 +325,9 @@ useEffect(() => {
           rotate-90
           
         "
-      />{' '}
+      />
+      )}
+      {' '}
       {/*DF:PEGAR COMPLETO*/}
       {/* HEADER */}
       <header onMouseEnter={() => setIsHovered(true)}
