@@ -362,241 +362,230 @@ export const PublicMenu: React.FC = () => {
       {' '}
       {/*DF:PEGAR COMPLETO*/}
       {/* HEADER */}
-      <header
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className={`sticky top-0 z-50 transition-transform duration-300 pb-5 ${
-        showHeader || isHovered ? 'translate-y-0' : '-translate-y-full'
-      }`}
-    >
-      {' '}
-      {/* 2. DIV INTERNO: Controla el fondo y el Glassmorphism */}
-      <div 
-        className={`w-full mx-auto px-5 py-2`}
-        style={internalDivStyle} // APLICAMOS LOS ESTILOS DE FONDO AQUÍ
-      >
+      <header onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={`sticky top-0 z-50 transition-transform duration-200 pb-5 ${
+          showHeader || isHovered ? "translate-y-0" : "-translate-y-full"
+        }`}>
         {' '}
-        {/* DF: SE REDUJO EL PADDING PARA QUE QUEDE MAS DELGADO */}
-        <div className="flex items-center justify-between gap-4">
-          {/* Search Bar */}
-          <div className="flex-1 max-w-xs shadow-lg rounded-lg">
-            {/* ... Tu código de Search Bar ... */}
-            <div className="relative">
+        {/* DF: SE QUITÓ EL BLUR */}
+        <div className="w-full mx-auto px-5 py-2">
+          {' '}
+          {/* DF: SE REDUJO EL PADDING PARA QUE QUEDE MAS DELGADO */}
+          <div className="flex items-center justify-between gap-4">
+            {/* Search Bar */}
+            <div className="flex-1 max-w-xs shadow-lg rounded-lg">
+              <div className="relative">
                 {/* Icono de lupa */}
                 <Search
-                    className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
-                    style={{ color: primaryTextColor, stroke: primaryTextColor }}
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                  style={{ color: primaryTextColor, stroke: primaryTextColor }}
                 />
                 <input
-                    type="text"
-                    placeholder="Buscar..."
-                    value={searchTerm}
-                    onChange={(e) => {
-                        setSearchTerm(e.target.value);
-                        if (e.target.value) {
-                            setTimeout(() => {
-                                document.getElementById(
-                                    'products-section'
-                                ); /*DF:se quita scrooll intoview para que quite la section de featured*/
-                            }, 100);
-                        }
-                    }}
-                    className="w-full pl-10 pr-4 py-3 rounded-lg focus:ring-2 focus:outline-none transition-colors placeholder-opacity-70 custom-placeholder"
-                    style={{
-                        backgroundColor: cardBackgroundColor,
-                        borderColor: cardBackgroundColor,
-                        borderWidth: '1px',
-                        borderStyle: 'solid',
-                        borderRadius:
-                            theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                        color: primaryTextColor,
-                        caretColor: primaryTextColor,
-                        fontFamily: theme.secondary_font || 'Poppins',
-                    }}
-                    onFocus={(e) =>
-                        (e.target.style.borderColor = primaryTextColor)
+                  type="text"
+                  placeholder="Buscar..."
+                  value={searchTerm}
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    if (e.target.value) {
+                      setTimeout(() => {
+                        document.getElementById(
+                          'products-section'
+                        ); /*DF:se quita scrooll intoview para que quite la section de featured*/
+                      }, 100);
                     }
-                    onBlur={(e) =>
-                        (e.target.style.borderColor = cardBackgroundColor)
-                    }
+                  }}
+                  className="w-full pl-10 pr-4 py-3 rounded-lg focus:ring-2 focus:outline-none transition-colors placeholder-opacity-70 custom-placeholder"
+                  style={{
+                    backgroundColor: cardBackgroundColor,
+                    borderColor: cardBackgroundColor,
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderRadius:
+                      theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                    color: primaryTextColor,
+                    caretColor: primaryTextColor,
+                    fontFamily: theme.secondary_font || 'Poppins',
+                  }}
+                  onFocus={(e) =>
+                    (e.target.style.borderColor = primaryTextColor)
+                  }
+                  onBlur={(e) =>
+                    (e.target.style.borderColor = cardBackgroundColor)
+                  }
                 />
 
                 {/* CSS dinámico para el placeholder*/}
                 <style>{`
-                    .custom-placeholder::placeholder {
+                  .custom-placeholder::placeholder {
                     color: ${primaryTextColor} !important;
                     opacity: 0.7;
-                    }
+                  }
                 `}</style>
+              </div>
             </div>
-          </div>
 
-          {/* Logo */}
-          <div className="flex-shrink-0 text-center">
-            {/* ... Tu código de Logo ... */}
-            {restaurant.logo ? (
+            {/* Logo */}
+            <div className="flex-shrink-0 text-center">
+              {restaurant.logo ? (
                 <img
-                    src={restaurant.logo}
-                    alt={restaurant.name}
-                    className="h-16 mx-auto"
+                  src={restaurant.logo}
+                  alt={restaurant.name}
+                  className="h-16 mx-auto"
                 />
-            ) : (
+              ) : (
                 <div
-                    className="text-3xl font-bold"
-                    style={{
-                        color: primaryColor,
-                        fontFamily: theme.secondary_font || 'Poppins',
-                    }}
+                  className="text-3xl font-bold" 
+                  style={{
+                    color: primaryColor,
+                    fontFamily: theme.secondary_font || 'Poppins',
+                  }}
                 >
-                    {restaurant.name.substring(0, 2).toUpperCase()}
+                  {restaurant.name.substring(0, 2).toUpperCase()}
                 </div>
-            )}
-          </div>
+              )}
+            </div>
 
-          {/* Action Buttons */}
+            {/* Action Buttons */}
 
-          <div className="flex items-center gap-2 flex-1 justify-end max-w-xs">
-            {/* DF:OPEN/CLOSED STATUS BUTTON */}
-            {/* ... Tu código del botón de horas ... */}
-            <button
+            <div className="flex items-center gap-2 flex-1 justify-end max-w-xs">
+              {/* DF:OPEN/CLOSED STATUS BUTTON */}
+              <button
                 onClick={() => setShowHoursModal(true)}
                 className="hidden  md:flex  md:h-[45px] items-center gap-2 p-3 rounded-lg transition-all hover:opacity-90 shadow-lg" /*DF:PARA QUE EL BOTON DE ABIERTO SOLO APAREZCA EN EL HEADER EN VERSION PC*/
                 style={{
-                    fontFamily: theme.primary_font || 'Poppins',
-                    backgroundColor: (() => {
-                        const now = new Date();
-                        const dayNames = [
-                            'sunday',
-                            'monday',
-                            'tuesday',
-                            'wednesday',
-                            'thursday',
-                            'friday',
-                            'saturday',
-                        ];
-                        const currentDay = dayNames[now.getDay()];
-                        const hours =
-                            restaurant.settings.business_hours?.[currentDay];
-                        if (!hours?.is_open) return '#fcaeae'; // cerrado = rojo
-                        const currentTime = now.getHours() * 60 + now.getMinutes();
-                        const [openH, openM] = hours.open.split(':').map(Number);
-                        const [closeH, closeM] = hours.close.split(':').map(Number);
-                        const openTime = openH * 60 + openM;
-                        const closeTime = closeH * 60 + closeM;
-                        return currentTime >= openTime && currentTime <= closeTime
-                            ? '#AFFEBF'
-                            : '#fcaeae'; // abierto o cerrado
-                        
-                    })(),
-                }}
-            >
-                {(() => {
+                  fontFamily: theme.primary_font || 'Poppins',
+                  backgroundColor: (() => {
                     const now = new Date();
                     const dayNames = [
-                        'sunday',
-                        'monday',
-                        'tuesday',
-                        'wednesday',
-                        'thursday',
-                        'friday',
-                        'saturday',
+                      'sunday',
+                      'monday',
+                      'tuesday',
+                      'wednesday',
+                      'thursday',
+                      'friday',
+                      'saturday',
                     ];
                     const currentDay = dayNames[now.getDay()];
                     const hours =
-                        restaurant.settings.business_hours?.[currentDay];
-                    const isOpen = (() => {
-                        if (!hours?.is_open) return false;
-                        const currentTime = now.getHours() * 60 + now.getMinutes();
-                        const [openH, openM] = hours.open.split(':').map(Number);
-                        const [closeH, closeM] = hours.close.split(':').map(Number);
-                        const openTime = openH * 60 + openM;
-                        const closeTime = closeH * 60 + closeM;
-                        return currentTime >= openTime && currentTime <= closeTime;
-                    })();
+                      restaurant.settings.business_hours?.[currentDay];
+                    if (!hours?.is_open) return '#fcaeae'; // cerrado = rojo
+                    const currentTime = now.getHours() * 60 + now.getMinutes();
+                    const [openH, openM] = hours.open.split(':').map(Number);
+                    const [closeH, closeM] = hours.close.split(':').map(Number);
+                    const openTime = openH * 60 + openM;
+                    const closeTime = closeH * 60 + closeM;
+                    return currentTime >= openTime && currentTime <= closeTime
+                      ? '#AFFEBF'
+                      : '#fcaeae'; // abierto o cerrado
+                    
+                  })(),
+                }}
+              >
+                {(() => {
+                  const now = new Date();
+                  const dayNames = [
+                    'sunday',
+                    'monday',
+                    'tuesday',
+                    'wednesday',
+                    'thursday',
+                    'friday',
+                    'saturday',
+                  ];
+                  const currentDay = dayNames[now.getDay()];
+                  const hours =
+                    restaurant.settings.business_hours?.[currentDay];
+                  const isOpen = (() => {
+                    if (!hours?.is_open) return false;
+                    const currentTime = now.getHours() * 60 + now.getMinutes();
+                    const [openH, openM] = hours.open.split(':').map(Number);
+                    const [closeH, closeM] = hours.close.split(':').map(Number);
+                    const openTime = openH * 60 + openM;
+                    const closeTime = closeH * 60 + closeM;
+                    return currentTime >= openTime && currentTime <= closeTime;
+                  })();
 
-                    // 🎨 Cambia estos valores según los colores que prefieras
-                    const textColor = isOpen ? '#1d4b40' : '#491c1c'; // texto verde oscuro si abierto, blanco si cerrado
-                    const iconColor = isOpen ? '#1d4b40' : '#491c1c'; // mismo color para el ícono
+                  // 🎨 Cambia estos valores según los colores que prefieras
+                  const textColor = isOpen ? '#1d4b40' : '#491c1c'; // texto verde oscuro si abierto, blanco si cerrado
+                  const iconColor = isOpen ? '#1d4b40' : '#491c1c'; // mismo color para el ícono
 
-                    return (
-                        <div className="flex items-center gap-2">
-                            <Clock className="w-5 h-5" style={{ color: iconColor }} />
-                            <div className="text-right">
-                                <h5
-                                    className="font-bold text-sm"
-                                    style={{
-                                        color: textColor,
-                                        fontFamily: theme.primary_font || 'Poppins',
-                                        textTransform: 'uppercase',
-                                    }}
-                                >
-                                    {isOpen ? 'Abierto' : 'Cerrado'}
-                                </h5>
-                            </div>
-                        </div>
-                    );
+                  return (
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-5 h-5" style={{ color: iconColor }} />
+                      <div className="text-right">
+                        <h5
+                          className="font-bold text-sm"
+                          style={{
+                            color: textColor,
+                            fontFamily: theme.primary_font || 'Poppins',
+                            textTransform: 'uppercase',
+                          }}
+                        >
+                          {isOpen ? 'Abierto' : 'Cerrado'}
+                        </h5>
+                      </div>
+                    </div>
+                  );
                 })()}
-            </button>
-            
-            {hasPromo && (
+              </button>
+              {hasPromo && (
                 <button
-                // ... Tu código del botón de promociones ...
-                    onClick={() => setShowPromoModal(true)}
-                    className="p-3 rounded-lg border transition-colors relative hover:opacity-90 shadow-lg"
-                    style={{
-                        backgroundColor: cardBackgroundColor,
-                        borderColor: cardBackgroundColor,
-                        borderRadius:
-                            theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                    }}
-                >
-                    <Gift
-                        className="w-5 h-5"
-                        style={{
-                            color: primaryColor,
-                        }}
-                    />
-                    <span
-                        style={{
-                            position: 'absolute',
-                            top: '-4px', // antes 6px → negativo para que quede encima del borde
-                            right: '-4px', // antes 6px → negativo para que sobresalga del borde
-                            width: '17px',
-                            height: '17px',
-                            backgroundColor: secondaryColor,
-                            borderRadius: '50%',
-                        }}
-                    />
-                </button>
-            )}
-            <button
-            // ... Tu código del botón de carrito ...
-                onClick={() => setShowCart(true)}
-                className="p-3 rounded-lg border hover:opacity-90 transition-colors relative shadow-lg"
-                style={{
+                  onClick={() => setShowPromoModal(true)}
+                  className="p-3 rounded-lg border transition-colors relative hover:opacity-90 shadow-lg"
+                  style={{
                     backgroundColor: cardBackgroundColor,
                     borderColor: cardBackgroundColor,
                     borderRadius:
-                        theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                }}
-            >
-                <ShoppingCart
+                      theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                  }}
+                >
+                  <Gift
                     className="w-5 h-5"
-                    style={{ color: primaryColor, stroke: primaryColor }}
+                    style={{
+                      color: primaryColor,
+                    }}
+                  />
+                  <span
+                    style={{
+                      position: 'absolute',
+                      top: '-4px', // antes 6px → negativo para que quede encima del borde
+                      right: '-4px', // antes 6px → negativo para que sobresalga del borde
+                      width: '17px',
+                      height: '17px',
+                      backgroundColor: secondaryColor,
+                      borderRadius: '50%',
+                    }}
+                  />
+                </button>
+              )}
+              <button
+                onClick={() => setShowCart(true)}
+                className="p-3 rounded-lg border hover:opacity-90 transition-colors relative shadow-lg"
+                style={{
+                  backgroundColor: cardBackgroundColor,
+                  borderColor: cardBackgroundColor,
+                  borderRadius:
+                    theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                }}
+              >
+                <ShoppingCart
+                  className="w-5 h-5"
+                  style={{ color: primaryColor, stroke: primaryColor }}
                 />
                 {cartItemsCount > 0 && (
-                    <span
-                        className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white"
-                        style={{ backgroundColor: secondaryColor }}
-                    >
-                        {cartItemsCount}
-                    </span>
+                  <span
+                    className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                    style={{ backgroundColor: secondaryColor }}
+                  >
+                    {cartItemsCount}
+                  </span>
                 )}
-            </button>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
       {!searchTerm && featuredProducts.length > 0 && (
         <div className="text-left px-[15px]  md:px-[210px] md:-mt-[9px] md:-mb-[30px] scale-[0.85]">
           {' '}
