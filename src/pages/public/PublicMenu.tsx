@@ -270,7 +270,7 @@ useEffect(() => {
           md:-translate-y-[15%]
           md:-translate-x-[10%]
         "
-      ></Pathleft>
+      />
       <Pathbottom
         color={primaryColor}
         className="
@@ -295,7 +295,7 @@ useEffect(() => {
           translate-x-[0%]
 
         "
-      ></Pathbottom>
+      />
       <Pathtop
         color={primaryColor}
         className="
@@ -322,7 +322,7 @@ useEffect(() => {
           rotate-90
           
         "
-      ></Pathtop>{' '}
+      />{' '}
       {/*DF:PEGAR COMPLETO*/}
       {/* HEADER */}
       <header onMouseEnter={() => setIsHovered(true)}
