@@ -89,24 +89,6 @@ export const PublicMenu: React.FC = () => {
     };
   }, [lastScrollY]);
 
-  // --- Estilos Dinámicos para el Glassmorphism ---
-  
-  // Usamos el objeto de estilo para aplicar el color y el backdrop-filter (glassmorphism)
-  // ya que primaryColor es una variable de JavaScript/prop.
-  const internalDivStyle = scrolled ? {
-    // Usamos el color primario con una opacidad (por ejemplo, 'CC' es ~80%)
-    backgroundColor: `${primaryColor}CC`, 
-    backdropFilter: 'blur(10px)',
-    WebkitBackdropFilter: 'blur(10px)', // Para compatibilidad
-    transition: 'background-color 300ms, backdrop-filter 300ms' // Suaviza la transición
-  } : {
-    // Transparente cuando está en la parte superior
-    backgroundColor: 'transparent',
-    backdropFilter: 'none',
-    WebkitBackdropFilter: 'none',
-    transition: 'background-color 300ms, backdrop-filter 300ms'
-  };
-
 
 
   const loadMenuData = () => {
@@ -362,11 +344,13 @@ export const PublicMenu: React.FC = () => {
       {' '}
       {/*DF:PEGAR COMPLETO*/}
       {/* HEADER */}
-      <header onMouseEnter={() => setIsHovered(true)}
+      <header 
+        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`sticky top-0 z-50 transition-transform duration-200 pb-5 ${
-          showHeader || isHovered ? "translate-y-0" : "-translate-y-full"
-        }`}>
+        className={`sticky top-0 z-50 transition-transform duration-300 pb-5 ${
+          showHeader || isHovered ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         {' '}
         {/* DF: SE QUITÓ EL BLUR */}
         <div className="w-full mx-auto px-5 py-2">
