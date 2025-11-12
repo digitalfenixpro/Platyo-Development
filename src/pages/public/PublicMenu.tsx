@@ -247,7 +247,7 @@ export const PublicMenu: React.FC = () => {
     restaurant.settings.promo?.vertical_promo_image;
   const internalDivStyle = scrolled ? {
     // 1. Fondo semi-transparente
-    backgroundColor: `${primaryColor}CC`, 
+    backgroundColor: `white`, 
     // 2. Aplicación del Glassmorphism (blur al fondo de lo que hay detrás)
     backdropFilter: 'blur(10px)',
     WebkitBackdropFilter: 'blur(10px)', // Para compatibilidad
