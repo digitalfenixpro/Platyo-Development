@@ -253,7 +253,7 @@ export const FloatingFooter: React.FC<FloatingFooterProps> = ({
               )}
               {restaurant.settings.social_media?.whatsapp && (
                 <a
-                  href={restaurant.settings.social_media.whatsapp}
+                  href={restaurant.settings.social_media.whatsapp} 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 hover:opacity-90 transition-colors rounded-lg"
