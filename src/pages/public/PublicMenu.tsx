@@ -358,7 +358,6 @@ export const PublicMenu: React.FC = () => {
       />
       )}
       {' '}
-      {/*DF:PEGAR COMPLETO*/}
       {/* HEADER */}
       <header 
         onMouseEnter={() => setIsHovered(true)}
