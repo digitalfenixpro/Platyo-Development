@@ -205,20 +205,7 @@ export const PublicMenu: React.FC = () => {
         Math.max(1, featuredProducts.length)
     );
   };
-  const internalDivStyle = scrolled ? {
-    // 1. Fondo semi-transparente
-    backgroundColor: `${primaryColor}CC`, 
-    // 2. Aplicación del Glassmorphism (blur al fondo de lo que hay detrás)
-    backdropFilter: 'blur(10px)',
-    WebkitBackdropFilter: 'blur(10px)', // Para compatibilidad
-    transition: 'background-color 300ms, backdrop-filter 300ms' 
-  } : {
-    // Transparente cuando está en la parte superior
-    backgroundColor: 'transparent',
-    backdropFilter: 'none',
-    WebkitBackdropFilter: 'none',
-    transition: 'background-color 300ms, backdrop-filter 300ms'
-  };
+  
 
   if (loading) {
     return (
@@ -258,6 +245,20 @@ export const PublicMenu: React.FC = () => {
   const hasPromo =
     restaurant.settings.promo?.enabled &&
     restaurant.settings.promo?.vertical_promo_image;
+  const internalDivStyle = scrolled ? {
+    // 1. Fondo semi-transparente
+    backgroundColor: `${primaryColor}CC`, 
+    // 2. Aplicación del Glassmorphism (blur al fondo de lo que hay detrás)
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)', // Para compatibilidad
+    transition: 'background-color 300ms, backdrop-filter 300ms' 
+  } : {
+    // Transparente cuando está en la parte superior
+    backgroundColor: 'transparent',
+    backdropFilter: 'none',
+    WebkitBackdropFilter: 'none',
+    transition: 'background-color 300ms, backdrop-filter 300ms'
+  };
 
   return (
     <div
