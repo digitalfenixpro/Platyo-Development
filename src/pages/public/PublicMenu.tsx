@@ -254,7 +254,7 @@ useEffect(() => {
       {/*<LeftShape color={primaryColor} />*/}
       {/* DECORATIVE ORGANIC SHAPES - MATCHING REFERENCE */}
       {/*SE AGREGARON TODOS LOS SVG*/}
-      {useState.settings.theme.pathform && (
+      {theme?.pathform &&  (
       <Pathleft
         color={primaryColor}
         className="
