@@ -1298,7 +1298,7 @@ Fecha: ${new Date().toLocaleString()}
                   {/* 🔹 Checkbox controlado */}
                   <input
                     type="checkbox"
-                    checked={formData.settings.theme?.pathform || true}
+                    checked={formData.settings.theme?.pathform || false}
                     onChange={(e) =>
                       updateFormData('settings.theme.pathform', e.target.checked)
                     }
