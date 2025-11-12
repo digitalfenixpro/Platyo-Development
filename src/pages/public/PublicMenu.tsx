@@ -375,6 +375,7 @@ useEffect(() => {
                       theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
                     color: primaryTextColor,
                     caretColor: primaryTextColor,
+                    fontFamily: theme.secondary_font || 'Poppins',
                   }}
                   onFocus={(e) =>
                     (e.target.style.borderColor = primaryTextColor)
