@@ -272,6 +272,7 @@ useEffect(() => {
           md:-translate-x-[10%]
         "
       />
+      )}
       {theme?.pathform &&  (
       <Pathbottom
         color={primaryColor}
@@ -297,7 +298,8 @@ useEffect(() => {
           translate-x-[0%]
 
         "
-      />)}
+      />
+      )}
      {theme?.pathform &&  (
       <Pathtop
         color={primaryColor}
