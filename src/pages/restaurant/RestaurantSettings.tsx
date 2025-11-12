@@ -1287,7 +1287,7 @@ Fecha: ${new Date().toLocaleString()}
                   Configura los colores, tipografía y estilos de tu menú público
                 </p>
               </div>
-              <div className="g-gradient-to-br from-gray-50 to-gray-50 border rounded-lg p-4">
+              <div className="bg-gradient-to-br from-gray-50 to-gray-50 border rounded-lg p-4">
               {/* 🔸 Bloque para activar o desactivar PathForms */}
               <div className="flex flex-col gap-2">
                 <p className="text-sm text-black-800 font-medium">
