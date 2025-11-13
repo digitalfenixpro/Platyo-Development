@@ -432,6 +432,100 @@ const translations: Record<Language, Translations> = {
     settings: 'Configuración',
     analytics: 'Estadísticas',
 
+    // Terms and Conditions
+    termsSection1Title: 'Aceptación de los Términos',
+    termsSection1Content: 'Al registrarse y utilizar Platyo, usted acepta estar legalmente vinculado por estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestro servicio.',
+    
+    termsSection2Title: 'Descripción del Servicio',
+    termsSection2Content: 'Platyo es una plataforma de gestión para restaurantes que proporciona herramientas para:',
+    termsSection2Item1: 'Gestión de menú digital y catálogo de productos',
+    termsSection2Item2: 'Sistema de pedidos en línea',
+    termsSection2Item3: 'Administración de clientes y órdenes',
+    termsSection2Item4: 'Análisis y reportes de ventas',
+    termsSection2Item5: 'Gestión de inventario y categorías',
+    
+    termsSection3Title: 'Registro y Cuenta',
+    termsSection3Content: 'Para utilizar Platyo, debe crear una cuenta proporcionando información precisa y completa. Usted es responsable de:',
+    termsSection3Item1: 'Mantener la confidencialidad de su contraseña',
+    termsSection3Item2: 'Todas las actividades que ocurran bajo su cuenta',
+    termsSection3Item3: 'Notificar inmediatamente cualquier uso no autorizado',
+    termsSection3Item4: 'Proporcionar información veraz y actualizada',
+    
+    termsSection4Title: 'Suscripciones y Pagos',
+    termsSection4Content: 'Platyo ofrece diferentes planes de suscripción. Al suscribirse, usted acepta:',
+    termsSection4Item1: 'Pagar todas las tarifas asociadas con su plan seleccionado',
+    termsSection4Item2: 'Las renovaciones automáticas según la periodicidad del plan',
+    termsSection4Item3: 'Que los precios pueden cambiar con previo aviso de 30 días',
+    termsSection4Item4: 'La política de reembolso según el plan contratado',
+    
+    termsSection5Title: 'Uso Aceptable',
+    termsSection5Content: 'Al usar Platyo, usted se compromete a NO:',
+    termsSection5Item1: 'Violar leyes o regulaciones aplicables',
+    termsSection5Item2: 'Infringir derechos de propiedad intelectual',
+    termsSection5Item3: 'Transmitir contenido ofensivo, ilegal o inapropiado',
+    termsSection5Item4: 'Intentar acceder sin autorización a sistemas o datos',
+    termsSection5Item5: 'Usar el servicio para actividades fraudulentas',
+    termsSection5Item6: 'Interferir con el funcionamiento del servicio',
+    
+    termsSection6Title: 'Propiedad Intelectual',
+    termsSection6Content1: 'Todo el contenido, características y funcionalidad de Platyo son propiedad exclusiva de la empresa y están protegidos por leyes de derechos de autor, marcas registradas y otras leyes de propiedad intelectual.',
+    termsSection6Content2: 'Usted conserva todos los derechos sobre el contenido que cargue (menús, productos, imágenes), pero nos otorga una licencia para usarlo en la prestación del servicio.',
+    
+    termsSection7Title: 'Privacidad y Protección de Datos',
+    termsSection7Content: 'Recopilamos y procesamos datos personales de acuerdo con nuestra Política de Privacidad y cumpliendo con:',
+    termsSection7Item1: 'Ley 1581 de 2012 de Protección de Datos Personales en Colombia',
+    termsSection7Item2: 'Decreto 1377 de 2013',
+    termsSection7Item3: 'Principios de legalidad, finalidad, libertad, veracidad, transparencia, acceso y seguridad',
+    termsSection7Content2: 'Sus derechos incluyen: conocer, actualizar, rectificar y suprimir sus datos personales, así como revocar la autorización otorgada.',
+    
+    termsSection8Title: 'Limitación de Responsabilidad',
+    termsSection8Content: 'Platyo se proporciona "tal cual" y "según disponibilidad". No garantizamos que:',
+    termsSection8Item1: 'El servicio será ininterrumpido o libre de errores',
+    termsSection8Item2: 'Los resultados obtenidos serán exactos o confiables',
+    termsSection8Item3: 'Todos los errores serán corregidos',
+    termsSection8Content2: 'No seremos responsables por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo pérdida de beneficios, datos, uso o buena voluntad.',
+    
+    termsSection9Title: 'Indemnización',
+    termsSection9Content: 'Usted acepta indemnizar y mantener indemne a Platyo, sus afiliados, directores, empleados y agentes de cualquier reclamación, daño, obligación, pérdida, responsabilidad, costo o deuda que surja de:',
+    termsSection9Item1: 'Su uso del servicio',
+    termsSection9Item2: 'Violación de estos términos',
+    termsSection9Item3: 'Violación de derechos de terceros',
+    termsSection9Item4: 'Contenido que usted publique o comparta',
+    
+    termsSection10Title: 'Terminación del Servicio',
+    termsSection10Content: 'Podemos suspender o terminar su acceso al servicio inmediatamente, sin previo aviso, por cualquier motivo, incluyendo:',
+    termsSection10Item1: 'Violación de estos términos',
+    termsSection10Item2: 'Solicitud de autoridades legales',
+    termsSection10Item3: 'Discontinuación del servicio',
+    termsSection10Item4: 'Actividad fraudulenta o ilegal',
+    
+    termsSection11Title: 'Modificaciones',
+    termsSection11Content: 'Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación. Su uso continuado del servicio constituye su aceptación de los términos modificados.',
+    
+    termsSection12Title: 'Ley Aplicable y Jurisdicción',
+    termsSection12Content: 'Estos términos se rigen por las leyes de la República de Colombia. Cualquier disputa será resuelta en los tribunales competentes de Colombia, renunciando expresamente a cualquier otro fuero que pudiera corresponder.',
+    
+    termsSection13Title: 'Disposiciones Generales',
+    termsSection13Item1Label: 'Divisibilidad',
+    termsSection13Item1: 'Si alguna disposición es considerada inválida, las demás permanecerán vigentes',
+    termsSection13Item2Label: 'Renuncia',
+    termsSection13Item2: 'La falta de ejercicio de un derecho no constituye renuncia al mismo',
+    termsSection13Item3Label: 'Acuerdo Completo',
+    termsSection13Item3: 'Estos términos constituyen el acuerdo completo entre las partes',
+    termsSection13Item4Label: 'Cesión',
+    termsSection13Item4: 'No puede ceder sus derechos sin nuestro consentimiento previo por escrito',
+    
+    termsSection14Title: 'Contacto',
+    termsSection14Content: 'Para preguntas sobre estos términos, puede contactarnos a través de:',
+    termsSection14Item1: 'Email: admin@digitalfenixpro.com',
+    termsSection14Item2: 'Dentro de la plataforma mediante el sistema de tickets de soporte',
+    
+    termsLastUpdate: 'Última actualización',
+    termsLastUpdateDate: 'Noviembre 2025',
+    termsAcceptDisclaimer: 'Al hacer clic en "Aceptar" o al usar el servicio, usted reconoce que ha leído, entendido y acepta estar legalmente vinculado por estos Términos y Condiciones.',
+    acceptTermsAndConditionsButton: 'Aceptar Términos y Condiciones',
+
+
     // Auth Context Errors
     userNotFound: 'Usuario no encontrado',
     incorrectPassword: 'Contraseña incorrecta',
