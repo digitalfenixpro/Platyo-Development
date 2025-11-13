@@ -235,7 +235,7 @@ export const RestaurantDashboard: React.FC = () => {
             </a>
           </div>
           <div className="bg-gray-50 p-3 md:p-4 rounded-lg">
-            <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">{t('delivery')}</p>
+            <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">{t('Delivery')}</p>
             <Badge variant={restaurant?.settings?.delivery?.enabled ? 'success' : 'gray'}>
               {restaurant?.settings?.delivery?.enabled ? t('enabled') : t('disabled')}
             </Badge>
