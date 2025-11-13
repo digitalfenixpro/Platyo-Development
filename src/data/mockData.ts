@@ -4,7 +4,7 @@ import { User, Restaurant, Subscription, Category, Product, Order } from '../typ
 export const availablePlans = [
   {
     id: 'gratis',
-    name: 'Gratis',
+    name: 'FREE',
     price: 0,
     currency: 'USD',
     billing_period: 'monthly' as const,
