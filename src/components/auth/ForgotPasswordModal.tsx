@@ -62,11 +62,11 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
             {t('requestSent')}
           </h3>
           <p className="text-gray-600 mb-6 text-lg">
-            Hemos recibido tu solicitud de recuperación de contraseña.
+            {t('requestInfo')}
           </p>
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-5 border border-blue-100">
             <p className="text-sm text-gray-700 leading-relaxed">
-              Nuestro equipo se contactará contigo al email{' '}
+              {t('requestResponse')}{' '}
               <span className="font-semibold text-blue-700">{email}</span> para ayudarte a reactivar tu cuenta.
             </p>
           </div>
