@@ -473,6 +473,12 @@ const translations: Record<Language, Translations> = {
     ofService: 'del servicio',
     createAccount: 'Crear Cuenta',
     termsModalTitle: 'Términos y Condiciones de Platyo',
+    restaurantNamePlaceholder: 'Mi Restaurante',
+    ownerNamePlaceholder: 'Pepito Perez',
+    contactEmailPlaceholder: 'contacto@mirestaurante.com',
+    phonePlaceholder: '+57 (310) 123-4567',
+    addressPlaceholder: 'Calle 123 No 45-67, Ciudad',
+
 
 
     // Dashboard
