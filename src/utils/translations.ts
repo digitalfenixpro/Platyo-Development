@@ -58,6 +58,7 @@ interface Translations {
   password: string;
   confirmPassword: string;
   forgotPassword: string;
+  noAccount: string;
   restaurantName: string;
   ownerName: string;
   acceptTerms: string;
@@ -387,6 +388,7 @@ const translations: Record<Language, Translations> = {
     registerTitle: 'Registra tu Restaurante',
     registerSubtitle: 'Completa los datos para crear tu cuenta',
     password: 'Contraseña',
+    noAccount: '¿No tienes una cuenta?',
     confirmPassword: 'Confirmar Contraseña',
     forgotPassword: '¿Olvidaste tu contraseña?',  
     restaurantName: 'Nombre del Restaurante',
@@ -1578,6 +1580,7 @@ const translations: Record<Language, Translations> = {
     password: 'Password',
     confirmPassword: 'Confirm Password',
     forgotPassword: '¿Forgot your password?', 
+    noAccount: 'Do not have an account?',
     restaurantName: 'Restaurant Name',
     ownerName: 'Owner Name',
     acceptTerms: 'I accept the terms and conditions',
