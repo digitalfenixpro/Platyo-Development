@@ -1881,7 +1881,7 @@ const translations: Record<Language, Translations> = {
     noAccount: 'Do not have an account?',
     restaurantName: 'Restaurant Name',
     ownerName: 'Owner Name',
-    acceptTerms: 'I accept the terms and conditions',
+    acceptTerms: 'I accept the terms and conditions ',
     backToLogin: 'Back to Login',
     demoAccounts: 'Demo accounts:',
     superadmin: 'Superadmin',
