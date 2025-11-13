@@ -3,6 +3,7 @@ import { Trash2 } from 'lucide-react';
 import { Product, Order } from '../../types';
 import { Button } from '../ui/Button';
 import { formatCurrency } from '../../utils/currencyUtils';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface OrderProductSelectorProps {
   products: Product[];
@@ -23,6 +24,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
   onShowToast,
   currency = 'USD',
 }) => {
+  const { t } = useLanguage();
   const [selectedProductId, setSelectedProductId] = useState('');
   const [selectedVariationId, setSelectedVariationId] = useState('');
   const [quantity, setQuantity] = useState(1);
@@ -32,7 +34,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
 
   const handleAddProduct = () => {
     if (!selectedProductId || !selectedVariationId) {
-      onShowToast('error', 'Error', 'Selecciona un producto y variación', 3000);
+      onShowToast('error', t('error'), t('errorSelectProductVariation'), 3000);
       return;
     }
 
@@ -56,7 +58,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
 
   return (
     <div>
-      <h3 className="font-medium text-gray-900 mb-4">Productos del Pedido</h3>
+      <h3 className="font-medium text-gray-900 mb-4">{t('orderProducts')}</h3>
 
       {/* Add Product Form */}
       <div className="bg-gray-50 p-4 rounded-lg mb-4">
@@ -69,7 +71,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
             }}
             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
           >
-            <option value="">Seleccionar producto</option>
+            <option value="">{t('selectProduct')}</option>
             {products.map(product => (
               <option key={product.id} value={product.id}>
                 {product.name}
@@ -84,7 +86,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
                 onChange={(e) => setSelectedVariationId(e.target.value)}
                 className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
               >
-                <option value="">Seleccionar variación</option>
+                <option value="">{t('selectVariation')}</option>
                 {selectedProduct.variations.map(variation => (
                   <option key={variation.id} value={variation.id}>
                     {variation.name} - {formatCurrency(variation.price, currency)}
@@ -94,7 +96,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
 
               {selectedProduct.ingredients && selectedProduct.ingredients.length > 0 && (
                 <div className="border border-gray-300 rounded-lg p-3">
-                  <p className="text-sm font-medium text-gray-700 mb-2">Ingredientes adicionales:</p>
+                  <p className="text-sm font-medium text-gray-700 mb-2">{t('additionalIngredients')}:</p>
                   <div className="space-y-2">
                     {selectedProduct.ingredients.map(ingredient => (
                       <label key={ingredient.id} className="flex items-center gap-2 cursor-pointer">
@@ -125,7 +127,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
               value={quantity}
               onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
               className="w-24 border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
-              placeholder="Cantidad"
+              placeholder={t('quantity')}
             />
             <Button
               type="button"
@@ -133,7 +135,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
               size="sm"
               className="flex-1"
             >
-              Agregar Producto
+              {t('addProduct')}
             </Button>
           </div>
         </div>
@@ -187,7 +189,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
 
           <div className="bg-blue-50 p-3 rounded-lg">
             <div className="flex justify-between items-center">
-              <span className="font-medium text-gray-700">Subtotal:</span>
+              <span className="font-medium text-gray-700">{t('subtotal')}:</span>
               <span className="text-lg font-bold text-blue-600">
                 {formatCurrency(orderItems.reduce((sum, item) => sum + item.total_price, 0), currency)}
               </span>
@@ -196,7 +198,7 @@ export const OrderProductSelector: React.FC<OrderProductSelectorProps> = ({
         </div>
       ) : (
         <p className="text-gray-500 text-sm text-center py-4 bg-gray-50 rounded-lg mb-4">
-          No hay productos agregados. Selecciona productos para agregar al pedido.
+          {t('noProductsAdded')}. {t('selectProductsToAdd')}.
         </p>
       )}
     </div>
