@@ -512,6 +512,8 @@ interface Translations {
   categoryIcon: string;
   categoryUpdated: string;
   categoryCreated: string;
+  messageCategoryUpdated: string;
+  messageCategoryCreated: string;
   categoryDeleted: string;
   categoryActivated: string;
   categoryDeactivated: string;
@@ -1410,6 +1412,8 @@ const translations: Record<Language, Translations> = {
     createFirstCategory: 'Crea tu primera categoría para organizar tu menú.',
     categoryIcon: 'Icono (Emoji)',
     categoryUpdated: 'Categoría Actualizada',
+    messageCategoryUpdated: 'La categoría se ha actualizado correctamente.',
+    messageCategoryCreated: 'La nueva categoría se ha añadido a tu menú.',
     categoryCreated: 'Categoría Creada',
     categoryDeleted: 'Categoría Eliminada',
     categoryActivated: 'Categoría Activada',
@@ -2906,6 +2910,8 @@ const translations: Record<Language, Translations> = {
     categoryIcon: 'Icon (Emoji)',
     categoryUpdated: 'Category Updated',
     categoryCreated: 'Category Created',
+    messageCategoryUpdated: 'The category has been updated successfully.',
+    messageCategoryCreated: 'The new category has been added to your menu.',
     categoryDeleted: 'Category Deleted',
     categoryActivated: 'Category Activated',
     categoryDeactivated: 'Category Deactivated',
