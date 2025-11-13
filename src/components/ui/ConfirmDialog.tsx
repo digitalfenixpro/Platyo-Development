@@ -1,6 +1,7 @@
 import React from 'react';
 import { AlertTriangle, X } from 'lucide-react';
 import { Button } from './Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface ConfirmDialogProps {
   isOpen: boolean;
@@ -20,11 +21,13 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
   onConfirm,
   title,
   message,
-  confirmText = 'Confirmar',
-  cancelText = 'Cancelar',
+  confirmText,
+  cancelText,
   variant = 'danger',
   itemName
 }) => {
+  const { t } = useLanguage();
+
   if (!isOpen) return null;
 
   const variantStyles = {
@@ -99,7 +102,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
             <div className="flex items-start gap-2">
               <AlertTriangle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-yellow-800">
-                <strong>{t('warningTitle')}</strong> {t('actionCannotBeUndone')}
+                <strong>{t('warningTitle')}:</strong> {t('actionCannotBeUndone')}
               </p>
             </div>
           </div>
@@ -111,13 +114,13 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
             onClick={onClose}
             className="flex-1 px-4 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors"
           >
-            {cancelText}
+            {cancelText || t('confirmDialogDefaultCancel')}
           </button>
           <button
             onClick={handleConfirm}
             className={`flex-1 px-4 py-3 rounded-lg font-medium transition-colors ${styles.buttonClass}`}
           >
-            {confirmText}
+            {confirmText || t('confirmDialogDefaultConfirm')}
           </button>
         </div>
       </div>
