@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { AuthContextType, User, Restaurant, RegisterData, Subscription, SupportTicket } from '../types';
 import { loadFromStorage, saveToStorage, initializeData } from '../data/mockData';
-import { useLanguage } from './LanguageContext';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -23,7 +22,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [requirePasswordChange, setRequirePasswordChange] = useState(false);
-  const { t } = useLanguage();
 
   useEffect(() => {
     const savedAuth = loadFromStorage('currentAuth', null);
@@ -74,7 +72,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     
     if (!foundUser) {
       console.log('User not found');
-      return { success: false, error: t('userNotFound') };
+      return { success: false, error: 'Usuario no encontrado' };
     }
 
     console.log('Found user:', foundUser);
@@ -83,7 +81,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     // Validate password
     if (foundUser.password !== password) {
       console.log('Password mismatch');
-      return { success: false, error: t('incorrectPassword') };
+      return { success: false, error: 'Contraseña incorrecta' };
     }
 
     let userRestaurant = null;
@@ -92,11 +90,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         userRestaurant = restaurants.find((r: Restaurant) => r.id === foundUser.restaurant_id);
         if (!userRestaurant) {
           console.log('Restaurant not found for user');
-          return { success: false, error: t('restaurantNotFoundForUser') };
+          return { success: false, error: 'Restaurante no encontrado para este usuario' };
         }
       } else {
         console.log('User has no restaurant assigned');
-        return { success: false, error: t('noRestaurantAssigned') };
+        return { success: false, error: 'No tienes un restaurante asignado. Contacta al administrador.' };
       }
     }
 
@@ -157,7 +155,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     // Check if email already exists
     if (users.find((u: User) => u.email === data.email)) {
-      return { success: false, error: t('emailAlreadyRegistered') };
+      return { success: false, error: 'El email ya está registrado' };
     }
 
     // Create unique slug from restaurant name
@@ -300,7 +298,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const foundUser = users.find((u: User) => u.email === email);
 
     if (!foundUser) {
-      return { success: false, error: t('noAccountFoundWithEmail') };
+      return { success: false, error: 'No se encontró una cuenta con ese email' };
     }
 
     const userRestaurant = restaurants.find((r: Restaurant) => r.owner_id === foundUser.id);
@@ -311,13 +309,13 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const newTicket = {
       id: ticketId,
       restaurantId: userRestaurant?.id || 'N/A',
-      restaurantName: userRestaurant?.name || t('userWithoutRestaurant'),
-      subject: t('passwordRecoveryRequest'),
+      restaurantName: userRestaurant?.name || 'Usuario sin restaurante',
+      subject: 'Solicitud de recuperación de contraseña',
       category: 'account',
       priority: 'high',
-      message: `${t('customer')} ${foundUser.name || t('noName')} ${t('email')} ${email} ${t('passwordRecoveryMessage')}\n\n${t('userRole')}: ${foundUser.role}\n${t('requestDate')}: ${new Date(now).toLocaleString('es-CO')}`,
+      message: `El usuario ${foundUser.name || 'Sin nombre'} con email ${email} ha solicitado recuperar su contraseña.\n\nRol del usuario: ${foundUser.role}\nFecha de solicitud: ${new Date(now).toLocaleString('es-CO')}`,
       contactEmail: email,
-      contactPhone: userRestaurant?.phone || t('notAvailable'),
+      contactPhone: userRestaurant?.phone || 'No disponible',
       status: 'pending' as const,
       createdAt: now,
       updatedAt: now,
