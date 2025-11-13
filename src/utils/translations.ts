@@ -532,6 +532,9 @@ interface Translations {
   categoryActivatedDes: string;
   categoryDeactivatedDes: string;
   viewMenu: string;
+  deleteCategoryTitle: string;
+  deleteCategoryMessage: string;
+  deleteCategoryButton: string;
   
   // Customers
   customerManagement: string;
@@ -1427,6 +1430,10 @@ const translations: Record<Language, Translations> = {
     catDeleteImg: 'Eliminar imagen',
     categoryActivatedDes: 'La categoría ha sido activada y ahora aparece en su menú público.',
     categoryDeactivatedDes: 'La categoría ha sido desactivada y ya no aparece en su menú público.',
+    deleteCategoryTitle: '¿Eliminar categoría?',
+    deleteCategoryMessage: 'Esta acción eliminará permanentemente la categoría de tu menú. Todos los productos asociados a esta categoría quedarán sin categoría asignada.',
+    deleteCategoryButton: 'Eliminar categoría',
+
     
     // Customers
     deletedSuccessfully: 'Eliminados exitosamente',
@@ -2917,6 +2924,9 @@ const translations: Record<Language, Translations> = {
     catDeleteImg: 'Delete image',
     categoryActivatedDes: 'The category has been activated and now appears in your public menu.',
     categoryDeactivatedDes: 'The category has been deactivated and no longer appears in your public menu.',
+    deleteCategoryTitle: 'Delete category?',
+    deleteCategoryMessage: 'This action will permanently delete the category from your menu. All products associated with this category will be left without an assigned category.',
+    deleteCategoryButton: 'Delete category',
     
     // Customers
     deletedSuccessfully: 'Deleted successfully',
