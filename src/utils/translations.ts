@@ -46,6 +46,21 @@ interface Translations {
   subscription: string;
   settings: string;
   analytics: string;
+
+  // Auth Context Errors
+  userNotFound: string;
+  incorrectPassword: string;
+  restaurantNotFoundForUser: string;
+  noRestaurantAssigned: string;
+  emailAlreadyRegistered: string;
+  noAccountFoundWithEmail: string;
+  passwordRecoveryRequest: string;
+  passwordRecoveryMessage: string;
+  userRole: string;
+  requestDate: string;
+  userWithoutRestaurant: string;
+  noName: string;
+  notAvailable: string;
   
   // Auth
   login: string;
