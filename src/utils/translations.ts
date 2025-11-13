@@ -1535,7 +1535,7 @@ const translations: Record<Language, Translations> = {
     statActiveRestaurants: 'Active Restaurants',
     statOrdersProcessed: 'Orders Processed',
     statSatisfaction: 'Satisfaction',
-    requestSent: '¡Solicitud Enviada!',
+    requestSent: 'Request submitted!',
     requestInfo: 'We have received your password recovery request.',
     requestResponse: 'Our team will contact you by email.',
     recoverPassword: 'Recover Password',
