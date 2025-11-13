@@ -16,7 +16,7 @@ interface Translations {
   status: string;
   date: string;
   name: string;
-  description: string;a
+  description: string;
   email: string;
   phone: string;
   address: string;
@@ -131,8 +131,6 @@ interface Translations {
   acceptTermsAndConditionsButton: string;
   
   // Auth Context Errors
-  userNotFound: string;
-  incorrectPassword: string;
   restaurantNotFoundForUser: string;
   noRestaurantAssigned: string;
   emailAlreadyRegistered: string;
@@ -860,8 +858,6 @@ const translations: Record<Language, Translations> = {
 
 
     // Auth Context Errors
-    userNotFound: 'Usuario no encontrado',
-    incorrectPassword: 'Contraseña incorrecta',
     restaurantNotFoundForUser: 'Restaurante no encontrado para este usuario',
     noRestaurantAssigned: 'No tienes un restaurante asignado. Contacta al administrador.',
     emailAlreadyRegistered: 'El email ya está registrado',
@@ -2357,8 +2353,6 @@ const translations: Record<Language, Translations> = {
 
 
     // Auth Context Errors
-    userNotFound: 'User not found',
-    incorrectPassword: 'Incorrect password',
     restaurantNotFoundForUser: 'Restaurant not found for this user',
     noRestaurantAssigned: 'You do not have a restaurant assigned. Contact the administrator.',
     emailAlreadyRegistered: 'Email is already registered',
