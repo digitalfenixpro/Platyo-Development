@@ -99,7 +99,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
             <div className="flex items-start gap-2">
               <AlertTriangle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-yellow-800">
-                <strong>Advertencia:</strong> Esta acción no se puede deshaceraaaa.
+                <strong>{t('warningTitle')}</strong> {t('actionCannotBeUndone')}
               </p>
             </div>
           </div>
