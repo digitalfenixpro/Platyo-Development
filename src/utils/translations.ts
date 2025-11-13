@@ -1415,7 +1415,7 @@ const translations: Record<Language, Translations> = {
     categoryUpdated: 'Categoría Actualizada',
     messageCategoryUpdated: 'La categoría se ha actualizado correctamente.',
     messageCategoryCreated: 'La nueva categoría se ha añadido a tu menú.',
-    messageCategoryDeleted: 'La categoría se ha eliminado de tu menú';
+    messageCategoryDeleted: 'La categoría se ha eliminado de tu menú',
     categoryCreated: 'Categoría Creada',
     categoryDeleted: 'Categoría Eliminada',
     categoryActivated: 'Categoría Activada',
@@ -2914,7 +2914,7 @@ const translations: Record<Language, Translations> = {
     categoryCreated: 'Category Created',
     messageCategoryUpdated: 'The category has been updated successfully.',
     messageCategoryCreated: 'The new category has been added to your menu.',
-    messageCategoryDeleted: 'The category has been removed from your menu.';
+    messageCategoryDeleted: 'The category has been removed from your menu.',
     categoryDeleted: 'Category Deleted',
     categoryActivated: 'Category Activated',
     categoryDeactivated: 'Category Deactivated',
