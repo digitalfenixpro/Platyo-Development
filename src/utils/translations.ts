@@ -133,7 +133,6 @@ interface Translations {
   // Auth Context Errors
   restaurantNotFoundForUser: string;
   noRestaurantAssigned: string;
-  emailAlreadyRegistered: string;
   noAccountFoundWithEmail: string;
   passwordRecoveryRequest: string;
   passwordRecoveryMessage: string;
@@ -860,7 +859,6 @@ const translations: Record<Language, Translations> = {
     // Auth Context Errors
     restaurantNotFoundForUser: 'Restaurante no encontrado para este usuario',
     noRestaurantAssigned: 'No tienes un restaurante asignado. Contacta al administrador.',
-    emailAlreadyRegistered: 'El email ya está registrado',
     noAccountFoundWithEmail: 'No se encontró una cuenta con ese email',
     passwordRecoveryRequest: 'Solicitud de recuperación de contraseña',
     passwordRecoveryMessage: 'ha solicitado recuperar su contraseña.',
@@ -2355,7 +2353,6 @@ const translations: Record<Language, Translations> = {
     // Auth Context Errors
     restaurantNotFoundForUser: 'Restaurant not found for this user',
     noRestaurantAssigned: 'You do not have a restaurant assigned. Contact the administrator.',
-    emailAlreadyRegistered: 'Email is already registered',
     noAccountFoundWithEmail: 'No account found with that email',
     passwordRecoveryRequest: 'Password recovery request',
     passwordRecoveryMessage: 'has requested to recover their password.',
