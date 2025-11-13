@@ -66,6 +66,9 @@ interface Translations {
   demoAccounts: string;
   superadmin: string;
   restaurant: string;
+  requestSent: string;
+  requestInfo: string;
+  requestResponse: string;
   
   // Dashboard
   totalProducts: string;
@@ -420,7 +423,10 @@ const translations: Record<Language, Translations> = {
     statActiveRestaurants: 'Restaurantes Activos',
     statOrdersProcessed: 'Pedidos Procesados',
     statSatisfaction: 'Satisfacción',
-    
+    requestSent: '¡Solicitud Enviada!',
+    requestInfo: 'Hemos recibido tu solicitud de recuperación de contraseña.'
+    requestResponse: 'Nuestro equipo se contactará contigo al email',
+
     // Dashboard
     totalProducts: 'Productos',
     activeProducts: 'activos',
@@ -1517,7 +1523,10 @@ const translations: Record<Language, Translations> = {
     statActiveRestaurants: 'Active Restaurants',
     statOrdersProcessed: 'Orders Processed',
     statSatisfaction: 'Satisfaction',
-    
+    requestSent: '¡Solicitud Enviada!',
+    requestInfo: 'We have received your password recovery request.'
+    requestResponse: 'Our team will contact you by email.',
+
     // Dashboard
     totalProducts: 'Products',
     activeProducts: 'active',
