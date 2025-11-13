@@ -1584,6 +1584,85 @@ const translations: Record<Language, Translations> = {
     settings: 'Settings',
     analytics: 'Analytics',
 
+    // Terms and Conditions
+    termsSection1Title: string;
+    termsSection1Content: string;
+    termsSection2Title: string;
+    termsSection2Content: string;
+    termsSection2Item1: string;
+    termsSection2Item2: string;
+    termsSection2Item3: string;
+    termsSection2Item4: string;
+    termsSection2Item5: string;
+    termsSection3Title: string;
+    termsSection3Content: string;
+    termsSection3Item1: string;
+    termsSection3Item2: string;
+    termsSection3Item3: string;
+    termsSection3Item4: string;
+    termsSection4Title: string;
+    termsSection4Content: string;
+    termsSection4Item1: string;
+    termsSection4Item2: string;
+    termsSection4Item3: string;
+    termsSection4Item4: string;
+    termsSection5Title: string;
+    termsSection5Content: string;
+    termsSection5Item1: string;
+    termsSection5Item2: string;
+    termsSection5Item3: string;
+    termsSection5Item4: string;
+    termsSection5Item5: string;
+    termsSection5Item6: string;
+    termsSection6Title: string;
+    termsSection6Content1: string;
+    termsSection6Content2: string;
+    termsSection7Title: string;
+    termsSection7Content: string;
+    termsSection7Item1: string;
+    termsSection7Item2: string;
+    termsSection7Item3: string;
+    termsSection7Content2: string;
+    termsSection8Title: string;
+    termsSection8Content: string;
+    termsSection8Item1: string;
+    termsSection8Item2: string;
+    termsSection8Item3: string;
+    termsSection8Content2: string;
+    termsSection9Title: string;
+    termsSection9Content: string;
+    termsSection9Item1: string;
+    termsSection9Item2: string;
+    termsSection9Item3: string;
+    termsSection9Item4: string;
+    termsSection10Title: string;
+    termsSection10Content: string;
+    termsSection10Item1: string;
+    termsSection10Item2: string;
+    termsSection10Item3: string;
+    termsSection10Item4: string;
+    termsSection11Title: string;
+    termsSection11Content: string;
+    termsSection12Title: string;
+    termsSection12Content: string;
+    termsSection13Title: string;
+    termsSection13Item1Label: string;
+    termsSection13Item1: string;
+    termsSection13Item2Label: string;
+    termsSection13Item2: string;
+    termsSection13Item3Label: string;
+    termsSection13Item3: string;
+    termsSection13Item4Label: string;
+    termsSection13Item4: string;
+    termsSection14Title: string;
+    termsSection14Content: string;
+    termsSection14Item1: string;
+    termsSection14Item2: string;
+    termsLastUpdate: string;
+    termsLastUpdateDate: string;
+    termsAcceptDisclaimer: string;
+    acceptTermsAndConditionsButton: string;
+
     // Auth Context Errors
     userNotFound: 'User not found',
     incorrectPassword: 'Incorrect password',
