@@ -57,6 +57,7 @@ interface Translations {
   registerSubtitle: string;
   password: string;
   confirmPassword: string;
+  forgotPassword: string;
   restaurantName: string;
   ownerName: string;
   acceptTerms: string;
@@ -387,6 +388,7 @@ const translations: Record<Language, Translations> = {
     registerSubtitle: 'Completa los datos para crear tu cuenta',
     password: 'Contraseña',
     confirmPassword: 'Confirmar Contraseña',
+    forgotPassword: '¿Olvidaste tu contraseña?',  
     restaurantName: 'Nombre del Restaurante',
     ownerName: 'Nombre del Propietario',
     acceptTerms: 'Acepto los ',
@@ -1575,6 +1577,7 @@ const translations: Record<Language, Translations> = {
     registerSubtitle: 'Complete the information to create your account',
     password: 'Password',
     confirmPassword: 'Confirm Password',
+    forgotPassword: '¿Forgot your password?', 
     restaurantName: 'Restaurant Name',
     ownerName: 'Owner Name',
     acceptTerms: 'I accept the terms and conditions',
