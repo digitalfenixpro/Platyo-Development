@@ -1601,7 +1601,11 @@ const translations: Record<Language, Translations> = {
     ofService: 'of service',
     createAccount: 'Create Account',
     termsModalTitle: 'Platyo Terms and Conditions',
-
+    restaurantNamePlaceholder: 'My Restaurant',
+    ownerNamePlaceholder: 'John Doe',
+    contactEmailPlaceholder: 'contact@myrestaurant.com',
+    phonePlaceholder: '+1 (555) 123-4567',
+    addressPlaceholder: '123 Main St, City',
 
     // Dashboard
     totalProducts: 'Products',
