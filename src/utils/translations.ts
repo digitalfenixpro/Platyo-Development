@@ -36,7 +36,11 @@ interface Translations {
   ready: string;
   delivered: string;
   cancelled: string;
-  
+
+  // Confirm Dialog - Defaults
+  confirmDialogDefaultConfirm: string;
+  confirmDialogDefaultCancel: string;
+    
   // Navigation
   dashboard: string;
   categories: string;
@@ -746,6 +750,10 @@ const translations: Record<Language, Translations> = {
     ready: 'Listo',
     delivered: 'Entregado',
     cancelled: 'Cancelado',
+
+    // Confirm Dialog - Defaults
+    confirmDialogDefaultConfirm: 'Confirmar',
+    confirmDialogDefaultCancel: 'Cancelar',
     
     // Navigation
     dashboard: 'Dashboard',
@@ -2239,7 +2247,11 @@ const translations: Record<Language, Translations> = {
     ready: 'Ready',
     delivered: 'Delivered',
     cancelled: 'Cancelled',
-    
+
+    // Confirm Dialog - Defaults
+    confirmDialogDefaultConfirm: 'Confirm',
+    confirmDialogDefaultCancel: 'Cancel',
+
     // Navigation
     dashboard: 'Dashboard',
     categories: 'Categories',
