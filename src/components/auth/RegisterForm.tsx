@@ -142,7 +142,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
               value={formData.restaurantName}
               onChange={handleChange}
               error={errors.restaurantName}
-              placeholder="Mi Restaurante"
+              placeholder={t('restaurantNamePlaceholder')}
             />
 
             <Input
@@ -150,7 +150,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
               label={t('ownerName')}
               value={formData.ownerName}
               onChange={handleChange}
-              placeholder="Pepito Perez"
+              placeholder={t('ownerNamePlaceholder')}
             />
 
             <Input
@@ -160,7 +160,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
               value={formData.email}
               onChange={handleChange}
               error={errors.email}
-              placeholder="contacto@mirestaurante.com"
+              placeholder={t('contactEmailPlaceholder')}
             />
 
             <Input
@@ -168,7 +168,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
               label={t('phone')}
               value={formData.phone}
               onChange={handleChange}
-              placeholder="+57 (310) 123-4567"
+              placeholder={t('phonePlaceholder')}
             />
           </div>
 
@@ -177,7 +177,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
             label={t('restaurantAddress')}
             value={formData.address}
             onChange={handleChange}
-            placeholder="Calle 123 No 45-67, Ciudad"
+            placeholder={t('addressPlaceholder')}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
