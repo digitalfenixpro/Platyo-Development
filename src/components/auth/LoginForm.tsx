@@ -52,7 +52,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
             label="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="info@email.com"
+            placeholder="tu@email.com"
             required
           />
 
@@ -62,7 +62,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
               label={t('password')}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder={t('password')}
+              placeholder="Contraseña"
               required
             />
             <button
@@ -95,7 +95,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
             onClick={() => setShowForgotPassword(true)}
             className="text-sm text-gray-600 hover:text-gray-900 underline"
           >
-            {t('forgotPassword')}
+            ¿Olvidaste tu contraseña?
           </button>
         </div>
 
