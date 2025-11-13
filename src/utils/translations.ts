@@ -172,7 +172,7 @@ interface Translations {
   requestSendError: string;
 
   // Register Form
-  restaurantNameRequired: string;a
+  restaurantNameRequired: string;
   emailRequired: string;
   passwordRequired: string;
   mustAcceptTerms: string;
