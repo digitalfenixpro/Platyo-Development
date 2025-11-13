@@ -16,7 +16,7 @@ interface Translations {
   status: string;
   date: string;
   name: string;
-  description: string;
+  description: string;a
   email: string;
   phone: string;
   address: string;
