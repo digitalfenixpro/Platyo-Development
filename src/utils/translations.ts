@@ -47,6 +47,85 @@ interface Translations {
   settings: string;
   analytics: string;
 
+  // Terms and Conditions
+  termsSection1Title: string;
+  termsSection1Content: string;
+  termsSection2Title: string;
+  termsSection2Content: string;
+  termsSection2Item1: string;
+  termsSection2Item2: string;
+  termsSection2Item3: string;
+  termsSection2Item4: string;
+  termsSection2Item5: string;
+  termsSection3Title: string;
+  termsSection3Content: string;
+  termsSection3Item1: string;
+  termsSection3Item2: string;
+  termsSection3Item3: string;
+  termsSection3Item4: string;
+  termsSection4Title: string;
+  termsSection4Content: string;
+  termsSection4Item1: string;
+  termsSection4Item2: string;
+  termsSection4Item3: string;
+  termsSection4Item4: string;
+  termsSection5Title: string;
+  termsSection5Content: string;
+  termsSection5Item1: string;
+  termsSection5Item2: string;
+  termsSection5Item3: string;
+  termsSection5Item4: string;
+  termsSection5Item5: string;
+  termsSection5Item6: string;
+  termsSection6Title: string;
+  termsSection6Content1: string;
+  termsSection6Content2: string;
+  termsSection7Title: string;
+  termsSection7Content: string;
+  termsSection7Item1: string;
+  termsSection7Item2: string;
+  termsSection7Item3: string;
+  termsSection7Content2: string;
+  termsSection8Title: string;
+  termsSection8Content: string;
+  termsSection8Item1: string;
+  termsSection8Item2: string;
+  termsSection8Item3: string;
+  termsSection8Content2: string;
+  termsSection9Title: string;
+  termsSection9Content: string;
+  termsSection9Item1: string;
+  termsSection9Item2: string;
+  termsSection9Item3: string;
+  termsSection9Item4: string;
+  termsSection10Title: string;
+  termsSection10Content: string;
+  termsSection10Item1: string;
+  termsSection10Item2: string;
+  termsSection10Item3: string;
+  termsSection10Item4: string;
+  termsSection11Title: string;
+  termsSection11Content: string;
+  termsSection12Title: string;
+  termsSection12Content: string;
+  termsSection13Title: string;
+  termsSection13Item1Label: string;
+  termsSection13Item1: string;
+  termsSection13Item2Label: string;
+  termsSection13Item2: string;
+  termsSection13Item3Label: string;
+  termsSection13Item3: string;
+  termsSection13Item4Label: string;
+  termsSection13Item4: string;
+  termsSection14Title: string;
+  termsSection14Content: string;
+  termsSection14Item1: string;
+  termsSection14Item2: string;
+  termsLastUpdate: string;
+  termsLastUpdateDate: string;
+  termsAcceptDisclaimer: string;
+  acceptTermsAndConditionsButton: string;
+  
   // Auth Context Errors
   userNotFound: string;
   incorrectPassword: string;
@@ -1679,83 +1758,98 @@ const translations: Record<Language, Translations> = {
     analytics: 'Analytics',
 
     // Terms and Conditions
-    termsSection1Title: string;
-    termsSection1Content: string;
-    termsSection2Title: string;
-    termsSection2Content: string;
-    termsSection2Item1: string;
-    termsSection2Item2: string;
-    termsSection2Item3: string;
-    termsSection2Item4: string;
-    termsSection2Item5: string;
-    termsSection3Title: string;
-    termsSection3Content: string;
-    termsSection3Item1: string;
-    termsSection3Item2: string;
-    termsSection3Item3: string;
-    termsSection3Item4: string;
-    termsSection4Title: string;
-    termsSection4Content: string;
-    termsSection4Item1: string;
-    termsSection4Item2: string;
-    termsSection4Item3: string;
-    termsSection4Item4: string;
-    termsSection5Title: string;
-    termsSection5Content: string;
-    termsSection5Item1: string;
-    termsSection5Item2: string;
-    termsSection5Item3: string;
-    termsSection5Item4: string;
-    termsSection5Item5: string;
-    termsSection5Item6: string;
-    termsSection6Title: string;
-    termsSection6Content1: string;
-    termsSection6Content2: string;
-    termsSection7Title: string;
-    termsSection7Content: string;
-    termsSection7Item1: string;
-    termsSection7Item2: string;
-    termsSection7Item3: string;
-    termsSection7Content2: string;
-    termsSection8Title: string;
-    termsSection8Content: string;
-    termsSection8Item1: string;
-    termsSection8Item2: string;
-    termsSection8Item3: string;
-    termsSection8Content2: string;
-    termsSection9Title: string;
-    termsSection9Content: string;
-    termsSection9Item1: string;
-    termsSection9Item2: string;
-    termsSection9Item3: string;
-    termsSection9Item4: string;
-    termsSection10Title: string;
-    termsSection10Content: string;
-    termsSection10Item1: string;
-    termsSection10Item2: string;
-    termsSection10Item3: string;
-    termsSection10Item4: string;
-    termsSection11Title: string;
-    termsSection11Content: string;
-    termsSection12Title: string;
-    termsSection12Content: string;
-    termsSection13Title: string;
-    termsSection13Item1Label: string;
-    termsSection13Item1: string;
-    termsSection13Item2Label: string;
-    termsSection13Item2: string;
-    termsSection13Item3Label: string;
-    termsSection13Item3: string;
-    termsSection13Item4Label: string;
-    termsSection13Item4: string;
-    termsSection14Title: string;
-    termsSection14Content: string;
-    termsSection14Item1: string;
-    termsSection14Item2: string;
-    termsLastUpdate: string;
-    termsLastUpdateDate: string;
-    termsAcceptDisclaimer: string;
-    acceptTermsAndConditionsButton: string;
+    termsSection1Title: 'Acceptance of Terms',
+    termsSection1Content: 'By registering and using Platyo, you agree to be legally bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our service.',
+    
+    termsSection2Title: 'Service Description',
+    termsSection2Content: 'Platyo is a restaurant management platform that provides tools for:',
+    termsSection2Item1: 'Digital menu management and product catalog',
+    termsSection2Item2: 'Online ordering system',
+    termsSection2Item3: 'Customer and order administration',
+    termsSection2Item4: 'Sales analysis and reports',
+    termsSection2Item5: 'Inventory and category management',
+    
+    termsSection3Title: 'Registration and Account',
+    termsSection3Content: 'To use Platyo, you must create an account by providing accurate and complete information. You are responsible for:',
+    termsSection3Item1: 'Maintaining the confidentiality of your password',
+    termsSection3Item2: 'All activities that occur under your account',
+    termsSection3Item3: 'Immediately notifying any unauthorized use',
+    termsSection3Item4: 'Providing truthful and updated information',
+    
+    termsSection4Title: 'Subscriptions and Payments',
+    termsSection4Content: 'Platyo offers different subscription plans. By subscribing, you agree to:',
+    termsSection4Item1: 'Pay all fees associated with your selected plan',
+    termsSection4Item2: 'Automatic renewals according to the plan periodicity',
+    termsSection4Item3: 'That prices may change with 30 days prior notice',
+    termsSection4Item4: 'The refund policy according to the contracted plan',
+    
+    termsSection5Title: 'Acceptable Use',
+    termsSection5Content: 'By using Platyo, you agree NOT to:',
+    termsSection5Item1: 'Violate applicable laws or regulations',
+    termsSection5Item2: 'Infringe intellectual property rights',
+    termsSection5Item3: 'Transmit offensive, illegal or inappropriate content',
+    termsSection5Item4: 'Attempt unauthorized access to systems or data',
+    termsSection5Item5: 'Use the service for fraudulent activities',
+    termsSection5Item6: 'Interfere with the operation of the service',
+    
+    termsSection6Title: 'Intellectual Property',
+    termsSection6Content1: 'All content, features and functionality of Platyo are the exclusive property of the company and are protected by copyright laws, trademarks and other intellectual property laws.',
+    termsSection6Content2: 'You retain all rights to the content you upload (menus, products, images), but grant us a license to use it in providing the service.',
+    
+    termsSection7Title: 'Privacy and Data Protection',
+    termsSection7Content: 'We collect and process personal data in accordance with our Privacy Policy and complying with:',
+    termsSection7Item1: 'Law 1581 of 2012 on Personal Data Protection in Colombia',
+    termsSection7Item2: 'Decree 1377 of 2013',
+    termsSection7Item3: 'Principles of legality, purpose, freedom, veracity, transparency, access and security',
+    termsSection7Content2: 'Your rights include: knowing, updating, rectifying and deleting your personal data, as well as revoking the authorization granted.',
+    
+    termsSection8Title: 'Limitation of Liability',
+    termsSection8Content: 'Platyo is provided "as is" and "as available". We do not guarantee that:',
+    termsSection8Item1: 'The service will be uninterrupted or error-free',
+    termsSection8Item2: 'The results obtained will be accurate or reliable',
+    termsSection8Item3: 'All errors will be corrected',
+    termsSection8Content2: 'We will not be liable for indirect, incidental, special, consequential or punitive damages, including loss of profits, data, use or goodwill.',
+    
+    termsSection9Title: 'Indemnification',
+    termsSection9Content: 'You agree to indemnify and hold harmless Platyo, its affiliates, directors, employees and agents from any claim, damage, obligation, loss, liability, cost or debt arising from:',
+    termsSection9Item1: 'Your use of the service',
+    termsSection9Item2: 'Violation of these terms',
+    termsSection9Item3: 'Violation of third party rights',
+    termsSection9Item4: 'Content you post or share',
+    
+    termsSection10Title: 'Service Termination',
+    termsSection10Content: 'We may suspend or terminate your access to the service immediately, without prior notice, for any reason, including:',
+    termsSection10Item1: 'Violation of these terms',
+    termsSection10Item2: 'Request from legal authorities',
+    termsSection10Item3: 'Discontinuation of service',
+    termsSection10Item4: 'Fraudulent or illegal activity',
+    
+    termsSection11Title: 'Modifications',
+    termsSection11Content: 'We reserve the right to modify these terms at any time. Modifications will take effect immediately after publication. Your continued use of the service constitutes your acceptance of the modified terms.',
+    
+    termsSection12Title: 'Applicable Law and Jurisdiction',
+    termsSection12Content: 'These terms are governed by the laws of the Republic of Colombia. Any dispute will be resolved in the competent courts of Colombia, expressly waiving any other jurisdiction that may correspond.',
+    
+    termsSection13Title: 'General Provisions',
+    termsSection13Item1Label: 'Severability',
+    termsSection13Item1: 'If any provision is deemed invalid, the others will remain in effect',
+    termsSection13Item2Label: 'Waiver',
+    termsSection13Item2: 'Failure to exercise a right does not constitute a waiver of it',
+    termsSection13Item3Label: 'Entire Agreement',
+    termsSection13Item3: 'These terms constitute the entire agreement between the parties',
+    termsSection13Item4Label: 'Assignment',
+    termsSection13Item4: 'You may not assign your rights without our prior written consent',
+    
+    termsSection14Title: 'Contact',
+    termsSection14Content: 'For questions about these terms, you can contact us through:',
+    termsSection14Item1: 'Email: admin@digitalfenixpro.com',
+    termsSection14Item2: 'Within the platform through the support ticket system',
+    
+    termsLastUpdate: 'Last Update',
+    termsLastUpdateDate: 'November 2025',
+    termsAcceptDisclaimer: 'By clicking "Accept" or by using the service, you acknowledge that you have read, understood and agree to be legally bound by these Terms and Conditions.',
+    acceptTermsAndConditionsButton: 'Accept Terms and Conditions',
+
 
     // Auth Context Errors
     userNotFound: 'User not found',
