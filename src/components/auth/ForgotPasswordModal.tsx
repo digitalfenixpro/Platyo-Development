@@ -79,7 +79,7 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
               </div>
               <div className="flex-1 text-sm text-gray-700 leading-relaxed">
                 <p className="font-medium text-gray-900 mb-2">
-                  {t('forgotPassword')}
+                  ¿Olvidaste tu contraseña?
                 </p>
                 <p>
                   Ingresa tu dirección de email y nos pondremos en contacto contigo para ayudarte a recuperar el acceso a tu cuenta.
