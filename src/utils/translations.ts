@@ -431,6 +431,22 @@ const translations: Record<Language, Translations> = {
     subscription: 'Suscripción',
     settings: 'Configuración',
     analytics: 'Estadísticas',
+
+    // Auth Context Errors
+    userNotFound: 'Usuario no encontrado',
+    incorrectPassword: 'Contraseña incorrecta',
+    restaurantNotFoundForUser: 'Restaurante no encontrado para este usuario',
+    noRestaurantAssigned: 'No tienes un restaurante asignado. Contacta al administrador.',
+    emailAlreadyRegistered: 'El email ya está registrado',
+    noAccountFoundWithEmail: 'No se encontró una cuenta con ese email',
+    passwordRecoveryRequest: 'Solicitud de recuperación de contraseña',
+    passwordRecoveryMessage: 'ha solicitado recuperar su contraseña.',
+    userRole: 'Rol del usuario',
+    requestDate: 'Fecha de solicitud',
+    userWithoutRestaurant: 'Usuario sin restaurante',
+    noName: 'Sin nombre',
+    notAvailable: 'No disponible',
+
     
     // Auth
     login: 'Iniciar Sesión',
@@ -1567,6 +1583,22 @@ const translations: Record<Language, Translations> = {
     subscription: 'Subscription',
     settings: 'Settings',
     analytics: 'Analytics',
+
+    // Auth Context Errors
+    userNotFound: 'User not found',
+    incorrectPassword: 'Incorrect password',
+    restaurantNotFoundForUser: 'Restaurant not found for this user',
+    noRestaurantAssigned: 'You do not have a restaurant assigned. Contact the administrator.',
+    emailAlreadyRegistered: 'Email is already registered',
+    noAccountFoundWithEmail: 'No account found with that email',
+    passwordRecoveryRequest: 'Password recovery request',
+    passwordRecoveryMessage: 'has requested to recover their password.',
+    userRole: 'User role',
+    requestDate: 'Request date',
+    userWithoutRestaurant: 'User without restaurant',
+    noName: 'No name',
+    notAvailable: 'Not available',
+
     
     // Auth
     login: 'Login',
