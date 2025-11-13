@@ -476,6 +476,7 @@ interface Translations {
   references: string;
   estimatedTime: string;
   thankYouOrder: string;
+  allDates: string;
   
   // Products
   productManagement: string;
@@ -1269,6 +1270,7 @@ const translations: Record<Language, Translations> = {
     references: 'Referencias',
     estimatedTime: 'Tiempo estimado',
     thankYouOrder: '¡Gracias por tu pedido!',
+    allDates: 'Todas las fechas',
     statusUpdatedTitle: 'Estado Actualizado',
     orderStatusUpdated: 'Estado del pedido actualizado',
     orderTypeTitle: 'Tipo de pedido',
@@ -2798,6 +2800,7 @@ const translations: Record<Language, Translations> = {
     references: 'References',
     estimatedTime: 'Estimated time',
     thankYouOrder: 'Thank you for your order!',
+    allDates: 'All dates',
     statusUpdatedTitle: 'Status Updated',
     orderStatusUpdated: 'Order status updated',
     orderTypeTitle: 'Order type',
