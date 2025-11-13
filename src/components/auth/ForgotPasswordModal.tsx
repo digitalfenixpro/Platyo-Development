@@ -35,10 +35,10 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
           handleClose();
         }, 4000);
       } else {
-        setError(result.error || 'Error al enviar la solicitud');
+        setError(result.error || t('requestSendError'));
       }
     } catch (err) {
-      setError('Error inesperado');
+      setError(t('unexpectedError'));
     } finally {
       setLoading(false);
     }
@@ -52,7 +52,7 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={handleClose} title="Recuperar Contraseña">
+    <Modal isOpen={isOpen} onClose={handleClose} title={t('recoverPassword')}>
       {success ? (
         <div className="text-center py-8 px-4">
           <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -67,7 +67,8 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-5 border border-blue-100">
             <p className="text-sm text-gray-700 leading-relaxed">
               {t('requestResponse')}{' '}
-              <span className="font-semibold text-blue-700">{email}</span> para ayudarte a reactivar tu cuenta.
+              <span className="font-semibold text-blue-700">{email}</span>{' '}
+              {t('helpReactivateAccount')}
             </p>
           </div>
         </div>
@@ -84,7 +85,7 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
                   {t('forgotPassword')}
                 </p>
                 <p>
-                  Ingresa tu dirección de email y nos pondremos en contacto contigo para ayudarte a recuperar el acceso a tu cuenta.
+                  {t('recoverPasswordInstructions')}
                 </p>
               </div>
             </div>
@@ -93,10 +94,10 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
           <div>
             <Input
               type="email"
-              label="Email"
+              label={t('email')}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="info@email.com"
+              placeholder={t('emailPlaceholder')}
               required
             />
           </div>
@@ -117,14 +118,14 @@ export const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
               onClick={handleClose}
               className="flex-1 hover:bg-gray-100 transition-colors"
             >
-              Cancelar
+              {t('cancel')}
             </Button>
             <Button
               type="submit"
               loading={loading}
               className="flex-1 bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-600 hover:to-red-700 shadow-md hover:shadow-lg transition-all"
             >
-              Enviar Solicitud
+              {t('sendRequest')}
             </Button>
           </div>
         </form>
