@@ -52,7 +52,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
             label="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="tu@email.com"
+            placeholder="info@email.com"
             required
           />
 
