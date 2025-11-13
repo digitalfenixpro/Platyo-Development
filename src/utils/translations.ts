@@ -69,7 +69,12 @@ interface Translations {
   requestSent: string;
   requestInfo: string;
   requestResponse: string;
-  
+  recoverPassword: string;
+  recoverPasswordInstructions: string;
+  helpReactivateAccount: string;
+  emailPlaceholder: string;
+  sendRequest: string;
+  requestSendError: string;
   
   // Dashboard
   totalProducts: string;
@@ -427,6 +432,12 @@ const translations: Record<Language, Translations> = {
     requestSent: '¡Solicitud Enviada!',
     requestInfo: 'Hemos recibido tu solicitud de recuperación de contraseña.',
     requestResponse: 'Nuestro equipo se contactará contigo al email',
+    recoverPassword: 'Recuperar Contraseña',
+    recoverPasswordInstructions: 'Ingresa tu dirección de email y nos pondremos en contacto contigo para ayudarte a recuperar el acceso a tu cuenta.',
+    helpReactivateAccount: 'para ayudarte a reactivar tu cuenta.',
+    emailPlaceholder: 'tu@email.com',
+    sendRequest: 'Enviar Solicitud',
+    requestSendError: 'Error al enviar la solicitud',
 
     // Dashboard
     totalProducts: 'Productos',
@@ -1527,6 +1538,12 @@ const translations: Record<Language, Translations> = {
     requestSent: '¡Solicitud Enviada!',
     requestInfo: 'We have received your password recovery request.',
     requestResponse: 'Our team will contact you by email.',
+    recoverPassword: 'Recover Password',
+    recoverPasswordInstructions: 'Enter your email address and we will contact you to help you recover access to your account.',
+    helpReactivateAccount: 'to help you reactivate your account.',
+    emailPlaceholder: 'your@email.com',
+    sendRequest: 'Send Request',
+    requestSendError: 'Error sending the request',
 
     // Dashboard
     totalProducts: 'Products',
