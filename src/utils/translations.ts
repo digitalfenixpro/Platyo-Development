@@ -208,7 +208,7 @@ interface Translations {
   restaurantStatus: string;
   lastUpdate: string;
   noOrdersYet: string;
-  ordersWillAppear: string;a
+  ordersWillAppear: string;
 
   
   
