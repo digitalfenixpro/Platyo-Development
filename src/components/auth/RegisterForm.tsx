@@ -107,7 +107,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
     return (
       <div className="w-full max-w-md">
         <div className="text-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+          <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
             <Store className="w-10 h-10 text-white" />
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('registrationSuccessful')}</h2>
@@ -116,7 +116,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
           </p>
           <Button
             onClick={onSwitchToLogin}
-            className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700"
+            className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700"
             size="lg"
           >
             {t('backToLogin')}
