@@ -453,6 +453,19 @@ interface Translations {
   tutorialStep8Detail6: string;
   tutorialStep8Detail7: string;
   tutorialStep8Image: string;
+
+  // Order Product Selector
+  orderProducts: string;
+  selectProduct: string;
+  selectProductOption: string;
+  selectVariation: string;
+  selectVariationOption: string;
+  additionalIngredients: string;
+  quantity: string;
+  addProduct: string;
+  noProductsAdded: string;
+  selectProductsToAdd: string;
+  errorSelectProductVariation: string;
   
   // Orders
   orderManagement: string;
