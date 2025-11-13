@@ -1261,6 +1261,20 @@ const translations: Record<Language, Translations> = {
     statusTableService: 'Atención en Mesas',
     na: 'N/A',
     orderTable: 'Mesa',
+
+    // Order Product Selector
+    orderProducts: 'Productos del Pedido',
+    selectProduct: 'Seleccionar producto',
+    selectProductOption: 'Selecciona un producto',
+    selectVariation: 'Seleccionar variación',
+    selectVariationOption: 'Selecciona una variación',
+    additionalIngredients: 'Ingredientes adicionales',
+    quantity: 'Cantidad',
+    addProduct: 'Agregar Producto',
+    noProductsAdded: 'No hay productos agregados',
+    selectProductsToAdd: 'Selecciona productos para agregar al pedido',
+    errorSelectProductVariation: 'Selecciona un producto y variación',
+
     
     // Orders
     orderManagement: 'Gestión de Pedidos',
