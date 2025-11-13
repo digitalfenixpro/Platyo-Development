@@ -95,6 +95,15 @@ interface Translations {
   contactEmailPlaceholder: string;
   phonePlaceholder: string;
   addressPlaceholder: string;
+
+  // Change Password Modal
+  changePasswordRequired: string;
+  provisionalPasswordDetected: string;
+  securityPasswordChange: string;
+  newPassword: string;
+  confirmNewPassword: string;
+  changePassword: string;
+  writePasswordAgain: string;
   
   // Dashboard
   totalProducts: string;
@@ -479,6 +488,14 @@ const translations: Record<Language, Translations> = {
     phonePlaceholder: '+57 (310) 123-4567',
     addressPlaceholder: 'Calle 123 No 45-67, Ciudad',
 
+    // Change Password Modal
+    changePasswordRequired: 'Cambio de Contraseña Requerido',
+    provisionalPasswordDetected: 'Contraseña provisional detectada.',
+    securityPasswordChange: 'Por seguridad, debes cambiar tu contraseña antes de continuar. Esta contraseña será permanente y podrás usarla en futuros inicios de sesión.',
+    newPassword: 'Nueva Contraseña',
+    confirmNewPassword: 'Confirmar Nueva Contraseña',
+    changePassword: 'Cambiar Contraseña',
+    writePasswordAgain: 'Escribe la contraseña nuevamente',
 
 
     // Dashboard
@@ -1606,6 +1623,16 @@ const translations: Record<Language, Translations> = {
     contactEmailPlaceholder: 'contact@myrestaurant.com',
     phonePlaceholder: '+1 (555) 123-4567',
     addressPlaceholder: '123 Main St, City',
+
+    // Change Password Modal
+    changePasswordRequired: 'Password Change Required',
+    provisionalPasswordDetected: 'Provisional password detected.',
+    securityPasswordChange: 'For security reasons, you must change your password before continuing. This password will be permanent and you can use it for future logins.',
+    newPassword: 'New Password',
+    confirmNewPassword: 'Confirm New Password',
+    changePassword: 'Change Password',
+    writePasswordAgain: 'Write the password again',
+
 
     // Dashboard
     totalProducts: 'Products',
