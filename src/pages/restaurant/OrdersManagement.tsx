@@ -380,7 +380,7 @@ export const OrdersManagement: React.FC = () => {
           <div class="order-info">
             <p><strong>${t('customerLabel')}:</strong> ${order.customer.name}</p>
             <p><strong>${t('phoneLabel')}:</strong> ${order.customer.phone}</p>
-            <p><strong>${t('typeLabel')}:</strong> ${order.order_type}</p>
+            <p><strong>${t('orderType')}:</strong> ${order.order_type}</p>
             ${order.delivery_address ?
             `<p><strong>${t('addressLabel')}:</strong> ${order.delivery_address}</p>` : ''}
             ${order.table_number ?
@@ -806,7 +806,7 @@ export const OrdersManagement: React.FC = () => {
               <span>${new Date(order.created_at).toLocaleString('es-CO')}</span>
             </div>
             <div class="order-info-line">
-              <span><strong>${t('typeLabel')}:</strong></span>
+              <span><strong>${t('orderType')}:</strong></span>
               <span>${
                 order.order_type === 'delivery' ?
                 t('deliveryOrderType') :
@@ -1298,7 +1298,7 @@ export const OrdersManagement: React.FC = () => {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">{t('typeLabel')}</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{t('orderType')}</label>
               <select
                 value={typeFilter}
                 onChange={(e) => setTypeFilter(e.target.value)}
@@ -1387,7 +1387,7 @@ export const OrdersManagement: React.FC = () => {
                       {t('customerLabel')}
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      {t('typeLabel')}
+                      {t('orderType')}
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       {t('total')}
@@ -1590,7 +1590,7 @@ export const OrdersManagement: React.FC = () => {
               <h3 className="font-medium text-gray-900 mb-2">{t('orderInfoTitle')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <p className="text-sm text-gray-600">{t('typeLabel')}</p>
+                  <p className="text-sm text-gray-600">{t('orderType')}</p>
                   <div className="mt-1">
                     {getOrderTypeBadge(selectedOrder.order_type, selectedOrder.table_number)}
                   </div>
