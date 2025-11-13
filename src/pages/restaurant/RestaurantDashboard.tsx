@@ -315,7 +315,7 @@ export const RestaurantDashboard: React.FC = () => {
                         </Badge>
                       ) : (
                         <Badge variant={order.order_type === 'delivery' ? 'info' : 'gray'}>
-                          {order.order_type === 'delivery' ? t('delivery') : t('pickup')}
+                          {order.order_type === 'delivery' ? t('Delivery') : t('pickup')}
                         </Badge>
                       )}
                     </td>
