@@ -2806,7 +2806,20 @@ const translations: Record<Language, Translations> = {
     statusTableService: 'Table Service',
     na: 'N/A',
     orderTable: 'Table',
-    
+
+    // Order Product Selector
+    orderProducts: 'Order Products',
+    selectProduct: 'Select product',
+    selectProductOption: 'Select a product',
+    selectVariation: 'Select variation',
+    selectVariationOption: 'Select a variation',
+    additionalIngredients: 'Additional ingredients',
+    quantity: 'Quantity',
+    addProduct: 'Add Product',
+    noProductsAdded: 'No products added',
+    selectProductsToAdd: 'Select products to add to the order',
+    errorSelectProductVariation: 'Select a product and variation',
+
     // Orders
     orderManagement: 'Order Management',
     orderNumber: 'Order',
