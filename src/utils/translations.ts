@@ -1582,7 +1582,7 @@ const translations: Record<Language, Translations> = {
     demoAccounts: 'Demo accounts:',
     superadmin: 'Superadmin',
     restaurant: 'Restaurant',
-    authPageSubtitle: 'Complete Restaurant Management System',a
+    authPageSubtitle: 'Complete Restaurant Management System',
     authPageTitle: 'Transform your restaurant management',
     authPageDescription: 'The all-in-one platform you need to modernize your business and increase your sales',
     featureDigitalMenu: 'Digital Menu',
