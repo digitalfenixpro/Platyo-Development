@@ -107,7 +107,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
             onClick={onSwitchToRegister}
             className="w-full py-3 px-4 border-2 border-gray-300 rounded-lg text-gray-700 font-medium hover:border-gray-400 hover:bg-gray-50 transition-colors"
           >
-            Registra tu restaurante
+            {t('registerTitle')}
           </button>
         </div>
 
