@@ -90,6 +90,11 @@ interface Translations {
   ofService: string;
   createAccount: string;
   termsModalTitle: string;
+  restaurantNamePlaceholder: string;
+  ownerNamePlaceholder: string;
+  contactEmailPlaceholder: string;
+  phonePlaceholder: string;
+  addressPlaceholder: string;
   
   // Dashboard
   totalProducts: string;
