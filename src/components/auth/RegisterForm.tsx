@@ -34,17 +34,17 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
     const newErrors: Record<string, string> = {};
 
     if (!formData.restaurantName.trim()) {
-      newErrors.restaurantName = `El nombre del restaurante ${t('required')}`;
+      newErrors.restaurantName = t('restaurantNameRequired');
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = `Email es ${t('required')}`;
+      newErrors.email = t('emailRequired');
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = t('invalidEmail');
     }
 
     if (!formData.password) {
-      newErrors.password = `Contraseña es ${t('required')}`;
+      newErrors.password = t('passwordRequired');
     } else if (formData.password.length < 6) {
       newErrors.password = t('passwordTooShort');
     }
@@ -54,7 +54,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
     }
 
     if (!formData.acceptTerms) {
-      newErrors.acceptTerms = 'Debes aceptar los términos y condiciones';
+      newErrors.acceptTerms = t('mustAcceptTerms');
     }
 
     setErrors(newErrors);
@@ -81,10 +81,10 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
       if (result.success) {
         setSuccess(true);
       } else {
-        setErrors({ general: result.error || 'Error al registrar' });
+        setErrors({ general: result.error || t('registerError') });
       }
     } catch (err) {
-      setErrors({ general: 'Error inesperado' });
+      setErrors({ general: t('unexpectedError') });
     } finally {
       setLoading(false);
     }
@@ -156,7 +156,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
             <Input
               name="email"
               type="email"
-              label="Email de Contacto*"
+              label={`${t('contactEmail')}*`}
               value={formData.email}
               onChange={handleChange}
               error={errors.email}
@@ -174,7 +174,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
 
           <Input
             name="address"
-            label="Dirección del Restaurante"
+            label={t('restaurantAddress')}
             value={formData.address}
             onChange={handleChange}
             placeholder="Calle 123 No 45-67, Ciudad"
@@ -188,7 +188,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
               value={formData.password}
               onChange={handleChange}
               error={errors.password}
-              placeholder="Minimo 6 caracteres"
+              placeholder={t('minimumCharacters')}
             />
 
             <Input
@@ -198,7 +198,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
               value={formData.confirmPassword}
               onChange={handleChange}
               error={errors.confirmPassword}
-              placeholder="Repite tu contraseña"
+              placeholder={t('repeatPassword')}
             />
           </div>
 
@@ -221,9 +221,9 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
                 }}
                 className="text-blue-600 hover:text-blue-700 underline"
               >
-                términos y condiciones
+                {t('termsAndConditions')}
               </button>{' '}
-              del servicio
+              {t('ofService')}
             </label>
           </div>
           {errors.acceptTerms && (
@@ -242,7 +242,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
             className="w-full bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-600 hover:to-red-700"
             size="lg"
           >
-            Crear Cuenta
+            {t('createAccount')}
           </Button>
         </form>
 
@@ -260,7 +260,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
       <Modal
         isOpen={showTermsModal}
         onClose={() => setShowTermsModal(false)}
-        title="Términos y Condiciones de Platyo"
+        title={t('termsModalTitle')}
         size="xl"
       >
         <TermsAndConditions onAccept={() => {
