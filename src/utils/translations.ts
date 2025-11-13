@@ -209,6 +209,249 @@ interface Translations {
   lastUpdate: string;
   noOrdersYet: string;
   ordersWillAppear: string;
+
+  // Tutorial Modal
+  tutorialStepOf: string;
+  tutorialStepByStepInstructions: string;
+  tutorialImportantInfo: string;
+  tutorialPrevious: string;
+  tutorialNext: string;
+  tutorialFinish: string;
+  tutorialGoToStep: string;
+  
+  // Tutorial Steps Titles
+  tutorialStep1Title: string;
+  tutorialStep2Title: string;
+  tutorialStep3Title: string;
+  tutorialStep4Title: string;
+  tutorialStep5Title: string;
+  tutorialStep6Title: string;
+  tutorialStep7Title: string;
+  tutorialStep8Title: string;
+  
+  // Tutorial Steps Descriptions
+  tutorialStep1Description: string;
+  tutorialStep2Description: string;
+  tutorialStep3Description: string;
+  tutorialStep4Description: string;
+  tutorialStep5Description: string;
+  tutorialStep6Description: string;
+  tutorialStep7Description: string;
+  tutorialStep8Description: string;
+  
+  // Step 1: Categories
+  tutorialStep1Item1: string;
+  tutorialStep1Item2: string;
+  tutorialStep1Item3: string;
+  tutorialStep1Item4: string;
+  tutorialStep1Item5: string;
+  tutorialStep1Item6: string;
+  tutorialStep1Detail1: string;
+  tutorialStep1Detail2: string;
+  tutorialStep1Detail3: string;
+  tutorialStep1Detail4: string;
+  tutorialStep1Detail5: string;
+  tutorialStep1Image: string;
+  
+  // Step 2: Products
+  tutorialStep2Item1: string;
+  tutorialStep2Item2: string;
+  tutorialStep2Item3: string;
+  tutorialStep2Item4: string;
+  tutorialStep2Item5: string;
+  tutorialStep2Item6: string;
+  tutorialStep2Item7: string;
+  tutorialStep2Item8: string;
+  tutorialStep2Item9: string;
+  tutorialStep2Item10: string;
+  tutorialStep2Detail1: string;
+  tutorialStep2Detail2: string;
+  tutorialStep2Detail3: string;
+  tutorialStep2Detail4: string;
+  tutorialStep2Detail5: string;
+  tutorialStep2Detail6: string;
+  tutorialStep2Image: string;
+  
+  // Step 3: Menu Configuration
+  tutorialStep3Item1: string;
+  tutorialStep3Item2: string;
+  tutorialStep3Item3: string;
+  tutorialStep3Item4: string;
+  tutorialStep3Item5: string;
+  tutorialStep3Item6: string;
+  tutorialStep3Item7: string;
+  tutorialStep3Item8: string;
+  tutorialStep3Item9: string;
+  tutorialStep3Item10: string;
+  tutorialStep3Item11: string;
+  tutorialStep3Item12: string;
+  tutorialStep3Item13: string;
+  tutorialStep3Item14: string;
+  tutorialStep3Item15: string;
+  tutorialStep3Item16: string;
+  tutorialStep3Item17: string;
+  tutorialStep3Detail1: string;
+  tutorialStep3Detail2: string;
+  tutorialStep3Detail3: string;
+  tutorialStep3Detail4: string;
+  tutorialStep3Detail5: string;
+  tutorialStep3Detail6: string;
+  tutorialStep3Detail7: string;
+  tutorialStep3Image: string;
+  
+  // Step 4: Orders Management
+  tutorialStep4Item1: string;
+  tutorialStep4Item2: string;
+  tutorialStep4Item3: string;
+  tutorialStep4Item4: string;
+  tutorialStep4Item5: string;
+  tutorialStep4Item6: string;
+  tutorialStep4Item7: string;
+  tutorialStep4Item8: string;
+  tutorialStep4Item9: string;
+  tutorialStep4Item10: string;
+  tutorialStep4Item11: string;
+  tutorialStep4Item12: string;
+  tutorialStep4Item13: string;
+  tutorialStep4Item14: string;
+  tutorialStep4Item15: string;
+  tutorialStep4Item16: string;
+  tutorialStep4Item17: string;
+  tutorialStep4Item18: string;
+  tutorialStep4Item19: string;
+  tutorialStep4Detail1: string;
+  tutorialStep4Detail2: string;
+  tutorialStep4Detail3: string;
+  tutorialStep4Detail4: string;
+  tutorialStep4Detail5: string;
+  tutorialStep4Detail6: string;
+  tutorialStep4Detail7: string;
+  tutorialStep4Image: string;
+  
+  // Step 5: Public Menu
+  tutorialStep5Item1: string;
+  tutorialStep5Item2: string;
+  tutorialStep5Item3: string;
+  tutorialStep5Item4: string;
+  tutorialStep5Item5: string;
+  tutorialStep5Item6: string;
+  tutorialStep5Item7: string;
+  tutorialStep5Item8: string;
+  tutorialStep5Item9: string;
+  tutorialStep5Item10: string;
+  tutorialStep5Item11: string;
+  tutorialStep5Item12: string;
+  tutorialStep5Item13: string;
+  tutorialStep5Item14: string;
+  tutorialStep5Item15: string;
+  tutorialStep5Detail1: string;
+  tutorialStep5Detail2: string;
+  tutorialStep5Detail3: string;
+  tutorialStep5Detail4: string;
+  tutorialStep5Detail5: string;
+  tutorialStep5Detail6: string;
+  tutorialStep5Detail7: string;
+  tutorialStep5Detail8: string;
+  tutorialStep5Image: string;
+  
+  // Step 6: Analytics
+  tutorialStep6Item1: string;
+  tutorialStep6Item2: string;
+  tutorialStep6Item3: string;
+  tutorialStep6Item4: string;
+  tutorialStep6Item5: string;
+  tutorialStep6Item6: string;
+  tutorialStep6Item7: string;
+  tutorialStep6Item8: string;
+  tutorialStep6Item9: string;
+  tutorialStep6Item10: string;
+  tutorialStep6Item11: string;
+  tutorialStep6Item12: string;
+  tutorialStep6Item13: string;
+  tutorialStep6Item14: string;
+  tutorialStep6Item15: string;
+  tutorialStep6Item16: string;
+  tutorialStep6Item17: string;
+  tutorialStep6Item18: string;
+  tutorialStep6Item19: string;
+  tutorialStep6Item20: string;
+  tutorialStep6Item21: string;
+  tutorialStep6Item22: string;
+  tutorialStep6Item23: string;
+  tutorialStep6Item24: string;
+  tutorialStep6Item25: string;
+  tutorialStep6Item26: string;
+  tutorialStep6Item27: string;
+  tutorialStep6Detail1: string;
+  tutorialStep6Detail2: string;
+  tutorialStep6Detail3: string;
+  tutorialStep6Detail4: string;
+  tutorialStep6Detail5: string;
+  tutorialStep6Detail6: string;
+  tutorialStep6Detail7: string;
+  tutorialStep6Detail8: string;
+  tutorialStep6Image: string;
+  
+  // Step 7: Customers
+  tutorialStep7Item1: string;
+  tutorialStep7Item2: string;
+  tutorialStep7Item3: string;
+  tutorialStep7Item4: string;
+  tutorialStep7Item5: string;
+  tutorialStep7Item6: string;
+  tutorialStep7Item7: string;
+  tutorialStep7Item8: string;
+  tutorialStep7Item9: string;
+  tutorialStep7Item10: string;
+  tutorialStep7Item11: string;
+  tutorialStep7Item12: string;
+  tutorialStep7Item13: string;
+  tutorialStep7Item14: string;
+  tutorialStep7Item15: string;
+  tutorialStep7Item16: string;
+  tutorialStep7Item17: string;
+  tutorialStep7Item18: string;
+  tutorialStep7Detail1: string;
+  tutorialStep7Detail2: string;
+  tutorialStep7Detail3: string;
+  tutorialStep7Detail4: string;
+  tutorialStep7Detail5: string;
+  tutorialStep7Detail6: string;
+  tutorialStep7Detail7: string;
+  tutorialStep7Detail8: string;
+  tutorialStep7Detail9: string;
+  tutorialStep7Image: string;
+  
+  // Step 8: Subscription
+  tutorialStep8Item1: string;
+  tutorialStep8Item2: string;
+  tutorialStep8Item3: string;
+  tutorialStep8Item4: string;
+  tutorialStep8Item5: string;
+  tutorialStep8Item6: string;
+  tutorialStep8Item7: string;
+  tutorialStep8Item8: string;
+  tutorialStep8Item9: string;
+  tutorialStep8Item10: string;
+  tutorialStep8Item11: string;
+  tutorialStep8Item12: string;
+  tutorialStep8Item13: string;
+  tutorialStep8Item14: string;
+  tutorialStep8Item15: string;
+  tutorialStep8Item16: string;
+  tutorialStep8Item17: string;
+  tutorialStep8Item18: string;
+  tutorialStep8Item19: string;
+  tutorialStep8Item20: string;
+  tutorialStep8Item21: string;
+  tutorialStep8Detail1: string;
+  tutorialStep8Detail2: string;
+  tutorialStep8Detail3: string;
+  tutorialStep8Detail4: string;
+  tutorialStep8Detail5: string;
+  tutorialStep8Detail6: string;
+  tutorialStep8Detail7: string;
+  tutorialStep8Image: string;
   
   // Orders
   orderManagement: string;
