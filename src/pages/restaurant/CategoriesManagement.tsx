@@ -118,8 +118,8 @@ export const CategoriesManagement: React.FC = () => {
       'success',
       editingCategory ? t('categoryUpdated') : t('categoryCreated'),
       editingCategory 
-        ? 'The category has been updated successfully.'
-        : 'The new category has been added to your menu.',
+        ? t('messageCategoryUpdated')
+        : t('messageCategoryCreated'),
       4000
     );
   };
