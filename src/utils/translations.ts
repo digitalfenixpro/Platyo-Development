@@ -502,6 +502,42 @@ interface Translations {
   productCreated: string;
   productDeleted: string;
   productArchived: string;
+
+  // Product Form
+  enterProductName: string;
+  selectCategory: string;
+  enterProductDescription: string;
+  productSKU: string;
+  productImage: string;
+  uploadedImage: string;
+  uploadImageFromDevice: string;
+  uploadHighQualityImage: string;
+  productPreview: string;
+  imageWillShowInMenu: string;
+  noImageAdded: string;
+  uploadImageToShow: string;
+  variationsAndPrices: string;
+  from: string;
+  to: string;
+  addVariation: string;
+  variationName: string;
+  variationNamePlaceholder: string;
+  priceRequired: string;
+  comparePrice: string;
+  priceBeforeDiscount: string;
+  savings: string;
+  ingredientsLabel: string;
+  addIngredient: string;
+  ingredientName: string;
+  optionalLabel: string;
+  noIngredientsAdded: string;
+  ingredientsAreOptional: string;
+  updateProduct: string;
+  createProduct: string;
+  fillRequiredFields: string;
+  fileTooLarge: string;
+  maxSize5MB: string;
+  onlyOneImageAllowed: string;
   
   // Categories
   categoryManagement: string;
@@ -1403,6 +1439,43 @@ const translations: Record<Language, Translations> = {
     productCreated: 'Producto Creado',
     productDeleted: 'Producto Eliminado',
     productArchived: 'Producto Archivado',
+
+    // Product Form
+    enterProductName: 'Ingresa el nombre del producto',
+    selectCategory: 'Selecciona una categoría',
+    enterProductDescription: 'Ingresa la descripción del producto',
+    productSKU: 'SKU del Producto',
+    productImage: 'Imagen del Producto',
+    uploadedImage: 'Imagen cargada',
+    uploadImageFromDevice: 'Subir imagen desde dispositivo',
+    uploadHighQualityImage: 'Sube una imagen de alta calidad de tu producto. Solo se permite una imagen. Máximo 5MB.',
+    productPreview: 'Vista previa del producto',
+    imageWillShowInMenu: 'La imagen se mostrará en el menú público',
+    noImageAdded: 'No hay imagen agregada',
+    uploadImageToShow: 'Sube una imagen para mostrar tu producto',
+    variationsAndPrices: 'Variaciones y Precios',
+    from: 'Desde',
+    to: 'Hasta',
+    addVariation: 'Agregar Variación',
+    variationName: 'Nombre de la variación',
+    variationNamePlaceholder: 'Nombre de la variación (ej: Pequeño, Mediano, Grande)',
+    priceRequired: 'Precio',
+    comparePrice: 'Precio Comparativo',
+    priceBeforeDiscount: 'Precio antes del descuento',
+    savings: 'Ahorro',
+    ingredientsLabel: 'Ingredientes',
+    addIngredient: 'Agregar Ingrediente',
+    ingredientName: 'Nombre del ingrediente',
+    optionalLabel: 'Opcional',
+    noIngredientsAdded: 'No hay ingredientes agregados',
+    ingredientsAreOptional: 'Los ingredientes son opcionales y permiten personalizar el producto',
+    updateProduct: 'Actualizar Producto',
+    createProduct: 'Crear Producto',
+    fillRequiredFields: 'Por favor completa todos los campos requeridos',
+    fileTooLarge: 'es muy grande. Tamaño máximo: 5MB',
+    maxSize5MB: 'Tamaño máximo: 5MB',
+    onlyOneImageAllowed: 'Solo se permite una imagen',
+
     
     // Categories
     viewMenu: 'Ver Menú',
@@ -2901,6 +2974,43 @@ const translations: Record<Language, Translations> = {
     productCreated: 'Product Created',
     productDeleted: 'Product Deleted',
     productArchived: 'Product Archived',
+
+    // Product Form
+    enterProductName: 'Enter product name',
+    selectCategory: 'Select a category',
+    enterProductDescription: 'Enter product description',
+    productSKU: 'Product SKU',
+    productImage: 'Product Image',
+    uploadedImage: 'Image uploaded',
+    uploadImageFromDevice: 'Upload image from device',
+    uploadHighQualityImage: 'Upload a high quality image of your product. Only one image allowed. Max 5MB.',
+    productPreview: 'Product preview',
+    imageWillShowInMenu: 'The image will be shown in the public menu',
+    noImageAdded: 'No image added',
+    uploadImageToShow: 'Upload an image to show your product',
+    variationsAndPrices: 'Variations and Prices',
+    from: 'From',
+    to: 'To',
+    addVariation: 'Add Variation',
+    variationName: 'Variation name',
+    variationNamePlaceholder: 'Variation name (e.g., Small, Medium, Large)',
+    priceRequired: 'Price',
+    comparePrice: 'Compare Price',
+    priceBeforeDiscount: 'Price before discount',
+    savings: 'Savings',
+    ingredientsLabel: 'Ingredients',
+    addIngredient: 'Add Ingredient',
+    ingredientName: 'Ingredient name',
+    optionalLabel: 'Optional',
+    noIngredientsAdded: 'No ingredients added',
+    ingredientsAreOptional: 'Ingredients are optional and allow product customization',
+    updateProduct: 'Update Product',
+    createProduct: 'Create Product',
+    fillRequiredFields: 'Please fill in all required fields',
+    fileTooLarge: 'is too large. Maximum size: 5MB',
+    maxSize5MB: 'Maximum size: 5MB',
+    onlyOneImageAllowed: 'Only one image allowed',
+
     
     // Categories
     viewMenu: 'View Menu',
