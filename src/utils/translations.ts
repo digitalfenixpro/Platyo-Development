@@ -2779,6 +2779,19 @@ const translations: Record<Language, Translations> = {
     statusTableService: 'Table Service',
     na: 'N/A',
     orderTable: 'Table',
+
+    // Order Product Selector
+    orderProducts: string;
+    selectProduct: string;
+    selectProductOption: string;
+    selectVariation: string;
+    selectVariationOption: string;
+    additionalIngredients: string;
+    quantity: string;
+    addProduct: string;
+    noProductsAdded: string;
+    selectProductsToAdd: string;
+    errorSelectProductVariation: string;
     
     // Orders
     orderManagement: 'Order Management',
