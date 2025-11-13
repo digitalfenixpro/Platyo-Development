@@ -95,7 +95,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
             onClick={() => setShowForgotPassword(true)}
             className="text-sm text-gray-600 hover:text-gray-900 underline"
           >
-            ¿Olvidaste tu contraseña?
+            {t('forgotPassword')}
           </button>
         </div>
 
