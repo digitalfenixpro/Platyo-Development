@@ -516,10 +516,6 @@ interface Translations {
   imageWillShowInMenu: string;
   noImageAdded: string;
   uploadImageToShow: string;
-  variationsAndPrices: string;
-  from: string;
-  to: string;
-  addVariation: string;
   variationName: string;
   variationNamePlaceholder: string;
   priceRequired: string;
@@ -527,7 +523,6 @@ interface Translations {
   priceBeforeDiscount: string;
   savings: string;
   ingredientsLabel: string;
-  addIngredient: string;
   ingredientName: string;
   optionalLabel: string;
   noIngredientsAdded: string;
@@ -1453,10 +1448,6 @@ const translations: Record<Language, Translations> = {
     imageWillShowInMenu: 'La imagen se mostrará en el menú público',
     noImageAdded: 'No hay imagen agregada',
     uploadImageToShow: 'Sube una imagen para mostrar tu producto',
-    variationsAndPrices: 'Variaciones y Precios',
-    from: 'Desde',
-    to: 'Hasta',
-    addVariation: 'Agregar Variación',
     variationName: 'Nombre de la variación',
     variationNamePlaceholder: 'Nombre de la variación (ej: Pequeño, Mediano, Grande)',
     priceRequired: 'Precio',
@@ -1464,7 +1455,6 @@ const translations: Record<Language, Translations> = {
     priceBeforeDiscount: 'Precio antes del descuento',
     savings: 'Ahorro',
     ingredientsLabel: 'Ingredientes',
-    addIngredient: 'Agregar Ingrediente',
     ingredientName: 'Nombre del ingrediente',
     optionalLabel: 'Opcional',
     noIngredientsAdded: 'No hay ingredientes agregados',
@@ -2988,10 +2978,6 @@ const translations: Record<Language, Translations> = {
     imageWillShowInMenu: 'The image will be shown in the public menu',
     noImageAdded: 'No image added',
     uploadImageToShow: 'Upload an image to show your product',
-    variationsAndPrices: 'Variations and Prices',
-    from: 'From',
-    to: 'To',
-    addVariation: 'Add Variation',
     variationName: 'Variation name',
     variationNamePlaceholder: 'Variation name (e.g., Small, Medium, Large)',
     priceRequired: 'Price',
@@ -2999,7 +2985,6 @@ const translations: Record<Language, Translations> = {
     priceBeforeDiscount: 'Price before discount',
     savings: 'Savings',
     ingredientsLabel: 'Ingredients',
-    addIngredient: 'Add Ingredient',
     ingredientName: 'Ingredient name',
     optionalLabel: 'Optional',
     noIngredientsAdded: 'No ingredients added',
