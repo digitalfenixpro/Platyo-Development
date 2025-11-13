@@ -26,6 +26,7 @@ interface ProductIngredient {
   optional: boolean;
   extra_cost?: number;
 }
+
 export const ProductForm: React.FC<ProductFormProps> = ({
   categories,
   product,
@@ -106,6 +107,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
   const removeIngredient = (index: number) => {
     setIngredients(prev => prev.filter((_, i) => i !== index));
   };
+
   const handleImageRemove = () => {
     setFormData(prev => ({
       ...prev,
@@ -117,7 +119,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
     e.preventDefault();
     
     if (!formData.name.trim() || !formData.category_id || variations.length === 0) {
-      alert('Please fill in all required fields');
+      alert(t('fillRequiredFields'));
       return;
     }
 
@@ -140,6 +142,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
     const validVariations = variations.filter(v => v.price > 0);
     return validVariations.length > 0 ? Math.max(...validVariations.map(v => v.price)) : 0;
   };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Basic Information */}
@@ -152,7 +155,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             type="text"
             value={formData.name}
             onChange={(e) => handleInputChange('name', e.target.value)}
-            placeholder="Enter product name"
+            placeholder={t('enterProductName')}
             required
           />
         </div>
@@ -167,7 +170,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             required
           >
-            <option value="">Select a category</option>
+            <option value="">{t('selectCategory')}</option>
             {categories.map(category => (
               <option key={category.id} value={category.id}>
                 {category.name}
@@ -184,7 +187,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
         <textarea
           value={formData.description}
           onChange={(e) => handleInputChange('description', e.target.value)}
-          placeholder="Enter product description"
+          placeholder={t('enterProductDescription')}
           rows={3}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
@@ -199,7 +202,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             type="text"
             value={formData.sku}
             onChange={(e) => handleInputChange('sku', e.target.value)}
-            placeholder="Product SKU"
+            placeholder={t('productSKU')}
           />
         </div>
 
@@ -223,7 +226,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
         <label className="block text-sm font-medium text-gray-900 mb-4 flex items-center gap-2">
           <ImageIcon className="w-5 h-5 text-blue-600" />
-          Imagen del Producto
+          {t('productImage')}
         </label>
 
         {/* Add Image from Device */}
@@ -238,7 +241,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                     const file = e.target.files?.[0];
                     if (file) {
                       if (file.size > 5 * 1024 * 1024) {
-                        alert(`${file.name} es muy grande. Tamaño máximo: 5MB`);
+                        alert(`${file.name} ${t('fileTooLarge')}`);
                         return;
                       }
                       const reader = new FileReader();
@@ -259,13 +262,13 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   formData.image ? 'text-gray-400 cursor-not-allowed' : 'text-gray-700 hover:bg-gray-50 hover:border-gray-400'
                 }`}>
                   <Upload className="w-4 h-4 mr-2" />
-                  {formData.image ? 'Imagen cargada' : 'Subir imagen desde dispositivo'}
+                  {formData.image ? t('uploadedImage') : t('uploadImageFromDevice')}
                 </span>
               </label>
             </div>
             <p className="text-xs text-gray-600 flex items-start gap-2">
               <span className="text-blue-500 mt-0.5">ℹ</span>
-              <span>Sube una imagen de alta calidad de tu producto. Solo se permite una imagen. Máximo 5MB.</span>
+              <span>{t('uploadHighQualityImage')}</span>
             </p>
           </div>
         </div>
@@ -277,7 +280,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
               <div className="w-32 h-32 bg-gray-100 rounded-lg overflow-hidden">
                 <img
                   src={formData.image}
-                  alt="Product preview"
+                  alt={t('productPreview')}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -290,35 +293,35 @@ export const ProductForm: React.FC<ProductFormProps> = ({
               </button>
             </div>
             <div className="flex-1">
-              <p className="text-sm font-medium text-gray-900 mb-1">Imagen del producto</p>
-              <p className="text-xs text-gray-500">La imagen se mostrará en el menú público</p>
+              <p className="text-sm font-medium text-gray-900 mb-1">{t('productImage')}</p>
+              <p className="text-xs text-gray-500">{t('imageWillShowInMenu')}</p>
             </div>
           </div>
         ) : (
           <div className="bg-white rounded-lg border-2 border-dashed border-gray-300 p-6 text-center">
             <ImageIcon className="w-10 h-10 text-gray-300 mx-auto mb-2" />
-            <p className="text-sm text-gray-500 mb-1">No hay imagen agregada</p>
-            <p className="text-xs text-gray-400">Sube una imagen para mostrar tu producto</p>
+            <p className="text-sm text-gray-500 mb-1">{t('noImageAdded')}</p>
+            <p className="text-xs text-gray-400">{t('uploadImageToShow')}</p>
           </div>
         )}
       </div>
 
       {/* Product Variations */}
-      <div className="bg-gradient-to-br from-blue-50 to-ble-50 rounded-xl p-6 border border-blue-100">
+      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
         <div className="flex items-center justify-between mb-4">
           <label className="block text-sm font-medium text-gray-900 flex items-center gap-2">
             <DollarSign className="w-5 h-5 text-green-600" />
-            Variaciones y Precios *
+            {t('variationsAndPrices')} *
           </label>
           <div className="flex items-center gap-4 text-sm">
             {variations.length > 1 && (
               <>
                 <div className="flex items-center gap-1 bg-white px-3 py-1 rounded-lg shadow-sm">
-                  <span className="text-gray-600">Desde:</span>
+                  <span className="text-gray-600">{t('from')}:</span>
                   <span className="font-bold text-green-700">${getMinPrice().toFixed(2)}</span>
                 </div>
                 <div className="flex items-center gap-1 bg-white px-3 py-1 rounded-lg shadow-sm">
-                  <span className="text-gray-600">Hasta:</span>
+                  <span className="text-gray-600">{t('to')}:</span>
                   <span className="font-bold text-green-700">${getMaxPrice().toFixed(2)}</span>
                 </div>
               </>
@@ -334,7 +337,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             icon={Plus}
             onClick={addVariation}
           >
-            Agregar Variación
+            {t('addVariation')}
           </Button>
         </div>
 
@@ -350,7 +353,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                     type="text"
                     value={variation.name}
                     onChange={(e) => handleVariationChange(index, 'name', e.target.value)}
-                    placeholder="Nombre de la variación (ej: Pequeño, Mediano, Grande)"
+                    placeholder={t('variationNamePlaceholder')}
                   />
                 </div>
                 {variations.length > 1 && (
@@ -367,7 +370,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pl-11">
                 <div>
-                  <label className="block text-xs font-medium text-gray-600 mb-1">Precio *</label>
+                  <label className="block text-xs font-medium text-gray-600 mb-1">{t('priceRequired')} *</label>
                   <div className="relative">
                     <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                     <Input
@@ -383,7 +386,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-gray-600 mb-1">Precio Comparativo</label>
+                  <label className="block text-xs font-medium text-gray-600 mb-1">{t('comparePrice')}</label>
                   <div className="relative">
                     <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                     <Input
@@ -396,7 +399,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                       className="pl-8"
                     />
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">Precio antes del descuento</p>
+                  <p className="text-xs text-gray-500 mt-1">{t('priceBeforeDiscount')}</p>
                 </div>
 
                 <div>
@@ -416,7 +419,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                     {Math.round(((variation.compare_at_price - variation.price) / variation.compare_at_price) * 100)}% OFF
                   </span>
                   <span className="text-gray-600">
-                    Ahorro: <span className="font-medium text-green-600">${(variation.compare_at_price - variation.price).toFixed(2)}</span>
+                    {t('savings')}: <span className="font-medium text-green-600">${(variation.compare_at_price - variation.price).toFixed(2)}</span>
                   </span>
                 </div>
               )}
@@ -429,7 +432,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
       <div>
         <div className="flex items-center justify-between mb-3">
           <label className="block text-sm font-medium text-gray-700">
-            Ingredientes
+            {t('ingredientsLabel')}
           </label>
           <Button
             type="button"
@@ -438,7 +441,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
             icon={Plus}
             onClick={addIngredient}
           >
-            Agregar Ingrediente
+            {t('addIngredient')}
           </Button>
         </div>
         
@@ -451,7 +454,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                     type="text"
                     value={ingredient.name}
                     onChange={(e) => handleIngredientChange(index, 'name', e.target.value)}
-                    placeholder="Nombre del ingrediente"
+                    placeholder={t('ingredientName')}
                   />
                 </div>
                 <div className="flex items-center gap-2">
@@ -461,7 +464,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                     onChange={(e) => handleIngredientChange(index, 'optional', e.target.checked)}
                     className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
-                  <span className="text-sm text-gray-600">Opcional</span>
+                  <span className="text-sm text-gray-600">{t('optionalLabel')}</span>
                 </div>
                 {ingredient.optional && (
                   <div className="w-32">
@@ -494,11 +497,12 @@ export const ProductForm: React.FC<ProductFormProps> = ({
         
         {ingredients.length === 0 && (
           <div className="text-center py-8 border-2 border-dashed border-gray-300 rounded-lg">
-            <p className="text-gray-500 text-sm">No hay ingredientes agregados</p>
-            <p className="text-gray-400 text-xs mt-1">Los ingredientes son opcionales y permiten personalizar el producto</p>
+            <p className="text-gray-500 text-sm">{t('noIngredientsAdded')}</p>
+            <p className="text-gray-400 text-xs mt-1">{t('ingredientsAreOptional')}</p>
           </div>
         )}
       </div>
+
       {/* Form Actions */}
       <div className="flex justify-end gap-3 pt-4 border-t border-gray-200">
         <Button
@@ -513,7 +517,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
           type="submit"
           icon={Save}
         >
-          {product ? 'Actualizar Producto' : 'Crear Producto'}
+          {product ? t('updateProduct') : t('createProduct')}
         </Button>
       </div>
     </form>
