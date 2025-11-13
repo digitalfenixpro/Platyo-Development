@@ -75,6 +75,21 @@ interface Translations {
   emailPlaceholder: string;
   sendRequest: string;
   requestSendError: string;
+
+  // Register Form
+  restaurantNameRequired: string;
+  emailRequired: string;
+  passwordRequired: string;
+  mustAcceptTerms: string;
+  registerError: string;
+  contactEmail: string;
+  restaurantAddress: string;
+  minimumCharacters: string;
+  repeatPassword: string;
+  termsAndConditions: string;
+  ofService: string;
+  createAccount: string;
+  termsModalTitle: string;
   
   // Dashboard
   totalProducts: string;
@@ -438,6 +453,22 @@ const translations: Record<Language, Translations> = {
     emailPlaceholder: 'tu@email.com',
     sendRequest: 'Enviar Solicitud',
     requestSendError: 'Error al enviar la solicitud',
+
+    // Register Form
+    restaurantNameRequired: 'El nombre del restaurante es obligatorio',
+    emailRequired: 'El email es obligatorio',
+    passwordRequired: 'La contraseña es obligatoria',
+    mustAcceptTerms: 'Debes aceptar los términos y condiciones',
+    registerError: 'Error al registrar',
+    contactEmail: 'Email de Contacto',
+    restaurantAddress: 'Dirección del Restaurante',
+    minimumCharacters: 'Mínimo 6 caracteres',
+    repeatPassword: 'Repite tu contraseña',
+    termsAndConditions: 'términos y condiciones',
+    ofService: 'del servicio',
+    createAccount: 'Crear Cuenta',
+    termsModalTitle: 'Términos y Condiciones de Platyo',
+
 
     // Dashboard
     totalProducts: 'Productos',
@@ -1544,6 +1575,22 @@ const translations: Record<Language, Translations> = {
     emailPlaceholder: 'your@email.com',
     sendRequest: 'Send Request',
     requestSendError: 'Error sending the request',
+
+    // Register Form
+    restaurantNameRequired: 'Restaurant name is required',
+    emailRequired: 'Email is required',
+    passwordRequired: 'Password is required',
+    mustAcceptTerms: 'You must accept the terms and conditions',
+    registerError: 'Registration error',
+    contactEmail: 'Contact Email',
+    restaurantAddress: 'Restaurant Address',
+    minimumCharacters: 'Minimum 6 characters',
+    repeatPassword: 'Repeat your password',
+    termsAndConditions: 'terms and conditions',
+    ofService: 'of service',
+    createAccount: 'Create Account',
+    termsModalTitle: 'Platyo Terms and Conditions',
+
 
     // Dashboard
     totalProducts: 'Products',
