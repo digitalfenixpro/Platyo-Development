@@ -558,10 +558,10 @@ export const CategoriesManagement: React.FC = () => {
         isOpen={deleteConfirm.show}
         onClose={() => setDeleteConfirm({ show: false, categoryId: '', categoryName: '' })}
         onConfirm={() => handleDelete(deleteConfirm.categoryId)}
-        title="¿Eliminar categoría?"
-        message="Esta acción eliminará permanentemente la categoría de tu menú. Todos los productos asociados a esta categoría quedarán sin categoría asignada."
-        confirmText="Eliminar categoría"
-        cancelText="Cancelar"
+        title={t('deleteCategoryTitle')}
+        message={t('deleteCategoryMessage')}
+        confirmText={t('deleteCategoryButton')}
+        cancelText={t('cancel')}
         variant="danger"
         itemName={deleteConfirm.categoryName}
       />
