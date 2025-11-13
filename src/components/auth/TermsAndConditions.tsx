@@ -1,202 +1,205 @@
 import React from 'react';
 import { Button } from '../ui/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface TermsAndConditionsProps {
   onAccept?: () => void;
 }
 
 export const TermsAndConditions: React.FC<TermsAndConditionsProps> = ({ onAccept }) => {
+  const { t } = useLanguage();
+
   return (
     <div className="space-y-6">
       <div className="prose prose-sm max-w-none text-gray-700 max-h-[60vh] overflow-y-auto pr-4">
+        {/* Section 1 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">1. Aceptación de los Términos</h3>
-          <p>
-            Al registrarse y utilizar Platyo, usted acepta estar legalmente vinculado por estos Términos y Condiciones.
-            Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestro servicio.
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            1. {t('termsSection1Title')}
+          </h3>
+          <p>{t('termsSection1Content')}</p>
         </section>
 
+        {/* Section 2 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">2. Descripción del Servicio</h3>
-          <p>
-            Platyo es una plataforma de gestión para restaurantes que proporciona herramientas para:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            2. {t('termsSection2Title')}
+          </h3>
+          <p>{t('termsSection2Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Gestión de menú digital y catálogo de productos</li>
-            <li>Sistema de pedidos en línea</li>
-            <li>Administración de clientes y órdenes</li>
-            <li>Análisis y reportes de ventas</li>
-            <li>Gestión de inventario y categorías</li>
+            <li>{t('termsSection2Item1')}</li>
+            <li>{t('termsSection2Item2')}</li>
+            <li>{t('termsSection2Item3')}</li>
+            <li>{t('termsSection2Item4')}</li>
+            <li>{t('termsSection2Item5')}</li>
           </ul>
         </section>
 
+        {/* Section 3 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">3. Registro y Cuenta</h3>
-          <p>
-            Para utilizar Platyo, debe crear una cuenta proporcionando información precisa y completa. Usted es responsable de:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            3. {t('termsSection3Title')}
+          </h3>
+          <p>{t('termsSection3Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Mantener la confidencialidad de su contraseña</li>
-            <li>Todas las actividades que ocurran bajo su cuenta</li>
-            <li>Notificar inmediatamente cualquier uso no autorizado</li>
-            <li>Proporcionar información veraz y actualizada</li>
+            <li>{t('termsSection3Item1')}</li>
+            <li>{t('termsSection3Item2')}</li>
+            <li>{t('termsSection3Item3')}</li>
+            <li>{t('termsSection3Item4')}</li>
           </ul>
         </section>
 
+        {/* Section 4 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">4. Suscripciones y Pagos</h3>
-          <p>
-            Platyo ofrece diferentes planes de suscripción. Al suscribirse, usted acepta:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            4. {t('termsSection4Title')}
+          </h3>
+          <p>{t('termsSection4Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Pagar todas las tarifas asociadas con su plan seleccionado</li>
-            <li>Las renovaciones automáticas según la periodicidad del plan</li>
-            <li>Que los precios pueden cambiar con previo aviso de 30 días</li>
-            <li>La política de reembolso según el plan contratado</li>
+            <li>{t('termsSection4Item1')}</li>
+            <li>{t('termsSection4Item2')}</li>
+            <li>{t('termsSection4Item3')}</li>
+            <li>{t('termsSection4Item4')}</li>
           </ul>
         </section>
 
+        {/* Section 5 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">5. Uso Aceptable</h3>
-          <p>
-            Al usar Platyo, usted se compromete a NO:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            5. {t('termsSection5Title')}
+          </h3>
+          <p>{t('termsSection5Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Violar leyes o regulaciones aplicables</li>
-            <li>Infringir derechos de propiedad intelectual</li>
-            <li>Transmitir contenido ofensivo, ilegal o inapropiado</li>
-            <li>Intentar acceder sin autorización a sistemas o datos</li>
-            <li>Usar el servicio para actividades fraudulentas</li>
-            <li>Interferir con el funcionamiento del servicio</li>
+            <li>{t('termsSection5Item1')}</li>
+            <li>{t('termsSection5Item2')}</li>
+            <li>{t('termsSection5Item3')}</li>
+            <li>{t('termsSection5Item4')}</li>
+            <li>{t('termsSection5Item5')}</li>
+            <li>{t('termsSection5Item6')}</li>
           </ul>
         </section>
 
+        {/* Section 6 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">6. Propiedad Intelectual</h3>
-          <p>
-            Todo el contenido, características y funcionalidad de Platyo son propiedad exclusiva de la empresa y están
-            protegidos por leyes de derechos de autor, marcas registradas y otras leyes de propiedad intelectual.
-          </p>
-          <p className="mt-2">
-            Usted conserva todos los derechos sobre el contenido que cargue (menús, productos, imágenes), pero nos otorga
-            una licencia para usarlo en la prestación del servicio.
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            6. {t('termsSection6Title')}
+          </h3>
+          <p>{t('termsSection6Content1')}</p>
+          <p className="mt-2">{t('termsSection6Content2')}</p>
         </section>
 
+        {/* Section 7 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">7. Privacidad y Protección de Datos</h3>
-          <p>
-            Recopilamos y procesamos datos personales de acuerdo con nuestra Política de Privacidad y cumpliendo con:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            7. {t('termsSection7Title')}
+          </h3>
+          <p>{t('termsSection7Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Ley 1581 de 2012 de Protección de Datos Personales en Colombia</li>
-            <li>Decreto 1377 de 2013</li>
-            <li>Principios de legalidad, finalidad, libertad, veracidad, transparencia, acceso y seguridad</li>
+            <li>{t('termsSection7Item1')}</li>
+            <li>{t('termsSection7Item2')}</li>
+            <li>{t('termsSection7Item3')}</li>
           </ul>
-          <p className="mt-2">
-            Sus derechos incluyen: conocer, actualizar, rectificar y suprimir sus datos personales, así como revocar
-            la autorización otorgada.
-          </p>
+          <p className="mt-2">{t('termsSection7Content2')}</p>
         </section>
 
+        {/* Section 8 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">8. Limitación de Responsabilidad</h3>
-          <p>
-            Platyo se proporciona "tal cual" y "según disponibilidad". No garantizamos que:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            8. {t('termsSection8Title')}
+          </h3>
+          <p>{t('termsSection8Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>El servicio será ininterrumpido o libre de errores</li>
-            <li>Los resultados obtenidos serán exactos o confiables</li>
-            <li>Todos los errores serán corregidos</li>
+            <li>{t('termsSection8Item1')}</li>
+            <li>{t('termsSection8Item2')}</li>
+            <li>{t('termsSection8Item3')}</li>
           </ul>
-          <p className="mt-2">
-            No seremos responsables por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo
-            pérdida de beneficios, datos, uso o buena voluntad.
-          </p>
+          <p className="mt-2">{t('termsSection8Content2')}</p>
         </section>
 
+        {/* Section 9 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">9. Indemnización</h3>
-          <p>
-            Usted acepta indemnizar y mantener indemne a Platyo, sus afiliados, directores, empleados y agentes de
-            cualquier reclamación, daño, obligación, pérdida, responsabilidad, costo o deuda que surja de:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            9. {t('termsSection9Title')}
+          </h3>
+          <p>{t('termsSection9Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Su uso del servicio</li>
-            <li>Violación de estos términos</li>
-            <li>Violación de derechos de terceros</li>
-            <li>Contenido que usted publique o comparta</li>
+            <li>{t('termsSection9Item1')}</li>
+            <li>{t('termsSection9Item2')}</li>
+            <li>{t('termsSection9Item3')}</li>
+            <li>{t('termsSection9Item4')}</li>
           </ul>
         </section>
 
+        {/* Section 10 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">10. Terminación del Servicio</h3>
-          <p>
-            Podemos suspender o terminar su acceso al servicio inmediatamente, sin previo aviso, por cualquier motivo,
-            incluyendo:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            10. {t('termsSection10Title')}
+          </h3>
+          <p>{t('termsSection10Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Violación de estos términos</li>
-            <li>Solicitud de autoridades legales</li>
-            <li>Discontinuación del servicio</li>
-            <li>Actividad fraudulenta o ilegal</li>
+            <li>{t('termsSection10Item1')}</li>
+            <li>{t('termsSection10Item2')}</li>
+            <li>{t('termsSection10Item3')}</li>
+            <li>{t('termsSection10Item4')}</li>
           </ul>
         </section>
 
+        {/* Section 11 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">11. Modificaciones</h3>
-          <p>
-            Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en
-            vigor inmediatamente después de su publicación. Su uso continuado del servicio constituye su aceptación de
-            los términos modificados.
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            11. {t('termsSection11Title')}
+          </h3>
+          <p>{t('termsSection11Content')}</p>
         </section>
 
+        {/* Section 12 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">12. Ley Aplicable y Jurisdicción</h3>
-          <p>
-            Estos términos se rigen por las leyes de la República de Colombia. Cualquier disputa será resuelta en los
-            tribunales competentes de Colombia, renunciando expresamente a cualquier otro fuero que pudiera corresponder.
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            12. {t('termsSection12Title')}
+          </h3>
+          <p>{t('termsSection12Content')}</p>
         </section>
 
+        {/* Section 13 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">13. Disposiciones Generales</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            13. {t('termsSection13Title')}
+          </h3>
           <ul className="list-disc pl-6 space-y-1">
             <li>
-              <strong>Divisibilidad:</strong> Si alguna disposición es considerada inválida, las demás permanecerán vigentes
+              <strong>{t('termsSection13Item1Label')}:</strong> {t('termsSection13Item1')}
             </li>
             <li>
-              <strong>Renuncia:</strong> La falta de ejercicio de un derecho no constituye renuncia al mismo
+              <strong>{t('termsSection13Item2Label')}:</strong> {t('termsSection13Item2')}
             </li>
             <li>
-              <strong>Acuerdo Completo:</strong> Estos términos constituyen el acuerdo completo entre las partes
+              <strong>{t('termsSection13Item3Label')}:</strong> {t('termsSection13Item3')}
             </li>
             <li>
-              <strong>Cesión:</strong> No puede ceder sus derechos sin nuestro consentimiento previo por escrito
+              <strong>{t('termsSection13Item4Label')}:</strong> {t('termsSection13Item4')}
             </li>
           </ul>
         </section>
 
+        {/* Section 14 */}
         <section>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">14. Contacto</h3>
-          <p>
-            Para preguntas sobre estos términos, puede contactarnos a través de:
-          </p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            14. {t('termsSection14Title')}
+          </h3>
+          <p>{t('termsSection14Content')}</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>Email: admin@digitalfenixpro.com</li>
-            <li>Dentro de la plataforma mediante el sistema de tickets de soporte</li>
+            <li>{t('termsSection14Item1')}</li>
+            <li>{t('termsSection14Item2')}</li>
           </ul>
         </section>
 
+        {/* Footer */}
         <section className="bg-gray-50 p-4 rounded-lg mt-6">
           <p className="text-sm text-gray-600 italic">
-            <strong>Última actualización:</strong> Noviembre 2025
+            <strong>{t('termsLastUpdate')}:</strong> {t('termsLastUpdateDate')}
           </p>
           <p className="text-sm text-gray-600 mt-2">
-            Al hacer clic en "Aceptar" o al usar el servicio, usted reconoce que ha leído, entendido y acepta estar
-            legalmente vinculado por estos Términos y Condiciones.
+            {t('termsAcceptDisclaimer')}
           </p>
         </section>
       </div>
@@ -207,7 +210,7 @@ export const TermsAndConditions: React.FC<TermsAndConditionsProps> = ({ onAccept
             onClick={onAccept}
             className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700"
           >
-            Aceptar Términos y Condiciones
+            {t('acceptTermsAndConditionsButton')}
           </Button>
         </div>
       )}
