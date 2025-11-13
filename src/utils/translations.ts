@@ -2703,7 +2703,7 @@ const translations: Record<Language, Translations> = {
     customer: 'Customer',
     orderType: 'Type',
     pickup: 'Pickup',
-    delivery: 'Delivery',
+    Delivery: 'Delivery',
     table: 'Table',
     completedToday: 'Completed Today',
     inPreparation: 'In Preparation',
