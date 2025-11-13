@@ -143,7 +143,7 @@ export const CategoriesManagement: React.FC = () => {
     showToast(
       'info',
       t('categoryDeleted'),
-      'The category has been removed from your menu.',
+       t('messageCategoryDeleted'),
       4000
     );
   };
