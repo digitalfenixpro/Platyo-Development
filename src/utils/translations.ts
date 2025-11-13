@@ -70,6 +70,7 @@ interface Translations {
   requestInfo: string;
   requestResponse: string;
   
+  
   // Dashboard
   totalProducts: string;
   activeProducts: string;
@@ -424,7 +425,7 @@ const translations: Record<Language, Translations> = {
     statOrdersProcessed: 'Pedidos Procesados',
     statSatisfaction: 'Satisfacción',
     requestSent: '¡Solicitud Enviada!',
-    requestInfo: 'Hemos recibido tu solicitud de recuperación de contraseña.'
+    requestInfo: 'Hemos recibido tu solicitud de recuperación de contraseña.',
     requestResponse: 'Nuestro equipo se contactará contigo al email',
 
     // Dashboard
@@ -1524,7 +1525,7 @@ const translations: Record<Language, Translations> = {
     statOrdersProcessed: 'Orders Processed',
     statSatisfaction: 'Satisfaction',
     requestSent: '¡Solicitud Enviada!',
-    requestInfo: 'We have received your password recovery request.'
+    requestInfo: 'We have received your password recovery request.',
     requestResponse: 'Our team will contact you by email.',
 
     // Dashboard
