@@ -2133,7 +2133,7 @@ const translations: Record<Language, Translations> = {
     filterSummaryOrderPlural: "pedidos",
     filterSummaryOrderSingular: "pedido",
     filterSummaryMatchingFilters: "que coinciden con los filtros.",
-    filterSummaryInTotal: "en total.",
+    filterSummaryInTotal: " en total.",
     analyticsLastUpdated: "Última actualización",
     statTotalOrders: "Total de Pedidos",
     statCompletedSubtitle: "completados",
