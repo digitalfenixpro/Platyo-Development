@@ -1128,19 +1128,20 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
       onChange={handleImportFile}
       className="hidden"
     />
-    <Button
-      variant="outline"
-      size="sm"
-      icon={Filter}
-      onClick={() => setShowFilters(!showFilters)}
-      className={
-        showFilters
-          ? 'bg-gray-700 text-white'
-          : 'bg-gray-600 text-white  transition-colors'
-      }
-    >
-      {t('filtersAndSearch')}
-    </Button>
+<Button
+  variant="outline"
+  size="sm"
+  icon={Filter}
+  onClick={() => setShowFilters(!showFilters)}
+  className={
+    (showFilters
+      ? 'bg-gray-700 text-white'
+      : 'bg-gray-600 text-white') +
+    ' border-gray-600 hover:bg-gray-600 hover:text-white hover:border-gray-600'
+  }
+>
+  {t('filtersAndSearch')}
+</Button>
     <Button icon={UserPlus} onClick={() => setShowCreateModal(true)}>
       {t('newCustomer')}
     </Button>
