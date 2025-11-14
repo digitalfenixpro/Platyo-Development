@@ -1136,7 +1136,6 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
       className={
         showFilters
           ? 'bg-gray-700 text-white'
-          : 'bg-gray-600 text-white hover:bg-gray-700 transition-colors'
       }
     >
       {t('filtersAndSearch')}
