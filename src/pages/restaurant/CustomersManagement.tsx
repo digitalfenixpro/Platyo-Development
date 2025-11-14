@@ -633,7 +633,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
   const getOrderTypeBadge = (orderType: string) => {
     switch (orderType) {
       case 'delivery':
-        return <Badge variant="info" size="sm">{t('delivery')}</Badge>;
+        return <Badge variant="info" size="sm">{t('Delivery')}</Badge>;
       case 'pickup':
         return <Badge variant="gray" size="sm">{t('pickup')}</Badge>;
       case 'table':
