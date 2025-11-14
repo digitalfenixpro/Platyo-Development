@@ -890,7 +890,7 @@ export const RestaurantsManagement: React.FC = () => {
               type="email"
               value={newRestaurantForm.email}
               onChange={(e) => setNewRestaurantForm({ ...newRestaurantForm, email: e.target.value })}
-              placeholder="contacto@restaurante.com"
+              placeholder={t('emailPlaceholder')}
               required
             />
           </div>
