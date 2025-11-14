@@ -752,7 +752,7 @@ interface Translations {
   addMoreCategories: string;
 
   // Super Admin
-  superAdminPanel:a string;
+  superAdminPanel: string;
   superAdminDashboard: string;
   restaurantsManagement: string;
   usersManagement: string;
