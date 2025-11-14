@@ -418,30 +418,16 @@ export const CustomersManagement: React.FC = () => {
         showToast('info', t('vipRemoved'), `${selectedCustomers.size} ${t('customerPlural', { count: selectedCustomers.size })} ${t('noLongerVip', { count: selectedCustomers.size })}`, 4000);
         break;
         
-case 'delete':
-  // Abrir ventana emergente estilo "RemoveVIP"
-  setConfirmDialog({
-    show: true,
-    title: t('confirmDeleteMultiple'),
-    message: `${selectedCustomers.size} ${t('customerPlural', { count: selectedCustomers.size })}. ${t('warningDeleteAction')}`,
-    confirmText: t('delete'),
-    cancelText: t('cancel'),
-    onConfirm: () => {
-      // Ejecutar eliminación si confirman
-      selectedCustomersList.forEach(customer => {
-        deleteCustomerData(customer);
-      });
-
-      showToast(
-        'info',
-        t('customersDeleted'),
-        `${selectedCustomers.size} ${t('customerPlural', { count: selectedCustomers.size })} ${t('deletedSuccessfully', { count: selectedCustomers.size })}`,
-        5000
-      );
-    }
+      case 'delete':
+       // Eliminar todos los seleccionados
+if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${selectedCustomers.size !== 1 ? 's' : ''}? ${t('warningDeleteAction')}`)) {
+  selectedCustomersList.forEach(customer => {
+    deleteCustomerData(customer);
   });
-
-  break;
+          
+          showToast('info', t('customersDeleted'), `${selectedCustomers.size} ${t('customerPlural', { count: selectedCustomers.size })} ${t('deletedSuccessfully', { count: selectedCustomers.size })}`, 5000);
+        }
+        break;
     }
     
     setSelectedCustomers(new Set());
