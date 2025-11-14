@@ -1501,7 +1501,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
               label={t('phoneRequired')}
               value={editForm.phone}
               onChange={(e) => setEditForm(prev => ({ ...prev, phone: e.target.value }))}
-              placeholder={t(phonePlaceholder)}
+              placeholder={t('phonePlaceholder')}
             />
           </div>
           
@@ -1510,7 +1510,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
             type="email"
             value={editForm.email}
             onChange={(e) => setEditForm(prev => ({ ...prev, email: e.target.value }))}
-            placeholder={t(emailPlaceholder)}
+            placeholder={t('emailPlaceholder')}
           />
           
           <Input
@@ -1603,7 +1603,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
               label={t('phoneRequired')}
               value={createForm.phone}
               onChange={(e) => setCreateForm(prev => ({ ...prev, phone: e.target.value }))}
-              placeholder={t(phonePlaceholder)}
+              placeholder={t('phonePlaceholder')}
             />
           </div>
 
@@ -1612,7 +1612,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
             type="email"
             value={createForm.email}
             onChange={(e) => setCreateForm(prev => ({ ...prev, email: e.target.value }))}
-            placeholder={t(emailPlaceholder)}
+            placeholder={t('emailPlaceholder')}
           />
 
           <Input
