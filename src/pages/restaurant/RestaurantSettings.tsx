@@ -565,7 +565,7 @@ Fecha: ${new Date().toLocaleString()}
                         value={formData.email}
                         onChange={(e) => updateFormData('email', e.target.value)}
                         className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all"
-                        placeholder="contacto@restaurante.com"
+                        placeholder={t('emailPlaceholder')}
                       />
                     </div>
                   </div>
