@@ -599,6 +599,7 @@ interface Translations {
   segment: string;
   lastOrder: string;
   newCustomer: string;
+  removeVip: string;
   regular: string;
   frequent: string;
   vip: string;
@@ -1607,6 +1608,7 @@ const translations: Record<Language, Translations> = {
     selectActionToPerform: 'Selecciona la acción a realizar:',
     markAsVip: 'Marcar como VIP',
     addVipStatusToSelected: 'Agregar estado VIP a todos los clientes seleccionados',
+    removeVip: 'Eliminar de VIP',
     removeVipStatusFromSelected: 'Quitar estado VIP de todos los clientes seleccionados',
     permanentlyDeleteAllCustomersAndOrders: 'Eliminar permanentemente todos los clientes y sus pedidos',
     importCustomersFromCSV: 'Importar Clientes desde CSV',
@@ -3151,6 +3153,7 @@ const translations: Record<Language, Translations> = {
     selectActionToPerform: 'Select the action to perform:',
     markAsVip: 'Mark as VIP',
     addVipStatusToSelected: 'Add VIP status to all selected customers',
+    removeVip: 'Remove from VIP',
     removeVipStatusFromSelected: 'Remove VIP status from all selected customers',
     permanentlyDeleteAllCustomersAndOrders: 'Permanently delete all customers and their orders',
     importCustomersFromCSV: 'Import Customers from CSV',
