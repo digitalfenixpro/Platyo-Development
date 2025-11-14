@@ -1746,7 +1746,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
             <div className="flex items-center">
               <Users className="w-5 h-5 text-blue-600 mr-2" />
               <span className="text-sm font-medium text-blue-800">
-                {selectedCustomers.size} {t('customerPlural', { count: selectedCustomers.size })} {t('selectedPlural', { count: selectedCustomers.size })}
+                {selectedCustomers.size} {t('customerPlural', { count: selectedCustomers.size })} 
               </span>
             </div>
           </div>
