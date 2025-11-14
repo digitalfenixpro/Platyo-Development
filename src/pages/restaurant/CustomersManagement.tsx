@@ -1699,7 +1699,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
                 <ul className="text-sm text-red-800 space-y-1">
                   <li>• {t('allCustomerInfo')}</li>
-                  <li>• {customerToDelete.totalOrders} {t('orderPlural', { count: customerToDelete.totalOrders })} {t('associated', { count: customerToDelete.totalOrders })}</li>
+                  <li>• {customerToDelete.totalOrders} {t('orderPlural', { count: customerToDelete.totalOrders })</li>
                   <li>• {t('purchaseHistory')} ({formatCurrency(customerToDelete.totalSpent, currency)})</li>
                   {customerToDelete.isVip && <li>• {t('customerVipStatus')}</li>}
                 </ul>
