@@ -750,7 +750,7 @@ interface Translations {
   upgradeSubscription: string;
   addMoreProducts: string;
   addMoreCategories: string;
-  
+
   // Super Admin
   superAdminPanel: string;
   superAdminDashboard: string;
