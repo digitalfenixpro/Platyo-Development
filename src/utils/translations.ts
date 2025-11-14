@@ -28,7 +28,7 @@ interface Translations {
   view: string;
   print: string;
   download: string;
-  active: string;
+  active: string;a
   inactive: string;
   pending: string;
   confirmed: string;
