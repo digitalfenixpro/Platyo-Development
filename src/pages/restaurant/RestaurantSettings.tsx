@@ -324,8 +324,7 @@ Fecha: ${new Date().toLocaleString()}
   const tabs = [
     { id: 'general', name: 'General', icon: Globe },
     { id: 'hours', name: 'Horarios', icon: Clock },
-    { id: 'social', name: 'Redes Socia
-      les', icon: Globe },
+    { id: 'social', name: 'Redes Sociales', icon: Globe },
     { id: 'delivery', name: 'Delivery', icon: Truck },
     { id: 'tables', name: 'Pedidos en Mesa', icon: QrCode },
     { id: 'promo', name: 'Promocional', icon: Megaphone },
