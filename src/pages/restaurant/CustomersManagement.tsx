@@ -1510,7 +1510,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
             type="email"
             value={editForm.email}
             onChange={(e) => setEditForm(prev => ({ ...prev, email: e.target.value }))}
-            placeholder="cliente@email.com"
+            placeholder={t(emailPlaceholder)}
           />
           
           <Input
@@ -1612,7 +1612,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
             type="email"
             value={createForm.email}
             onChange={(e) => setCreateForm(prev => ({ ...prev, email: e.target.value }))}
-            placeholder="cliente@email.com"
+            placeholder={t(emailPlaceholder)}
           />
 
           <Input
