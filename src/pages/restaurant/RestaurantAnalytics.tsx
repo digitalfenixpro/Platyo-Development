@@ -449,11 +449,7 @@ export const RestaurantAnalytics: React.FC = () => {
   size="sm"
   icon={Filter}
   onClick={() => setShowFilters(!showFilters)}
-  className={
-    showFilters
-      ? 'bg-gray-700 text-white border-gray-700'
-      : 'bg-gray-600 text-white border-gray-600'
-  }
+  className="bg-gray-600 text-white border-gray-600"
 >
   {t('btnAdvancedFilters')}
   {getActiveFiltersCount() > 0 && ` (${getActiveFiltersCount()})`}
