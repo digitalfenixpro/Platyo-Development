@@ -95,7 +95,7 @@ export const RestaurantSettings: React.FC = () => {
             enabled: false,
             banner_image: '',
             promo_text: '',
-            cta_text: t('view_offers'),
+            cta_text: 'Ver Ofertas',
             cta_link: '',
           },
           billing: restaurant.settings.billing || {
@@ -154,8 +154,8 @@ export const RestaurantSettings: React.FC = () => {
     } catch (error) {
       showToast(
         'error',
-        t('error_title'),
-        t('save_error_message'),
+        'Error',
+        'Hubo un problema al guardar la configuración.',
         4000
       );
     } finally {
@@ -265,8 +265,8 @@ Fecha: ${new Date().toLocaleString()}
       console.error('Error sending support request:', error);
       showToast(
         'error',
-        t('error_title'),
-        t('support_send_error_message'),
+        'Error',
+        'Hubo un problema al enviar la solicitud de soporte.',
         4000
       );
     } finally {
@@ -290,7 +290,7 @@ Fecha: ${new Date().toLocaleString()}
       case 'closed':
         return <Badge variant="gray">{t('status_closed_simple')}</Badge>;
       default:
-        return <Badge variant="gray">{t('status_unknown')}</Badge>;
+        return <Badge variant="gray">Desconocido</Badge>;
     }
   };
 
@@ -311,26 +311,26 @@ Fecha: ${new Date().toLocaleString()}
 
   const getCategoryName = (category: string) => {
     const categories: { [key: string]: string } = {
-      general: t('category_general_name'),
-      technical: t('category_technical_name'),
-      billing: t('category_billing_name'),
-      feature: t('category_feature_name'),
-      account: t('category_account_name'),
-      other: t('category_other_name')
+      general: 'Consulta General',
+      technical: 'Problema Técnico',
+      billing: 'Facturación',
+      feature: 'Solicitud de Función',
+      account: 'Cuenta y Configuración',
+      other: 'Otro'
     };
     return categories[category] || category;
   };
 
   const tabs = [
-    { id: 'general', name: t('tab_general'), icon: Globe },
-    { id: 'hours', name: t('tab_hours'), icon: Clock },
-    { id: 'social', name: t('tab_social'), icon: Globe },
-    { id: 'delivery', name: t('tab_delivery'), icon: Truck },
-    { id: 'tables', name: t('tab_table_orders'), icon: QrCode },
-    { id: 'promo', name: t('tab_promo'), icon: Megaphone },
-    { id: 'theme', name: t('tab_theme'), icon: Palette },
-    { id: 'billing', name: t('tab_billing'), icon: FileText },
-    { id: 'support', name: t('tab_support'), icon: HelpCircle },
+    { id: 'general', name: 'General', icon: Globe },
+    { id: 'hours', name: 'Horarios', icon: Clock },
+    { id: 'social', name: 'Redes Sociales', icon: Globe },
+    { id: 'delivery', name: 'Delivery', icon: Truck },
+    { id: 'tables', name: 'Pedidos en Mesa', icon: QrCode },
+    { id: 'promo', name: 'Promocional', icon: Megaphone },
+    { id: 'theme', name: 'Tema', icon: Palette },
+    { id: 'billing', name: 'Facturación', icon: FileText },
+    { id: 'support', name: 'Soporte', icon: HelpCircle },
   ];
 
   if (!formData) {
@@ -347,14 +347,14 @@ Fecha: ${new Date().toLocaleString()}
   return (
     <div className="p-4 md:p-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-4 md:mb-6">
-        <h1 className="text-xl md:text-2xl font-bold text-gray-900">{t('settings_title')}</h1>
+        <h1 className="text-xl md:text-2xl font-bold text-gray-900">{t('settings')}</h1>
         <Button
           onClick={handleSave}
           loading={loading}
           icon={Save}
           className="w-full sm:w-auto"
         >
-          {t('save_button')}
+          {t('save')} {t('settings')}
         </Button>
       </div>
 
@@ -533,7 +533,7 @@ Fecha: ${new Date().toLocaleString()}
                       <Store className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-base md:text-lg font-bold text-gray-900">{t('restaurant_info_title')}</h3>
+                      <h3 className="text-base md:text-lg font-bold text-gray-900">{t('restaurantInfo')}</h3>
                       <p className="text-sm text-gray-600">{t('contact_location_subtitle')}</p>
                     </div>
                   </div>
@@ -544,7 +544,7 @@ Fecha: ${new Date().toLocaleString()}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                         <Building className="w-4 h-4 text-gray-500" />
-                        {t('restaurant_name_label')} <span className="text-red-500">*</span>
+                        {t('restaurantName')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -558,14 +558,14 @@ Fecha: ${new Date().toLocaleString()}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                         <Mail className="w-4 h-4 text-gray-500" />
-                        {t('email_label')}
+                        {t('email')}
                       </label>
                       <input
                         type="email"
                         value={formData.email}
                         onChange={(e) => updateFormData('email', e.target.value)}
                         className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all"
-                        placeholder={t('email_placeholder')}
+                        placeholder="contacto@restaurante.com"
                       />
                     </div>
                   </div>
@@ -574,7 +574,7 @@ Fecha: ${new Date().toLocaleString()}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                         <Phone className="w-4 h-4 text-gray-500" />
-                        {t('phone_label')} <span className="text-red-500">*</span>
+                        {t('phone')} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="tel"
@@ -594,7 +594,7 @@ Fecha: ${new Date().toLocaleString()}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                         <MapPin className="w-4 h-4 text-gray-500" />
-                        {t('address_label')}
+                        {t('address')}
                       </label>
                       <input
                         type="text"
@@ -609,7 +609,7 @@ Fecha: ${new Date().toLocaleString()}
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                       <FileText className="w-4 h-4 text-gray-500" />
-                      {t('description_label')}
+                      {t('description')}
                     </label>
                     <textarea
                       value={formData.description || ''}
@@ -631,7 +631,7 @@ Fecha: ${new Date().toLocaleString()}
                       <Globe className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-base md:text-lg font-bold text-gray-900">{t('regional_settings_title')}</h3>
+                      <h3 className="text-base md:text-lg font-bold text-gray-900">{t('regionalSettings')}</h3>
                       <p className="text-sm text-gray-600">{t('language_currency_subtitle')}</p>
                     </div>
                   </div>
@@ -641,7 +641,7 @@ Fecha: ${new Date().toLocaleString()}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
                     <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg md:rounded-xl p-4 md:p-5 border-2 border-purple-100">
                       <label className="block text-sm font-semibold text-gray-900 mb-3">
-                        {t('language_label')}
+                        {t('language')}
                       </label>
                       <select
                         value={formData.settings.language || 'es'}
@@ -662,7 +662,7 @@ Fecha: ${new Date().toLocaleString()}
                     <div className="bg-gradient-to-br from-purple-50 to-purple-50 rounded-xl p-5 border-2 border-purple-100">
                       <label className="block text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
                         <DollarSign className="w-4 h-4" />
-                        {t('currency_label')}
+                        {t('currency')}
                       </label>
                       <select
                         value={formData.settings.currency || 'COP'}
@@ -693,15 +693,15 @@ Fecha: ${new Date().toLocaleString()}
   </div>
 
   <div className="flex-1 w-full">
-    <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2">{t('public_menu_title')}</h3>
+    <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2">Menú Público</h3>
     <p className="text-sm text-gray-600 mb-4">
-      {t('public_menu_description')}
+      Comparte este enlace con tus clientes para que puedan ver tu menú y realizar pedidos
     </p>
 
     <div className="bg-white rounded-lg p-4 border border-green-200 w-full">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex-1 min-w-0">
-          <p className="text-xs text-gray-500 mb-1">{t('your_custom_url_label')}</p>
+          <p className="text-xs text-gray-500 mb-1">Tu URL personalizada:</p>
           <p className="text-sm font-mono text-gray-900 truncate">
             {window.location.origin}/{formData.domain}
           </p>
@@ -711,11 +711,11 @@ Fecha: ${new Date().toLocaleString()}
           <button
             onClick={() => {
               navigator.clipboard.writeText(`${window.location.origin}/${formData.domain}`);
-              showToast('success', t('copied_title'), t('url_copied_success'), 2000);
+              showToast('success', 'Copiado', 'URL copiada al portapapeles', 2000);
             }}
             className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors w-full sm:w-auto"
           >
-            {t('copy_button')}
+            Copiar
           </button>
 
           <a
@@ -725,7 +725,7 @@ Fecha: ${new Date().toLocaleString()}
             className="inline-flex items-center justify-center px-3 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors w-full sm:w-auto"
           >
             <Eye className="w-4 h-4 mr-2" />
-            {t('view_menu_button')}
+            Ver Menú
           </a>
         </div>
       </div>
@@ -744,7 +744,7 @@ Fecha: ${new Date().toLocaleString()}
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold text-gray-900">{t('opening_hours_title')}</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-gray-900">{t('businessHours')}</h3>
                   <p className="text-sm text-gray-600">{t('config_hours_subtitle')}</p>
                 </div>
               </div>
@@ -859,7 +859,7 @@ Fecha: ${new Date().toLocaleString()}
                   <Globe className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold text-gray-900">{t('social_media_title')}</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-gray-900">{t('socialMedia')}</h3>
                   <p className="text-sm text-gray-600">
                     {t('social_media_subtitle')}
                   </p>
@@ -869,7 +869,7 @@ Fecha: ${new Date().toLocaleString()}
               <div className="bg-white rounded-lg md:rounded-xl p-4 md:p-6 border border-gray-200 shadow-sm">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">{t('social_facebook')}</label>
+                    <label className="block text-sm font-medium text-gray-700">Facebook</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
@@ -887,7 +887,7 @@ Fecha: ${new Date().toLocaleString()}
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">{t('social_instagram')}</label>
+                    <label className="block text-sm font-medium text-gray-700">Instagram</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
@@ -905,7 +905,7 @@ Fecha: ${new Date().toLocaleString()}
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">{t('social_twitter')}</label>
+                    <label className="block text-sm font-medium text-gray-700">Twitter / X</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
@@ -923,7 +923,7 @@ Fecha: ${new Date().toLocaleString()}
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">{t('social_whatsapp')}</label>
+                    <label className="block text-sm font-medium text-gray-700">WhatsApp</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
@@ -934,7 +934,7 @@ Fecha: ${new Date().toLocaleString()}
                         type="tel"
                         value={formData.settings.social_media?.whatsapp || ''}
                         onChange={(e) => updateFormData('settings.social_media.whatsapp', e.target.value)}
-                        placeholder={t('whatsapp_placeholder')}
+                        placeholder="+1234567890"
                         className="pl-10 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                       />
                     </div>
@@ -1026,12 +1026,12 @@ Fecha: ${new Date().toLocaleString()}
                                 newTiers[index] = { ...tier, name: e.target.value };
                                 updateFormData('settings.delivery.pricing_tiers', newTiers);
                               }}
-                              placeholder={t('rate_name_placeholder')}
+                              placeholder="Estándar, Express, Premium..."
                             />
                           </div>
                           <div className="w-32">
                             <Input
-                              label={t('min_order_label')}
+                              label="Pedido Mínimo ($)"
                               type="number"
                               step="0.01"
                               value={tier.min_order_amount || 0}
@@ -1044,7 +1044,7 @@ Fecha: ${new Date().toLocaleString()}
                           </div>
                           <div className="w-32">
                             <Input
-                              label={t('max_order_label')}
+                              label="Pedido Máximo ($)"
                               type="number"
                               step="0.01"
                               value={tier.max_order_amount || 0}
@@ -1057,7 +1057,7 @@ Fecha: ${new Date().toLocaleString()}
                           </div>
                           <div className="w-32">
                             <Input
-                              label={t('shipping_cost_label')}
+                              label="Costo ($)"
                               type="number"
                               step="0.01"
                               value={tier.cost || 0}
@@ -1077,7 +1077,7 @@ Fecha: ${new Date().toLocaleString()}
                           }}
                           className="bg-red-600 text-white hover:bg-red-700 transition-colors"
                         >
-                          {t('delete')}
+                          Eliminar
                         </Button>
                         </div>
                       ))}
@@ -1095,7 +1095,7 @@ Fecha: ${new Date().toLocaleString()}
                           updateFormData('settings.delivery.pricing_tiers', newTiers);
                         }}
                       >
-                        {t('add_rate_button')}
+                        Agregar Tarifa de Delivery
                       </Button>
                     </div>
                   </div>
@@ -1107,7 +1107,7 @@ Fecha: ${new Date().toLocaleString()}
           {activeTab === 'tables' && (
             <div className="space-y-4 md:space-y-6">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <h3 className="text-base md:text-lg font-medium text-gray-900">{t('table_settings_title')}</h3>
+                <h3 className="text-base md:text-lg font-medium text-gray-900">Pedidos en Mesa</h3>
                 <div className="flex items-center gap-2">
                   <input
                     type="checkbox"
@@ -1116,7 +1116,7 @@ Fecha: ${new Date().toLocaleString()}
                     className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
                   <span className="text-sm font-medium text-gray-700">
-                    {formData.settings.table_orders?.enabled ? t('enabled') : t('disabled')}
+                    {formData.settings.table_orders?.enabled ? 'Habilitado' : 'Deshabilitado'}
                   </span>
                 </div>
               </div>
@@ -1125,7 +1125,7 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="space-y-4 md:space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <Input
-                      label={t('number_of_tables_label')}
+                      label="Número de Mesas"
                       type="number"
                       min="1"
                       max="100"
@@ -1135,9 +1135,9 @@ Fecha: ${new Date().toLocaleString()}
                   </div>
                   
                   <div>
-                    <h4 className="text-md font-medium text-gray-900 mb-4">{t('qr_codes_title')}</h4>
+                    <h4 className="text-md font-medium text-gray-900 mb-4">Códigos QR de Mesas</h4>
                     <p className="text-sm text-gray-600 mb-4">
-                      {t('qr_codes_description')}
+                      Los códigos QR permiten a los clientes acceder directamente al menú desde su mesa.
                     </p>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
@@ -1151,18 +1151,18 @@ Fecha: ${new Date().toLocaleString()}
                             <div className="flex items-center justify-center mb-2">
                               <QrCode className="w-5 h-5 text-blue-600 mr-2" />
                               <span className="text-sm font-medium text-blue-800">
-                                {t('table_label')} {tableNum}
+                                Mesa {tableNum}
                               </span>
                             </div>
                             <div className="flex-1 flex items-center justify-center mb-4">
                               <img 
                                 src={qrImageUrl} 
-                                alt={`QR ${t('table_label')} ${tableNum}`}
+                                alt={`QR Mesa ${tableNum}`}
                                 className="w-48 h-48 object-contain"
                               />
                             </div>
                             <div className="mt-auto">
-                              <p className="text-sm font-medium text-gray-900 mb-3">{t('table_label')} {tableNum}</p>
+                              <p className="text-sm font-medium text-gray-900 mb-3">Mesa {tableNum}</p>
                               <div className="flex flex-col gap-2">
                               <Button
                                 size="sm"
@@ -1177,7 +1177,7 @@ Fecha: ${new Date().toLocaleString()}
                                     printWindow.document.write(`
                                       <html>
                                         <head>
-                                          <title>QR ${t('table_label')} ${tableNum}</title>
+                                          <title>QR Mesa ${tableNum}</title>
                                           <style>
                                             body { 
                                               margin: 0;
@@ -1203,7 +1203,7 @@ Fecha: ${new Date().toLocaleString()}
                                           </style>
                                         </head>
                                         <body>
-                                          <img src="${qrImageUrl}" alt="QR ${t('table_label')} ${tableNum}" class="qr-image" />
+                                          <img src="${qrImageUrl}" alt="QR Mesa ${tableNum}" class="qr-image" />
                                         </body>
                                       </html>
                                     `);
@@ -1217,7 +1217,7 @@ Fecha: ${new Date().toLocaleString()}
                                   }
                                 }}
                               >
-                                {t('print_qr_button')}
+                                Imprimir
                               </Button>
                               <Button
                                 size="sm"
@@ -1232,7 +1232,7 @@ Fecha: ${new Date().toLocaleString()}
                                       const url = window.URL.createObjectURL(blob);
                                       const link = document.createElement('a');
                                       link.href = url;
-                                      link.download = `QR-${t('table_label')}-${tableNum}-${formData.name.replace(/[^a-zA-Z0-9]/g, '_')}.png`;
+                                      link.download = `QR-Mesa-${tableNum}-${formData.name.replace(/[^a-zA-Z0-9]/g, '_')}.png`;
                                       document.body.appendChild(link);
                                       link.click();
                                       document.body.removeChild(link);
@@ -1242,7 +1242,7 @@ Fecha: ${new Date().toLocaleString()}
                                       console.error('Error downloading QR:', error);
                                       const link = document.createElement('a');
                                       link.href = qrImageUrl;
-                                      link.download = `QR-${t('table_label')}-${tableNum}-${formData.name.replace(/[^a-zA-Z0-9]/g, '_')}.png`;
+                                      link.download = `QR-Mesa-${tableNum}-${formData.name.replace(/[^a-zA-Z0-9]/g, '_')}.png`;
                                       link.target = '_blank';
                                       document.body.appendChild(link);
                                       link.click();
@@ -1250,7 +1250,7 @@ Fecha: ${new Date().toLocaleString()}
                                     });
                                 }}
                               >
-                                {t('download_png_button')}
+                                Descargar
                               </Button>
                               </div>
                             </div>
@@ -1260,12 +1260,12 @@ Fecha: ${new Date().toLocaleString()}
                     </div>
                     
                     <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                      <h5 className="font-medium text-gray-900 mb-2">{t('important_qr_info')}</h5>
+                      <h5 className="font-medium text-gray-900 mb-2">Instrucciones:</h5>
                       <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• {t('qr_unique_code')}</li>
-                        <li>• {t('qr_scan_menu')}</li>
-                        <li>• {t('qr_auto_detect')}</li>
-                        <li>• {t('qr_print_download')}</li>
+                        <li>• Cada mesa tendrá su propio código QR único</li>
+                        <li>• Los clientes escanean el código para acceder al menú</li>
+                        <li>• El número de mesa se detecta automáticamente</li>
+                        <li>• Puedes imprimir y descargar cada código QR individualmente</li>
                       </ul>
                     </div>
                   </div>
@@ -1281,10 +1281,10 @@ Fecha: ${new Date().toLocaleString()}
                   <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center shadow-md">
                     <Palette className="w-5 h-5 text-white" />
                   </div>
-                  {t('theme_customization_title')}
+                  Personalización de Tema
                 </h3>
                 <p className="text-sm text-gray-600">
-                  {t('theme_customization_subtitle')}
+                  Configura los colores, tipografía y estilos de tu menú público
                 </p>
               </div>
               <div className="bg-gradient-to-br from-gray-50 to-gray-50 border rounded-lg p-4">
@@ -1305,15 +1305,15 @@ Fecha: ${new Date().toLocaleString()}
                     className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
                   <label className="text-sm font-medium text-gray-700">
-                    {formData.settings.theme?.pathform ? t('active') : t('inactive')}
+                    {formData.settings.theme?.pathform ? 'Activado' : 'Desactivado'}
                   </label>
                 </div>
               </div>
             </div>
 
               <div className="bg-gradient-to-br from-gray-50 to-gray-50 rounded-lg md:rounded-xl p-4 md:p-6 border border-purple-100">
-                <h4 className="text-sm md:text-md font-semibold text-gray-900 mb-3 md:mb-4">{t('color_templates_title')}</h4>
-                <p className="text-sm text-gray-600 mb-4">{t('color_templates_subtitle')}</p>
+                <h4 className="text-sm md:text-md font-semibold text-gray-900 mb-3 md:mb-4">Plantillas de Colores</h4>
+                <p className="text-sm text-gray-600 mb-4">Selecciona una plantilla predefinida o personaliza tus colores manualmente</p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-3 mb-4 md:mb-6">
                   <button
@@ -1335,7 +1335,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#ffffff' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate1')}</span>
+                    <span className="text-xs font-medium text-gray-700">Azul Océano</span>
                   </button>
 
                   <button
@@ -1357,7 +1357,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#334155' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate2')}</span>
+                    <span className="text-xs font-medium text-gray-700">Modo Nocturno</span>
                   </button>
 
                   <button
@@ -1379,7 +1379,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#ffffff' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate3')}</span>
+                    <span className="text-xs font-medium text-gray-700">Jardín Natural</span>
                   </button>
 
                   <button
@@ -1401,7 +1401,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#262626' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate4')}</span>
+                    <span className="text-xs font-medium text-gray-700">Rojo Oscuro</span>
                   </button>
 
                   <button
@@ -1423,7 +1423,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#fefce8' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate5')}</span>
+                    <span className="text-xs font-medium text-gray-700">Atardecer Dorado</span>
                   </button>
 
                   <button
@@ -1445,7 +1445,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#164e63' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate6')}</span>
+                    <span className="text-xs font-medium text-gray-700">Océano Profundo</span>
                   </button>
 
                   <button
@@ -1467,7 +1467,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#ffffff' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate7')}</span>
+                    <span className="text-xs font-medium text-gray-700">Rosa Vibrante</span>
                   </button>
 
                   <button
@@ -1489,7 +1489,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#312e81' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate8')}</span>
+                    <span className="text-xs font-medium text-gray-700">Noche Violeta</span>
                   </button>
 
                   <button
@@ -1511,7 +1511,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#2d4a0f' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate9')}</span>
+                    <span className="text-xs font-medium text-gray-700">Bosque Nocturno</span>
                   </button>
 
                   <button
@@ -1533,7 +1533,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#ffffff' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate10')}</span>
+                    <span className="text-xs font-medium text-gray-700">Naranja Energía</span>
                   </button>
 
                   <button
@@ -1555,7 +1555,7 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#f3e8ff' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate11')}</span>
+                    <span className="text-xs font-medium text-gray-700">Lavanda Suave</span>
                   </button>
 
                   <button
@@ -1577,15 +1577,15 @@ Fecha: ${new Date().toLocaleString()}
                         <div className="flex-1 h-8 rounded" style={{ backgroundColor: '#1f2937' }}></div>
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-gray-700">{t('colorTemplate12')}</span>
+                    <span className="text-xs font-medium text-gray-700">Minimalista Dark</span>
                   </button>
                 </div>
 
-                <h4 className="text-md font-semibold text-gray-900 mb-4">{t('manual_customization_title')}</h4>
+                <h4 className="text-md font-semibold text-gray-900 mb-4">Personalización Manual</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('primary_color_label')}
+                      Color Primario
                     </label>
                     <div className="flex gap-2">
                       <input
@@ -1601,14 +1601,14 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={(e) => updateFormData('settings.theme.primary_color', e.target.value)}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm font-mono"
                         />
-                        <p className="text-xs text-gray-500 mt-1">{t('primary_color_hint')}</p>
+                        <p className="text-xs text-gray-500 mt-1">Botones principales</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('secondary_color')}
+                      Color Secundario
                     </label>
                     <div className="flex gap-2">
                       <input
@@ -1624,14 +1624,14 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={(e) => updateFormData('settings.theme.secondary_color', e.target.value)}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm font-mono"
                         />
-                        <p className="text-xs text-gray-500 mt-1">{t('secondary_color')}</p>
+                        <p className="text-xs text-gray-500 mt-1">Botones secundarios</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('menu_bg_label')}
+                      Color del Fondo del Menú
                     </label>
                     <div className="flex gap-2">
                       <input
@@ -1647,14 +1647,14 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={(e) => updateFormData('settings.theme.menu_background_color', e.target.value)}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm font-mono"
                         />
-                        <p className="text-xs text-gray-500 mt-1">{t('menu_bg_hint')}</p>
+                        <p className="text-xs text-gray-500 mt-1">Fondo principal del menú</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('card_bg_label')}
+                      Color de las Tarjetas y Fondo
                     </label>
                     <div className="flex gap-2">
                       <input
@@ -1670,14 +1670,14 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={(e) => updateFormData('settings.theme.card_background_color', e.target.value)}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm font-mono"
                         />
-                        <p className="text-xs text-gray-500 mt-1">{t('card_bg_hint')}</p>
+                        <p className="text-xs text-gray-500 mt-1">Tarjetas de productos</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('primary_text_label')}
+                      Color Texto Primario
                     </label>
                     <div className="flex gap-2">
                       <input
@@ -1693,14 +1693,14 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={(e) => updateFormData('settings.theme.primary_text_color', e.target.value)}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm font-mono"
                         />
-                        <p className="text-xs text-gray-500 mt-1">{t('primary_text_hint')}</p>
+                        <p className="text-xs text-gray-500 mt-1">Títulos y textos principales</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('secondary_text_label')}
+                      Color Texto Secundario
                     </label>
                     <div className="flex gap-2">
                       <input
@@ -1716,7 +1716,7 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={(e) => updateFormData('settings.theme.secondary_text_color', e.target.value)}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm font-mono"
                         />
-                        <p className="text-xs text-gray-500 mt-1">{t('secondary_text_hint')}</p>
+                        <p className="text-xs text-gray-500 mt-1">Descripciones y subtítulos</p>
                       </div>
                     </div>
                   </div>
@@ -1724,12 +1724,12 @@ Fecha: ${new Date().toLocaleString()}
               </div>
 
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
-                <h4 className="text-md font-semibold text-gray-900 mb-4">{t('typography_title')}</h4>
+                <h4 className="text-md font-semibold text-gray-900 mb-4">Tipografía</h4>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('primary_font_label')}
+                      Fuente Principal
                     </label>
                     <select
                       value={formData.settings.theme.primary_font}
@@ -1746,12 +1746,12 @@ Fecha: ${new Date().toLocaleString()}
                       <option value="Playfair Display">Playfair Display</option>
                       <option  value="Merriweather">Merriweather</option>
                     </select>
-                    <p className="text-xs text-gray-500">{t('primary_font_hint')}</p>
+                    <p className="text-xs text-gray-500">Para texto de contenido</p>
                   </div>
 
                   <div className="space-y-3">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('secondary_font_label')}
+                      Fuente Secundaria
                     </label>
                     <select
                       value={formData.settings.theme.secondary_font}
@@ -1768,7 +1768,7 @@ Fecha: ${new Date().toLocaleString()}
                       <option value="Playfair Display">Playfair Display</option>
                       <option value="Merriweather">Merriweather</option>
                     </select>
-                    <p className="text-xs text-gray-500">{t('secondary_font_hint')}</p>
+                    <p className="text-xs text-gray-500">Para títulos y destacados</p>
                   </div>
                 </div>
 
@@ -1778,11 +1778,11 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="flex items-start gap-2">
                   <Palette className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm text-blue-800 font-medium">{t('about_customization')}</p>
+                    <p className="text-sm text-blue-800 font-medium">Sobre la personalización:</p>
                     <ul className="text-xs text-blue-700 mt-2 space-y-1 list-disc list-inside">
-                      <li>{t('theme_auto_apply')}</li>
-                      <li>{t('theme_preview')}</li>
-                      <li>{t('theme_contrast')}</li>
+                      <li>Los cambios se aplicarán automáticamente en tu menú público</li>
+                      <li>Puedes previsualizar los cambios guardando la configuración</li>
+                      <li>Asegúrate de que los colores tengan buen contraste para legibilidad</li>
                     </ul>
                   </div>
                 </div>
@@ -1797,9 +1797,9 @@ Fecha: ${new Date().toLocaleString()}
                   <FileText className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold text-gray-900">{t('billing_settings_title')}</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-gray-900">Configuración de Facturación</h3>
                   <p className="text-sm text-gray-600">
-                    {t('billing_settings_subtitle')}
+                    Información legal y fiscal para la generación de tickets de pedido válidos en Colombia
                   </p>
                 </div>
               </div>
@@ -1808,14 +1808,14 @@ Fecha: ${new Date().toLocaleString()}
               <div className="bg-gradient-to-br from-gray-50 to-gray-50 rounded-lg md:rounded-xl p-4 md:p-6 border border-gray-100">
                 <h4 className="text-sm md:text-md font-semibold text-gray-900 mb-3 md:mb-4 flex items-center gap-2">
                   <Store className="w-5 h-5 text-green-600" />
-                  {t('restaurant_info_billing_title')}
+                  Información del Restaurante
                 </h4>
 
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('commercial_name_label')}
+                        Nombre Comercial *
                       </label>
                       <input
                         type="text"
@@ -1825,12 +1825,12 @@ Fecha: ${new Date().toLocaleString()}
                         placeholder={t('commercial_name_placeholder')}
                         required
                       />
-                      <p className="text-xs text-gray-500">{t('billing_hint_legal_tickets')}</p>
+                      <p className="text-xs text-gray-500">El nombre que aparecerá en los tickets</p>
                     </div>
 
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('social_reason_label')}
+                        Razón Social
                       </label>
                       <input
                         type="text"
@@ -1839,14 +1839,14 @@ Fecha: ${new Date().toLocaleString()}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
                         placeholder={t('social_reason_placeholder')}
                       />
-                      <p className="text-xs text-gray-500">{t('billing_hint_legal_tickets')}</p>
+                      <p className="text-xs text-gray-500">Opcional - Nombre legal de la empresa</p>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('nit_label')}
+                        NIT *
                       </label>
                       <input
                         type="text"
@@ -1866,14 +1866,14 @@ Fecha: ${new Date().toLocaleString()}
                       />
                       <p className="text-xs text-gray-500">
                         {formData.settings.billing?.nit && !validateNIT(formData.settings.billing.nit)
-                          ? t('nit_invalid_error')
-                          : t('nit_placeholder')}
+                          ? '❌ Formato inválido. Use: 123456789-0'
+                          : 'Formato: 123456789-0'}
                       </p>
                     </div>
 
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('department_label')}
+                        Departamento *
                       </label>
                       <select
                         value={formData.settings.billing?.departamento || 'Cundinamarca'}
@@ -1900,7 +1900,7 @@ Fecha: ${new Date().toLocaleString()}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('city_label')}
+                        Ciudad *
                       </label>
                       <select
                         value={formData.settings.billing?.ciudad || ''}
@@ -1916,21 +1916,21 @@ Fecha: ${new Date().toLocaleString()}
                           ))}
                       </select>
                       <p className="text-xs text-gray-500">
-                        {t('select_department_first_hint')}
+                        Selecciona primero el departamento
                       </p>
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('address_billing_label')}
+                      Dirección *
                     </label>
                     <input
                       type="text"
                       value={formData.settings.billing?.direccion || ''}
                       onChange={(e) => updateFormData('settings.billing.direccion', e.target.value)}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                      placeholder={t('address_placeholder')}
+                      placeholder="Calle 123 #45-67"
                       required
                     />
                   </div>
@@ -1938,7 +1938,7 @@ Fecha: ${new Date().toLocaleString()}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('phone_billing_label')}
+                        Teléfono *
                       </label>
                       <input
                         type="tel"
@@ -1952,31 +1952,32 @@ Fecha: ${new Date().toLocaleString()}
 
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('email_billing_label')}
+                        Correo Electrónico
                       </label>
                       <input
                         type="email"
                         value={formData.settings.billing?.correo || ''}
                         onChange={(e) => updateFormData('settings.billing.correo', e.target.value)}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                        placeholder={t('email_placeholder')}
+                        placeholder="contacto@restaurante.com"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-            {/* Información Fiscal */}
+
+              {/* Información Fiscal */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
                 <h4 className="text-md font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <DollarSign className="w-5 h-5 text-blue-600" />
-                  {t('fiscal_information_title')}
+                  Información Fiscal
                 </h4>
 
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('tax_regime_label')} *
+                        Régimen Tributario *
                       </label>
                       <select
                         value={formData.settings.billing?.regimenTributario || 'simple'}
@@ -1984,15 +1985,15 @@ Fecha: ${new Date().toLocaleString()}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         required
                       >
-                        <option value="simple">{t('tax_regime_simple')}</option>
-                        <option value="comun">{t('tax_regime_common')}</option>
-                        <option value="no_responsable_iva">{t('tax_regime_no_vat')}</option>
+                        <option value="simple">Régimen Simple</option>
+                        <option value="comun">Régimen Común</option>
+                        <option value="no_responsable_iva">No responsable de IVA</option>
                       </select>
                     </div>
 
                     <div className="space-y-2">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('vat_responsible_label')} *
+                        ¿Responsable de IVA? *
                       </label>
                       <div className="flex items-center gap-6 h-12">
                         <label className="flex items-center gap-2 cursor-pointer">
@@ -2003,7 +2004,7 @@ Fecha: ${new Date().toLocaleString()}
                             onChange={() => updateFormData('settings.billing.responsableIVA', true)}
                             className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                           />
-                          <span className="text-sm text-gray-700">{t('yes_label')}</span>
+                          <span className="text-sm text-gray-700">Sí</span>
                         </label>
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
@@ -2013,7 +2014,7 @@ Fecha: ${new Date().toLocaleString()}
                             onChange={() => updateFormData('settings.billing.responsableIVA', false)}
                             className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                           />
-                          <span className="text-sm text-gray-700">{t('no_label')}</span>
+                          <span className="text-sm text-gray-700">No</span>
                         </label>
                       </div>
                     </div>
@@ -2021,7 +2022,7 @@ Fecha: ${new Date().toLocaleString()}
 
                   <div className="space-y-2">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('has_dian_resolution_label')} *
+                      ¿Tiene Resolución DIAN? *
                     </label>
                     <div className="flex items-center gap-6">
                       <label className="flex items-center gap-2 cursor-pointer">
@@ -2032,7 +2033,7 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={() => updateFormData('settings.billing.tieneResolucionDIAN', true)}
                           className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                         />
-                        <span className="text-sm text-gray-700">{t('yes_label')}</span>
+                        <span className="text-sm text-gray-700">Sí</span>
                       </label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
@@ -2042,19 +2043,19 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={() => updateFormData('settings.billing.tieneResolucionDIAN', false)}
                           className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
                         />
-                        <span className="text-sm text-gray-700">{t('no_label')}</span>
+                        <span className="text-sm text-gray-700">No</span>
                       </label>
                     </div>
                   </div>
 
                   {formData.settings.billing?.tieneResolucionDIAN && (
                     <div className="bg-white rounded-lg p-4 border border-blue-200 space-y-4">
-                      <h5 className="text-sm font-semibold text-gray-900">{t('dian_resolution_data_title')}</h5>
+                      <h5 className="text-sm font-semibold text-gray-900">Datos de la Resolución DIAN</h5>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                         <div className="space-y-2">
                           <label className="block text-sm font-medium text-gray-700">
-                            {t('resolution_number_label')} *
+                            Número de Resolución *
                           </label>
                           <input
                             type="text"
@@ -2067,7 +2068,7 @@ Fecha: ${new Date().toLocaleString()}
 
                         <div className="space-y-2">
                           <label className="block text-sm font-medium text-gray-700">
-                            {t('resolution_date_label')} *
+                            Fecha de Resolución *
                           </label>
                           <input
                             type="date"
@@ -2081,7 +2082,7 @@ Fecha: ${new Date().toLocaleString()}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                         <div className="space-y-2">
                           <label className="block text-sm font-medium text-gray-700">
-                            {t('numbering_range_from_label')} *
+                            Rango de Numeración - Desde *
                           </label>
                           <input
                             type="number"
@@ -2094,7 +2095,7 @@ Fecha: ${new Date().toLocaleString()}
 
                         <div className="space-y-2">
                           <label className="block text-sm font-medium text-gray-700">
-                            {t('numbering_range_to_label')} *
+                            Rango de Numeración - Hasta *
                           </label>
                           <input
                             type="number"
@@ -2114,14 +2115,14 @@ Fecha: ${new Date().toLocaleString()}
               <div className="bg-gradient-to-br from-gray-50 to-gray-50 rounded-xl p-6 border border-gray-100">
                 <h4 className="text-md font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <DollarSign className="w-5 h-5 text-yellow-600" />
-                  {t('tip_configuration_title')}
+                  Configuración de Propina
                 </h4>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="flex-1">
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        {t('apply_suggested_tip_label')} *
+                        ¿Aplicar propina sugerida? *
                       </label>
                       <div className="flex items-center gap-6">
                         <label className="flex items-center gap-2 cursor-pointer">
@@ -2132,7 +2133,7 @@ Fecha: ${new Date().toLocaleString()}
                             onChange={() => updateFormData('settings.billing.aplicaPropina', true)}
                             className="w-4 h-4 text-gray-600 border-gray-300 focus:ring-gray-500"
                           />
-                          <span className="text-sm text-gray-700">{t('yes_tip_10_percent')}</span>
+                          <span className="text-sm text-gray-700">Sí (10% del subtotal)</span>
                         </label>
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
@@ -2142,7 +2143,7 @@ Fecha: ${new Date().toLocaleString()}
                             onChange={() => updateFormData('settings.billing.aplicaPropina', false)}
                             className="w-4 h-4 text-gray-600 border-gray-300 focus:ring-gray-500"
                           />
-                          <span className="text-sm text-gray-700">{t('no_label')}</span>
+                          <span className="text-sm text-gray-700">No</span>
                         </label>
                       </div>
                     </div>
@@ -2151,7 +2152,7 @@ Fecha: ${new Date().toLocaleString()}
                   {formData.settings.billing?.aplicaPropina && (
                     <div className="bg-white rounded-lg p-4 border border-gray-200">
                       <p className="text-sm text-gray-600">
-                        {t('tip_description')}
+                        La propina sugerida se calculará automáticamente como el 10% del subtotal y se mostrará al final del ticket. El cliente puede decidir si desea incluirla o no.
                       </p>
                     </div>
                   )}
@@ -2162,13 +2163,13 @@ Fecha: ${new Date().toLocaleString()}
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
                 <h4 className="text-md font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <FileText className="w-5 h-5 text-purple-600" />
-                  {t('ticket_customization_title')}
+                  Personalización del Ticket
                 </h4>
 
                 <div className="space-y-6">
                   <div className="space-y-4">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('show_logo_on_ticket_label')}
+                      ¿Mostrar logo en el ticket?
                     </label>
                     <div className="flex items-center gap-6">
                       <label className="flex items-center gap-2 cursor-pointer">
@@ -2179,7 +2180,7 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={() => updateFormData('settings.billing.mostrarLogoEnTicket', true)}
                           className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
                         />
-                        <span className="text-sm text-gray-700">{t('yes_label')}</span>
+                        <span className="text-sm text-gray-700">Sí</span>
                       </label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
@@ -2189,7 +2190,7 @@ Fecha: ${new Date().toLocaleString()}
                           onChange={() => updateFormData('settings.billing.mostrarLogoEnTicket', false)}
                           className="w-4 h-4 text-purple-600 border-gray-300 focus:ring-purple-500"
                         />
-                        <span className="text-sm text-gray-700">{t('no_label')}</span>
+                        <span className="text-sm text-gray-700">No</span>
                       </label>
                     </div>
                   </div>
@@ -2197,26 +2198,26 @@ Fecha: ${new Date().toLocaleString()}
                   {formData.settings.billing?.mostrarLogoEnTicket && (
                     <div className="bg-white rounded-lg p-4 border border-purple-200 space-y-3">
                       <label className="block text-sm font-medium text-gray-700">
-                        {t('ticket_logo_label')}
+                        Logo para el ticket
                       </label>
 
                       {formData.settings.billing?.logoTicket && (
                         <div className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-lg">
                           <img
                             src={formData.settings.billing.logoTicket}
-                            alt={t('ticket_logo_alt')}
+                            alt="Logo del ticket"
                             className="w-16 h-16 object-contain rounded"
                           />
                           <div className="flex-1">
-                            <p className="text-sm font-medium text-gray-900">{t('current_logo_label')}</p>
-                            <p className="text-xs text-gray-500">{t('click_to_change_label')}</p>
+                            <p className="text-sm font-medium text-gray-900">Logo actual</p>
+                            <p className="text-xs text-gray-500">Click para cambiar</p>
                           </div>
                         <button
                           type="button"
                           onClick={() => updateFormData('settings.billing.logoTicket', '')}
                           className="bg-gradient-to-br from-red-500 to-rose-600 text-white text-sm font-medium px-3 py-1.5 rounded-lg shadow-md hover:opacity-90 transition"
                         >
-                          {t('delete_button')}
+                          Eliminar
                         </button>
                         </div>
                       )}
@@ -2229,7 +2230,7 @@ Fecha: ${new Date().toLocaleString()}
                             const file = e.target.files?.[0];
                             if (file) {
                               if (file.size > 1024 * 1024) {
-                                showToast('error', t('file_too_large_title'), t('file_too_large_message'), 3000);
+                                showToast('error', 'Archivo muy grande', 'El tamaño máximo es 1MB', 3000);
                                 return;
                               }
                               const reader = new FileReader();
@@ -2243,28 +2244,28 @@ Fecha: ${new Date().toLocaleString()}
                         />
                         <span className="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all shadow-sm w-full justify-center">
                           <Upload className="w-4 h-4 mr-2" />
-                          {formData.settings.billing?.logoTicket ? t('change_logo_button') : t('upload_logo_button')}
+                          {formData.settings.billing?.logoTicket ? 'Cambiar logo' : 'Subir logo'}
                         </span>
                       </label>
                       <p className="text-xs text-gray-500">
-                        {t('logo_upload_hint')}
+                        PNG o JPG. Máximo 1MB. Se recomienda 200x200px
                       </p>
                     </div>
                   )}
 
                   <div className="space-y-2">
                     <label className="block text-sm font-medium text-gray-700">
-                      {t('ticket_final_message_label')}
+                      Mensaje final del ticket (opcional)
                     </label>
                     <textarea
                       value={formData.settings.billing?.mensajeFinalTicket || ''}
                       onChange={(e) => updateFormData('settings.billing.mensajeFinalTicket', e.target.value)}
                       rows={3}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 resize-none"
-                      placeholder={t('ticket_final_message_placeholder')}
+                      placeholder="¡Gracias por tu visita! Esperamos verte pronto."
                     />
                     <p className="text-xs text-gray-500">
-                      {t('ticket_message_hint')}
+                      Este mensaje aparecerá al final de cada ticket
                     </p>
                   </div>
                 </div>
@@ -2275,13 +2276,13 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="flex items-start gap-2">
                   <FileText className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm text-green-800 font-medium">{t('billing_configuration_info_title')}</p>
+                    <p className="text-sm text-green-800 font-medium">Sobre la configuración de facturación:</p>
                     <ul className="text-xs text-green-700 mt-2 space-y-1 list-disc list-inside">
-                      <li>{t('billing_info_hint_1')}</li>
-                      <li>{t('billing_info_hint_2')}</li>
-                      <li>{t('billing_info_hint_3')}</li>
-                      <li>{t('billing_info_hint_4')}</li>
-                      <li>{t('billing_info_hint_5')}</li>
+                      <li>Estos datos se utilizarán para generar tickets de pedido legalmente válidos en Colombia</li>
+                      <li>Si eres responsable de IVA, el IVA se calculará y mostrará en cada ticket</li>
+                      <li>La resolución DIAN es requerida para facturación electrónica</li>
+                      <li>La propina es opcional y aparecerá como sugerencia al cliente</li>
+                      <li>Asegúrate de mantener esta información actualizada</li>
                     </ul>
                   </div>
                 </div>
@@ -2296,10 +2297,10 @@ Fecha: ${new Date().toLocaleString()}
                   <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center shadow-md">
                     <Megaphone className="w-5 h-5 text-white" />
                   </div>
-                  {t('promo_configuration_title')}
+                  Configuración Promocional
                 </h3>
                 <p className="text-sm text-gray-600 mt-1">
-                  {t('promo_configuration_description')}
+                  Configura la imagen promocional y los productos destacados en tu menú público
                 </p>
               </div>
 
@@ -2308,30 +2309,30 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="flex items-center gap-2 mb-2">
                   <ImageIcon className="w-5 h-5 text-orange-600" />
                   <label className="block text-sm font-medium text-gray-700">
-                    {t('vertical_promo_image_label')}
+                    Imagen Promocional Vertical
                   </label>
                 </div>
                 <p className="text-xs text-gray-600 mb-4">
-                  {t('vertical_promo_image_description')}
+                  Sube una imagen que aparecerá al hacer clic en el botón de promociones en el menú público
                 </p>
                 <div className="space-y-2">
                   {formData.settings.promo?.vertical_promo_image && (
                     <div className="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-lg">
                       <img
                         src={formData.settings.promo.vertical_promo_image}
-                        alt={t('vertical_promo_alt')}
+                        alt="Promo Vertical"
                         className="w-20 h-28 object-cover rounded-lg"
                       />
                       <div className="flex-1">
-                        <p className="text-sm font-medium text-gray-900">{t('current_promo_image_label')}</p>
-                        <p className="text-xs text-gray-500">{t('promo_image_display_hint')}</p>
+                        <p className="text-sm font-medium text-gray-900">Imagen promocional actual</p>
+                        <p className="text-xs text-gray-500">Se mostrará al hacer clic en el botón de promoción</p>
                       </div>
                     <button
                       type="button"
                       onClick={() => updateFormData('settings.promo.vertical_promo_image', '')}
                       className="bg-gradient-to-br from-red-500 to-rose-600 text-white text-sm font-medium px-3 py-1.5 rounded-lg shadow-md hover:opacity-90 transition"
                     >
-                      {t('delete_button')}
+                      Eliminar
                     </button>
                     </div>
                   )}
@@ -2343,7 +2344,7 @@ Fecha: ${new Date().toLocaleString()}
                         const file = e.target.files?.[0];
                         if (file) {
                           if (file.size > 5 * 1024 * 1024) {
-                            showToast('error', t('file_too_large_title'), t('promo_file_too_large_message'), 3000);
+                            showToast('error', 'Archivo muy grande', 'El tamaño máximo es 5MB', 3000);
                             return;
                           }
                           const reader = new FileReader();
@@ -2358,11 +2359,11 @@ Fecha: ${new Date().toLocaleString()}
                     />
                     <span className="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all shadow-sm w-full justify-center">
                       <Upload className="w-4 h-4 mr-2" />
-                      {t('upload_vertical_promo_image_button')}
+                      Subir imagen promocional vertical
                     </span>
                   </label>
                   <p className="text-xs text-gray-500">
-                    {t('promo_image_upload_hint')}
+                    Recomendado: 600x900px (formato vertical). Máximo 5MB. Formatos: JPG, PNG, WebP
                   </p>
                 </div>
               </div>
@@ -2372,11 +2373,16 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="flex items-center gap-2 mb-2">
                   <Star className="w-5 h-5 text-orange-600" />
                   <label className="block text-sm font-medium text-gray-700">
-                    {t('featured_products_label')} ({t('max_5_label')})
+                    Productos</label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Destacados 
+                  </label>
+                  <label className="block text-sm font-medium text-gray-700">
+                    (Máximo 5)
                   </label>
                 </div>
                 <p className="text-xs text-gray-600 mb-4">
-                  {t('featured_products_description')}
+                  Selecciona hasta 5 productos para mostrar en el carrusel de destacados
                 </p>
                 <div className="border border-gray-200 rounded-lg p-4 bg-gray-50 max-h-96 overflow-y-auto">
                   {(() => {
@@ -2432,14 +2438,14 @@ Fecha: ${new Date().toLocaleString()}
                                 <p className="text-xs text-gray-500 line-clamp-1">{product.description}</p>
                               </div>
                               {isSelected && (
-                                <Badge variant="success">{t('featured_badge')}</Badge>
+                                <Badge variant="success">Destacado</Badge>
                               )}
                             </label>
                           );
                         })}
                         {restaurantProducts.length === 0 && (
                           <p className="text-center text-gray-500 text-sm py-4">
-                            {t('no_products_available_message')}
+                            No hay productos disponibles. Crea productos primero.
                           </p>
                         )}
                       </div>
@@ -2447,7 +2453,7 @@ Fecha: ${new Date().toLocaleString()}
                   })()}
                 </div>
                 <p className="text-xs text-gray-600">
-                  {formData.settings.promo?.featured_product_ids?.length || 0} {t('of_5_products_selected')}
+                  {formData.settings.promo?.featured_product_ids?.length || 0} de 5 productos seleccionados
                 </p>
               </div>
 
@@ -2455,12 +2461,12 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="flex items-start gap-2">
                   <Megaphone className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm text-blue-800 font-medium">{t('promo_tips_title')}</p>
+                    <p className="text-sm text-blue-800 font-medium">Consejos para promociones:</p>
                     <ul className="text-xs text-blue-700 mt-2 space-y-1 list-disc list-inside">
-                      <li>{t('promo_tip_1')}</li>
-                      <li>{t('promo_tip_2')}</li>
-                      <li>{t('promo_tip_3')}</li>
-                      <li>{t('promo_tip_4')}</li>
+                      <li>La imagen promocional aparecerá al hacer clic en el botón de regalo</li>
+                      <li>Los productos destacados aparecerán en un carrusel en la parte superior del menú</li>
+                      <li>Usa imágenes atractivas y de calidad de tus productos destacados</li>
+                      <li>Selecciona tus mejores productos o los que tengan promociones especiales</li>
                     </ul>
                   </div>
                 </div>
@@ -2474,9 +2480,9 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md mx-auto mb-3 md:mb-4">
                   <HelpCircle className="w-8 h-8 md:w-10 md:h-10 text-white" />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">{t('support_center_title')}</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">Centro de Soporte</h3>
                 <p className="text-gray-600">
-                  {t('support_center_description')}
+                  ¿Necesitas ayuda? Completa el formulario y nuestro equipo te contactará pronto.
                 </p>
               </div>
 
@@ -2487,9 +2493,9 @@ Fecha: ${new Date().toLocaleString()}
                       <span className="text-white text-sm">✓</span>
                     </div>
                     <div>
-                      <h4 className="text-green-800 font-medium">{t('request_sent_title')}</h4>
+                      <h4 className="text-green-800 font-medium">¡Solicitud enviada!</h4>
                       <p className="text-green-700 text-sm">
-                        {t('request_sent_message')}
+                        Tu solicitud de soporte ha sido enviada. Te contactaremos pronto.
                       </p>
                     </div>
                   </div>
@@ -2500,7 +2506,7 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('subject_label')} *
+                      Asunto *
                     </label>
                     <input
                       type="text"
@@ -2514,41 +2520,41 @@ Fecha: ${new Date().toLocaleString()}
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('category_label')}
+                      Categoría
                     </label>
                     <select
                       value={supportForm.category}
                       onChange={(e) => setSupportForm(prev => ({ ...prev, category: e.target.value }))}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     >
-                      <option value="general">{t('category_general')}</option>
-                      <option value="technical">{t('category_technical')}</option>
-                      <option value="billing">{t('category_billing')}</option>
-                      <option value="feature">{t('category_feature')}</option>
-                      <option value="account">{t('category_account')}</option>
-                      <option value="other">{t('category_other')}</option>
+                      <option value="general">Consulta General</option>
+                      <option value="technical">Problema Técnico</option>
+                      <option value="billing">Facturación</option>
+                      <option value="feature">Solicitud de Función</option>
+                      <option value="account">Cuenta y Configuración</option>
+                      <option value="other">Otro</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('priority_label')}
+                      Prioridad
                     </label>
                     <select
                       value={supportForm.priority}
                       onChange={(e) => setSupportForm(prev => ({ ...prev, priority: e.target.value }))}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     >
-                      <option value="low">{t('priority_low')}</option>
-                      <option value="medium">{t('priority_medium')}</option>
-                      <option value="high">{t('priority_high')}</option>
-                      <option value="urgent">{t('priority_urgent')}</option>
+                      <option value="low">Baja - No es urgente</option>
+                      <option value="medium">Media - Respuesta en 24-48h</option>
+                      <option value="high">Alta - Respuesta en 2-8h</option>
+                      <option value="urgent">Urgente - Respuesta inmediata</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('contact_email_label')} *
+                      Email de Contacto *
                     </label>
                     <input
                       type="email"
@@ -2563,7 +2569,7 @@ Fecha: ${new Date().toLocaleString()}
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('contact_phone_label')}
+                    Teléfono de Contacto (Opcional)
                   </label>
                   <input
                     type="tel"
@@ -2576,14 +2582,14 @@ Fecha: ${new Date().toLocaleString()}
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('description_label')} *
+                    Descripción del Problema o Consulta *
                   </label>
                   <textarea
                     value={supportForm.message}
                     onChange={(e) => setSupportForm(prev => ({ ...prev, message: e.target.value }))}
                     rows={6}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder={t('description_placeholder')}
+                    placeholder="Describe detalladamente tu consulta o problema. Incluye pasos para reproducir el problema si es técnico."
                     required
                   />
                 </div>
@@ -2591,7 +2597,7 @@ Fecha: ${new Date().toLocaleString()}
                 {/* Historial de tickets */}
                 {supportTickets.length > 0 && (
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                    <h4 className="text-gray-800 font-medium mb-3">{t('recent_tickets_title')}</h4>
+                    <h4 className="text-gray-800 font-medium mb-3">Tickets enviados recientemente:</h4>
                     <div className="space-y-2 max-h-48 overflow-y-auto">
                       {supportTickets
                         .filter(ticket => ticket.restaurantId === restaurant?.id)
@@ -2619,7 +2625,7 @@ Fecha: ${new Date().toLocaleString()}
                                 onClick={() => handleViewTicketDetails(ticket)}
                                 className="text-blue-600 hover:text-blue-700"
                               >
-                                {t('view_details_button')}
+                                Ver Detalles
                               </Button>
                             </div>
                           </div>
@@ -2640,7 +2646,7 @@ Fecha: ${new Date().toLocaleString()}
                       contactPhone: restaurant?.phone || ''
                     })}
                   >
-                    {t('clear_form_button')}
+                    Limpiar Formulario
                   </Button>
                   <Button
                     type="submit"
@@ -2648,22 +2654,23 @@ Fecha: ${new Date().toLocaleString()}
                     icon={Send}
                     disabled={!supportForm.subject.trim() || !supportForm.message.trim() || !supportForm.contactEmail.trim()}
                   >
-                    {t('send_request_button')}
+                    Enviar Solicitud
                   </Button>
                 </div>
               </form>
 
               <div className="mt-8 bg-blue-50 rounded-lg p-6">
-                <h4 className="text-gray-900 font-medium mb-3">{t('other_support_channels_title')}</h4>
+                <h4 className="text-gray-900 font-medium mb-3">Otros canales de soporte:</h4>
                 <div className="space-y-2 text-sm text-gray-600">
-                  <p>📧 {t('direct_email_label')}: <a href="mailto:admin@digitalfenixpro.com" className="text-blue-600 hover:text-blue-700">admin@digitalfenixpro.com</a></p>
-                  <p>⏰ {t('business_hours_label')}: {t('business_hours_value')}</p>
-                  <p>🕐 {t('response_time_label')}: {t('response_time_value')}</p>
+                  <p>📧 Email directo: <a href="mailto:admin@digitalfenixpro.com" className="text-blue-600 hover:text-blue-700">admin@digitalfenixpro.com</a></p>
+                  <p>⏰ Horario de atención: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+                  <p>🕐 Tiempo de respuesta típico: 2-24 horas según prioridad</p>
                 </div>
                 
                 <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
                   <p className="text-blue-800 text-sm">
-                    <strong>{t('note_label')}:</strong> {t('support_note_message')}
+                    <strong>Nota:</strong> Los tickets se almacenan localmente y se envían automáticamente a nuestro sistema de soporte. 
+                    Recibirás una respuesta en el email de contacto proporcionado.
                   </p>
                 </div>
               </div>
@@ -2679,7 +2686,7 @@ Fecha: ${new Date().toLocaleString()}
           setShowTicketDetailModal(false);
           setSelectedTicket(null);
         }}
-        title={t('ticket_details_title')}
+        title="Detalles del Ticket"
         size="lg"
       >
         {selectedTicket && (
@@ -2694,26 +2701,26 @@ Fecha: ${new Date().toLocaleString()}
                 </div>
               </div>
               <div className="text-sm text-gray-600">
-                {t('ticket_id_label')}: {selectedTicket.id} • {new Date(selectedTicket.createdAt).toLocaleString()}
+                Ticket ID: {selectedTicket.id} • {new Date(selectedTicket.createdAt).toLocaleString()}
               </div>
             </div>
 
             {/* Ticket Info */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div>
-                <h4 className="text-sm md:text-md font-medium text-gray-900 mb-2 md:mb-3">{t('ticket_information_title')}</h4>
+                <h4 className="text-sm md:text-md font-medium text-gray-900 mb-2 md:mb-3">Información del Ticket</h4>
                 <div className="space-y-2 text-sm">
                   <div>
-                    <span className="text-gray-600">{t('category_label')}:</span> {getCategoryName(selectedTicket.category)}
+                    <span className="text-gray-600">Categoría:</span> {getCategoryName(selectedTicket.category)}
                   </div>
                   <div>
-                    <span className="text-gray-600">{t('priority_label')}:</span> {selectedTicket.priority.charAt(0).toUpperCase() + selectedTicket.priority.slice(1)}
+                    <span className="text-gray-600">Prioridad:</span> {selectedTicket.priority.charAt(0).toUpperCase() + selectedTicket.priority.slice(1)}
                   </div>
                 </div>
               </div>
               
               <div>
-                <h4 className="text-md font-medium text-gray-900 mb-3">{t('contact_information_title')}</h4>
+                <h4 className="text-md font-medium text-gray-900 mb-3">Información de Contacto</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center">
                     <Mail className="w-4 h-4 text-gray-400 mr-2" />
@@ -2731,7 +2738,7 @@ Fecha: ${new Date().toLocaleString()}
 
             {/* Original Message */}
             <div>
-              <h4 className="text-md font-medium text-gray-900 mb-3">{t('your_message_title')}</h4>
+              <h4 className="text-md font-medium text-gray-900 mb-3">Tu Mensaje</h4>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <p className="text-sm text-blue-800 whitespace-pre-wrap">{selectedTicket.message}</p>
               </div>
@@ -2740,14 +2747,14 @@ Fecha: ${new Date().toLocaleString()}
             {/* Admin Response */}
             {selectedTicket.response ? (
               <div>
-                <h4 className="text-md font-medium text-gray-900 mb-3">{t('support_team_response_title')}</h4>
+                <h4 className="text-md font-medium text-gray-900 mb-3">Respuesta del Equipo de Soporte</h4>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <p className="text-sm text-green-800 whitespace-pre-wrap">{selectedTicket.response}</p>
                   {selectedTicket.responseDate && (
                     <div className="text-xs text-green-600 mt-3 pt-3 border-t border-green-200">
                       <div className="flex items-center">
                         <Calendar className="w-3 h-3 mr-1" />
-                        {t('responded_on_label')}: {new Date(selectedTicket.responseDate).toLocaleString()}
+                        Respondido el: {new Date(selectedTicket.responseDate).toLocaleString()}
                       </div>
                     </div>
                   )}
@@ -2758,9 +2765,9 @@ Fecha: ${new Date().toLocaleString()}
                 <div className="flex items-center">
                   <HelpCircle className="w-5 h-5 text-yellow-600 mr-2" />
                   <div>
-                    <h4 className="text-yellow-800 font-medium">{t('waiting_response_title')}</h4>
+                    <h4 className="text-yellow-800 font-medium">Esperando Respuesta</h4>
                     <p className="text-yellow-700 text-sm">
-                      {t('waiting_response_message')}
+                      Tu ticket está siendo revisado por nuestro equipo. Te contactaremos pronto.
                     </p>
                   </div>
                 </div>
@@ -2770,7 +2777,7 @@ Fecha: ${new Date().toLocaleString()}
             {/* Admin Notes (if any) */}
             {selectedTicket.adminNotes && (
               <div>
-                <h4 className="text-md font-medium text-gray-900 mb-3">{t('additional_notes_title')}</h4>
+                <h4 className="text-md font-medium text-gray-900 mb-3">Notas Adicionales</h4>
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
                   <p className="text-sm text-gray-700 whitespace-pre-wrap">{selectedTicket.adminNotes}</p>
                 </div>
@@ -2784,7 +2791,7 @@ Fecha: ${new Date().toLocaleString()}
                   setSelectedTicket(null);
                 }}
               >
-                {t('close_button')}
+                Cerrar
               </Button>
             </div>
           </div>
