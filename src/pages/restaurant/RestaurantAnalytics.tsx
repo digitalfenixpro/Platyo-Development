@@ -444,12 +444,16 @@ export const RestaurantAnalytics: React.FC = () => {
         >
           {t('btnExportCSV')}
         </Button>
-<Button
+        <Button
   variant="outline"
   size="sm"
   icon={Filter}
   onClick={() => setShowFilters(!showFilters)}
-  className="bg-gray-600 text-white border-gray-600"
+  className="
+    bg-gray-600 text-white border-gray-600 
+    hover:bg-gray-600 hover:text-white hover:border-gray-600 
+    active:bg-gray-600 active:text-white active:border-gray-600
+  "
 >
   {t('btnAdvancedFilters')}
   {getActiveFiltersCount() > 0 && ` (${getActiveFiltersCount()})`}
