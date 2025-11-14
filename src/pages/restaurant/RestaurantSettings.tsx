@@ -551,7 +551,7 @@ Fecha: ${new Date().toLocaleString()}
                         value={formData.name}
                         onChange={(e) => updateFormData('name', e.target.value)}
                         className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:bg-white transition-all font-medium"
-                        placeholder={t('phonePlaceholder')}
+                        placeholder{t('restaurantName')}
                       />
                     </div>
 
