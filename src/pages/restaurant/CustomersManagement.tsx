@@ -772,7 +772,9 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
     showToast(
       'success',
       t('csvExported'),
-      t('customersExportedSuccessfully', { count: dataToExport.length }),
+      t('exportedSuccessfullyPlural'
+        
+        , { count: dataToExport.length }),
       4000
     );
   };
