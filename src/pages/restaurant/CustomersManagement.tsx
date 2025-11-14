@@ -1501,7 +1501,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
               label={t('phoneRequired')}
               value={editForm.phone}
               onChange={(e) => setEditForm(prev => ({ ...prev, phone: e.target.value }))}
-              placeholder="+1 (555) 123-4567"
+              placeholder={t(phonePlaceholder)}
             />
           </div>
           
@@ -1603,7 +1603,7 @@ if (confirm(`${t('confirmDeleteMultiple')} ${selectedCustomers.size} cliente${se
               label={t('phoneRequired')}
               value={createForm.phone}
               onChange={(e) => setCreateForm(prev => ({ ...prev, phone: e.target.value }))}
-              placeholder="+57 300 123 4567"
+              placeholder={t(phonePlaceholder)}
             />
           </div>
 
