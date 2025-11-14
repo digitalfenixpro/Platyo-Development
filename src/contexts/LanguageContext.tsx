@@ -11,14 +11,6 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-};
-
 interface LanguageProviderProps {
   children: ReactNode;
 }
@@ -33,7 +25,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const { t } = useTranslation(language);
 
   useEffect(() => {
-    // Load language from restaurant settings if logged in, otherwise use saved preference
     if (restaurant?.settings?.language) {
       setLanguageState(restaurant.settings.language as Language);
       localStorage.setItem('app_language', restaurant.settings.language);
@@ -44,7 +35,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     setLanguageState(lang);
     localStorage.setItem('app_language', lang);
 
-    // Update restaurant settings if user is logged in
     if (restaurant) {
       const restaurants = loadFromStorage('restaurants', []);
       const updatedRestaurants = restaurants.map((r: any) =>
@@ -54,7 +44,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       );
       saveToStorage('restaurants', updatedRestaurants);
 
-      // Update auth context
       const currentAuth = loadFromStorage('currentAuth', null);
       if (currentAuth) {
         currentAuth.restaurant.settings.language = lang;
@@ -71,3 +60,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 };
+
+// Mueve el hook AL FINAL y usa una función normal (no arrow function)
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+}
