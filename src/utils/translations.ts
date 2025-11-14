@@ -751,7 +751,6 @@ interface Translations {
   addMoreProducts: string;
   addMoreCategories: string;
 
-
   // Super Admin
   superAdminPanel: string;
   superAdminDashboard: string;
