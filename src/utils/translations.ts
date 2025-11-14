@@ -36,11 +36,7 @@ interface Translations {
   ready: string;
   delivered: string;
   cancelled: string;
-
-  // Confirm Dialog - Defaults
-  confirmDialogDefaultConfirm: string;
-  confirmDialogDefaultCancel: string;
-    
+  
   // Navigation
   dashboard: string;
   categories: string;
@@ -50,97 +46,6 @@ interface Translations {
   subscription: string;
   settings: string;
   analytics: string;
-
-  // Terms and Conditions
-  termsSection1Title: string;
-  termsSection1Content: string;
-  termsSection2Title: string;
-  termsSection2Content: string;
-  termsSection2Item1: string;
-  termsSection2Item2: string;
-  termsSection2Item3: string;
-  termsSection2Item4: string;
-  termsSection2Item5: string;
-  termsSection3Title: string;
-  termsSection3Content: string;
-  termsSection3Item1: string;
-  termsSection3Item2: string;
-  termsSection3Item3: string;
-  termsSection3Item4: string;
-  termsSection4Title: string;
-  termsSection4Content: string;
-  termsSection4Item1: string;
-  termsSection4Item2: string;
-  termsSection4Item3: string;
-  termsSection4Item4: string;
-  termsSection5Title: string;
-  termsSection5Content: string;
-  termsSection5Item1: string;
-  termsSection5Item2: string;
-  termsSection5Item3: string;
-  termsSection5Item4: string;
-  termsSection5Item5: string;
-  termsSection5Item6: string;
-  termsSection6Title: string;
-  termsSection6Content1: string;
-  termsSection6Content2: string;
-  termsSection7Title: string;
-  termsSection7Content: string;
-  termsSection7Item1: string;
-  termsSection7Item2: string;
-  termsSection7Item3: string;
-  termsSection7Content2: string;
-  termsSection8Title: string;
-  termsSection8Content: string;
-  termsSection8Item1: string;
-  termsSection8Item2: string;
-  termsSection8Item3: string;
-  termsSection8Content2: string;
-  termsSection9Title: string;
-  termsSection9Content: string;
-  termsSection9Item1: string;
-  termsSection9Item2: string;
-  termsSection9Item3: string;
-  termsSection9Item4: string;
-  termsSection10Title: string;
-  termsSection10Content: string;
-  termsSection10Item1: string;
-  termsSection10Item2: string;
-  termsSection10Item3: string;
-  termsSection10Item4: string;
-  termsSection11Title: string;
-  termsSection11Content: string;
-  termsSection12Title: string;
-  termsSection12Content: string;
-  termsSection13Title: string;
-  termsSection13Item1Label: string;
-  termsSection13Item1: string;
-  termsSection13Item2Label: string;
-  termsSection13Item2: string;
-  termsSection13Item3Label: string;
-  termsSection13Item3: string;
-  termsSection13Item4Label: string;
-  termsSection13Item4: string;
-  termsSection14Title: string;
-  termsSection14Content: string;
-  termsSection14Item1: string;
-  termsSection14Item2: string;
-  termsLastUpdate: string;
-  termsLastUpdateDate: string;
-  termsAcceptDisclaimer: string;
-  acceptTermsAndConditionsButton: string;
-  
-  // Auth Context Errors
-  restaurantNotFoundForUser: string;
-  noRestaurantAssigned: string;
-  noAccountFoundWithEmail: string;
-  passwordRecoveryRequest: string;
-  passwordRecoveryMessage: string;
-  userRole: string;
-  requestDate: string;
-  userWithoutRestaurant: string;
-  noName: string;
-  notAvailable: string;
   
   // Auth
   login: string;
@@ -164,41 +69,6 @@ interface Translations {
   requestSent: string;
   requestInfo: string;
   requestResponse: string;
-  recoverPassword: string;
-  recoverPasswordInstructions: string;
-  helpReactivateAccount: string;
-  emailPlaceholder: string;
-  sendRequest: string;
-  requestSendError: string;
-
-  // Register Form
-  restaurantNameRequired: string;
-  emailRequired: string;
-  passwordRequired: string;
-  mustAcceptTerms: string;
-  registerError: string;
-  contactEmail: string;
-  restaurantAddress: string;
-  minimumCharacters: string;
-  repeatPassword: string;
-  termsAndConditions: string;
-  ofService: string;
-  createAccount: string;
-  termsModalTitle: string;
-  restaurantNamePlaceholder: string;
-  ownerNamePlaceholder: string;
-  contactEmailPlaceholder: string;
-  phonePlaceholder: string;
-  addressPlaceholder: string;
-
-  // Change Password Modal
-  changePasswordRequired: string;
-  provisionalPasswordDetected: string;
-  securityPasswordChange: string;
-  newPassword: string;
-  confirmNewPassword: string;
-  changePassword: string;
-  writePasswordAgain: string;
   
   // Dashboard
   totalProducts: string;
@@ -210,262 +80,6 @@ interface Translations {
   lastUpdate: string;
   noOrdersYet: string;
   ordersWillAppear: string;
-
-  // Tutorial Modal
-  tutorialStepOf: string;
-  tutorialStepByStepInstructions: string;
-  tutorialImportantInfo: string;
-  tutorialPrevious: string;
-  tutorialNext: string;
-  tutorialFinish: string;
-  tutorialGoToStep: string;
-  
-  // Tutorial Steps Titles
-  tutorialStep1Title: string;
-  tutorialStep2Title: string;
-  tutorialStep3Title: string;
-  tutorialStep4Title: string;
-  tutorialStep5Title: string;
-  tutorialStep6Title: string;
-  tutorialStep7Title: string;
-  tutorialStep8Title: string;
-  
-  // Tutorial Steps Descriptions
-  tutorialStep1Description: string;
-  tutorialStep2Description: string;
-  tutorialStep3Description: string;
-  tutorialStep4Description: string;
-  tutorialStep5Description: string;
-  tutorialStep6Description: string;
-  tutorialStep7Description: string;
-  tutorialStep8Description: string;
-  
-  // Step 1: Categories
-  tutorialStep1Item1: string;
-  tutorialStep1Item2: string;
-  tutorialStep1Item3: string;
-  tutorialStep1Item4: string;
-  tutorialStep1Item5: string;
-  tutorialStep1Item6: string;
-  tutorialStep1Detail1: string;
-  tutorialStep1Detail2: string;
-  tutorialStep1Detail3: string;
-  tutorialStep1Detail4: string;
-  tutorialStep1Detail5: string;
-  tutorialStep1Image: string;
-  
-  // Step 2: Products
-  tutorialStep2Item1: string;
-  tutorialStep2Item2: string;
-  tutorialStep2Item3: string;
-  tutorialStep2Item4: string;
-  tutorialStep2Item5: string;
-  tutorialStep2Item6: string;
-  tutorialStep2Item7: string;
-  tutorialStep2Item8: string;
-  tutorialStep2Item9: string;
-  tutorialStep2Item10: string;
-  tutorialStep2Detail1: string;
-  tutorialStep2Detail2: string;
-  tutorialStep2Detail3: string;
-  tutorialStep2Detail4: string;
-  tutorialStep2Detail5: string;
-  tutorialStep2Detail6: string;
-  tutorialStep2Image: string;
-  
-  // Step 3: Menu Configuration
-  tutorialStep3Item1: string;
-  tutorialStep3Item2: string;
-  tutorialStep3Item3: string;
-  tutorialStep3Item4: string;
-  tutorialStep3Item5: string;
-  tutorialStep3Item6: string;
-  tutorialStep3Item7: string;
-  tutorialStep3Item8: string;
-  tutorialStep3Item9: string;
-  tutorialStep3Item10: string;
-  tutorialStep3Item11: string;
-  tutorialStep3Item12: string;
-  tutorialStep3Item13: string;
-  tutorialStep3Item14: string;
-  tutorialStep3Item15: string;
-  tutorialStep3Item16: string;
-  tutorialStep3Item17: string;
-  tutorialStep3Detail1: string;
-  tutorialStep3Detail2: string;
-  tutorialStep3Detail3: string;
-  tutorialStep3Detail4: string;
-  tutorialStep3Detail5: string;
-  tutorialStep3Detail6: string;
-  tutorialStep3Detail7: string;
-  tutorialStep3Image: string;
-  
-  // Step 4: Orders Management
-  tutorialStep4Item1: string;
-  tutorialStep4Item2: string;
-  tutorialStep4Item3: string;
-  tutorialStep4Item4: string;
-  tutorialStep4Item5: string;
-  tutorialStep4Item6: string;
-  tutorialStep4Item7: string;
-  tutorialStep4Item8: string;
-  tutorialStep4Item9: string;
-  tutorialStep4Item10: string;
-  tutorialStep4Item11: string;
-  tutorialStep4Item12: string;
-  tutorialStep4Item13: string;
-  tutorialStep4Item14: string;
-  tutorialStep4Item15: string;
-  tutorialStep4Item16: string;
-  tutorialStep4Item17: string;
-  tutorialStep4Item18: string;
-  tutorialStep4Item19: string;
-  tutorialStep4Detail1: string;
-  tutorialStep4Detail2: string;
-  tutorialStep4Detail3: string;
-  tutorialStep4Detail4: string;
-  tutorialStep4Detail5: string;
-  tutorialStep4Detail6: string;
-  tutorialStep4Detail7: string;
-  tutorialStep4Image: string;
-  
-  // Step 5: Public Menu
-  tutorialStep5Item1: string;
-  tutorialStep5Item2: string;
-  tutorialStep5Item3: string;
-  tutorialStep5Item4: string;
-  tutorialStep5Item5: string;
-  tutorialStep5Item6: string;
-  tutorialStep5Item7: string;
-  tutorialStep5Item8: string;
-  tutorialStep5Item9: string;
-  tutorialStep5Item10: string;
-  tutorialStep5Item11: string;
-  tutorialStep5Item12: string;
-  tutorialStep5Item13: string;
-  tutorialStep5Item14: string;
-  tutorialStep5Item15: string;
-  tutorialStep5Detail1: string;
-  tutorialStep5Detail2: string;
-  tutorialStep5Detail3: string;
-  tutorialStep5Detail4: string;
-  tutorialStep5Detail5: string;
-  tutorialStep5Detail6: string;
-  tutorialStep5Detail7: string;
-  tutorialStep5Detail8: string;
-  tutorialStep5Image: string;
-  
-  // Step 6: Analytics
-  tutorialStep6Item1: string;
-  tutorialStep6Item2: string;
-  tutorialStep6Item3: string;
-  tutorialStep6Item4: string;
-  tutorialStep6Item5: string;
-  tutorialStep6Item6: string;
-  tutorialStep6Item7: string;
-  tutorialStep6Item8: string;
-  tutorialStep6Item9: string;
-  tutorialStep6Item10: string;
-  tutorialStep6Item11: string;
-  tutorialStep6Item12: string;
-  tutorialStep6Item13: string;
-  tutorialStep6Item14: string;
-  tutorialStep6Item15: string;
-  tutorialStep6Item16: string;
-  tutorialStep6Item17: string;
-  tutorialStep6Item18: string;
-  tutorialStep6Item19: string;
-  tutorialStep6Item20: string;
-  tutorialStep6Item21: string;
-  tutorialStep6Item22: string;
-  tutorialStep6Item23: string;
-  tutorialStep6Item24: string;
-  tutorialStep6Item25: string;
-  tutorialStep6Item26: string;
-  tutorialStep6Item27: string;
-  tutorialStep6Detail1: string;
-  tutorialStep6Detail2: string;
-  tutorialStep6Detail3: string;
-  tutorialStep6Detail4: string;
-  tutorialStep6Detail5: string;
-  tutorialStep6Detail6: string;
-  tutorialStep6Detail7: string;
-  tutorialStep6Detail8: string;
-  tutorialStep6Image: string;
-  
-  // Step 7: Customers
-  tutorialStep7Item1: string;
-  tutorialStep7Item2: string;
-  tutorialStep7Item3: string;
-  tutorialStep7Item4: string;
-  tutorialStep7Item5: string;
-  tutorialStep7Item6: string;
-  tutorialStep7Item7: string;
-  tutorialStep7Item8: string;
-  tutorialStep7Item9: string;
-  tutorialStep7Item10: string;
-  tutorialStep7Item11: string;
-  tutorialStep7Item12: string;
-  tutorialStep7Item13: string;
-  tutorialStep7Item14: string;
-  tutorialStep7Item15: string;
-  tutorialStep7Item16: string;
-  tutorialStep7Item17: string;
-  tutorialStep7Item18: string;
-  tutorialStep7Detail1: string;
-  tutorialStep7Detail2: string;
-  tutorialStep7Detail3: string;
-  tutorialStep7Detail4: string;
-  tutorialStep7Detail5: string;
-  tutorialStep7Detail6: string;
-  tutorialStep7Detail7: string;
-  tutorialStep7Detail8: string;
-  tutorialStep7Detail9: string;
-  tutorialStep7Image: string;
-  
-  // Step 8: Subscription
-  tutorialStep8Item1: string;
-  tutorialStep8Item2: string;
-  tutorialStep8Item3: string;
-  tutorialStep8Item4: string;
-  tutorialStep8Item5: string;
-  tutorialStep8Item6: string;
-  tutorialStep8Item7: string;
-  tutorialStep8Item8: string;
-  tutorialStep8Item9: string;
-  tutorialStep8Item10: string;
-  tutorialStep8Item11: string;
-  tutorialStep8Item12: string;
-  tutorialStep8Item13: string;
-  tutorialStep8Item14: string;
-  tutorialStep8Item15: string;
-  tutorialStep8Item16: string;
-  tutorialStep8Item17: string;
-  tutorialStep8Item18: string;
-  tutorialStep8Item19: string;
-  tutorialStep8Item20: string;
-  tutorialStep8Item21: string;
-  tutorialStep8Detail1: string;
-  tutorialStep8Detail2: string;
-  tutorialStep8Detail3: string;
-  tutorialStep8Detail4: string;
-  tutorialStep8Detail5: string;
-  tutorialStep8Detail6: string;
-  tutorialStep8Detail7: string;
-  tutorialStep8Image: string;
-
-  // Order Product Selector
-  orderProducts: string;
-  selectProduct: string;
-  selectProductOption: string;
-  selectVariation: string;
-  selectVariationOption: string;
-  additionalIngredients: string;
-  quantity: string;
-  addProduct: string;
-  noProductsAdded: string;
-  selectProductsToAdd: string;
-  errorSelectProductVariation: string;
   
   // Orders
   orderManagement: string;
@@ -489,8 +103,6 @@ interface Translations {
   references: string;
   estimatedTime: string;
   thankYouOrder: string;
-  allDates: string;
-  productsSectionTitle: string;
   
   // Products
   productManagement: string;
@@ -517,37 +129,6 @@ interface Translations {
   productCreated: string;
   productDeleted: string;
   productArchived: string;
-
-  // Product Form
-  enterProductName: string;
-  selectCategory: string;
-  enterProductDescription: string;
-  productSKU: string;
-  productImage: string;
-  uploadedImage: string;
-  uploadImageFromDevice: string;
-  uploadHighQualityImage: string;
-  productPreview: string;
-  imageWillShowInMenu: string;
-  noImageAdded: string;
-  uploadImageToShow: string;
-  variationName: string;
-  variationNamePlaceholder: string;
-  priceRequired: string;
-  comparePrice: string;
-  priceBeforeDiscount: string;
-  savings: string;
-  ingredientsLabel: string;
-  ingredientName: string;
-  optionalLabel: string;
-  noIngredientsAdded: string;
-  ingredientsAreOptional: string;
-  updateProduct: string;
-  createProduct: string;
-  fillRequiredFields: string;
-  fileTooLarge: string;
-  maxSize5MB: string;
-  onlyOneImageAllowed: string;
   
   // Categories
   categoryManagement: string;
@@ -558,9 +139,6 @@ interface Translations {
   categoryIcon: string;
   categoryUpdated: string;
   categoryCreated: string;
-  messageCategoryUpdated: string;
-  messageCategoryCreated: string;
-  messageCategoryDeleted: string;
   categoryDeleted: string;
   categoryActivated: string;
   categoryDeactivated: string;
@@ -582,9 +160,6 @@ interface Translations {
   categoryActivatedDes: string;
   categoryDeactivatedDes: string;
   viewMenu: string;
-  deleteCategoryTitle: string;
-  deleteCategoryMessage: string;
-  deleteCategoryButton: string;
   
   // Customers
   customerManagement: string;
@@ -599,7 +174,6 @@ interface Translations {
   segment: string;
   lastOrder: string;
   newCustomer: string;
-  removeVip: string;
   regular: string;
   frequent: string;
   vip: string;
@@ -750,8 +324,7 @@ interface Translations {
   upgradeSubscription: string;
   addMoreProducts: string;
   addMoreCategories: string;
-
-
+  
   // Super Admin
   superAdminPanel: string;
   superAdminDashboard: string;
@@ -798,10 +371,6 @@ const translations: Record<Language, Translations> = {
     ready: 'Listo',
     delivered: 'Entregado',
     cancelled: 'Cancelado',
-
-    // Confirm Dialog - Defaults
-    confirmDialogDefaultConfirm: 'Confirmar',
-    confirmDialogDefaultCancel: 'Cancelar',
     
     // Navigation
     dashboard: 'Dashboard',
@@ -812,113 +381,6 @@ const translations: Record<Language, Translations> = {
     subscription: 'Suscripción',
     settings: 'Configuración',
     analytics: 'Estadísticas',
-
-    // Terms and Conditions
-    termsSection1Title: 'Aceptación de los Términos',
-    termsSection1Content: 'Al registrarse y utilizar Platyo, usted acepta estar legalmente vinculado por estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestro servicio.',
-    
-    termsSection2Title: 'Descripción del Servicio',
-    termsSection2Content: 'Platyo es una plataforma de gestión para restaurantes que proporciona herramientas para:',
-    termsSection2Item1: 'Gestión de menú digital y catálogo de productos',
-    termsSection2Item2: 'Sistema de pedidos en línea',
-    termsSection2Item3: 'Administración de clientes y órdenes',
-    termsSection2Item4: 'Análisis y reportes de ventas',
-    termsSection2Item5: 'Gestión de inventario y categorías',
-    
-    termsSection3Title: 'Registro y Cuenta',
-    termsSection3Content: 'Para utilizar Platyo, debe crear una cuenta proporcionando información precisa y completa. Usted es responsable de:',
-    termsSection3Item1: 'Mantener la confidencialidad de su contraseña',
-    termsSection3Item2: 'Todas las actividades que ocurran bajo su cuenta',
-    termsSection3Item3: 'Notificar inmediatamente cualquier uso no autorizado',
-    termsSection3Item4: 'Proporcionar información veraz y actualizada',
-    
-    termsSection4Title: 'Suscripciones y Pagos',
-    termsSection4Content: 'Platyo ofrece diferentes planes de suscripción. Al suscribirse, usted acepta:',
-    termsSection4Item1: 'Pagar todas las tarifas asociadas con su plan seleccionado',
-    termsSection4Item2: 'Las renovaciones automáticas según la periodicidad del plan',
-    termsSection4Item3: 'Que los precios pueden cambiar con previo aviso de 30 días',
-    termsSection4Item4: 'La política de reembolso según el plan contratado',
-    
-    termsSection5Title: 'Uso Aceptable',
-    termsSection5Content: 'Al usar Platyo, usted se compromete a NO:',
-    termsSection5Item1: 'Violar leyes o regulaciones aplicables',
-    termsSection5Item2: 'Infringir derechos de propiedad intelectual',
-    termsSection5Item3: 'Transmitir contenido ofensivo, ilegal o inapropiado',
-    termsSection5Item4: 'Intentar acceder sin autorización a sistemas o datos',
-    termsSection5Item5: 'Usar el servicio para actividades fraudulentas',
-    termsSection5Item6: 'Interferir con el funcionamiento del servicio',
-    
-    termsSection6Title: 'Propiedad Intelectual',
-    termsSection6Content1: 'Todo el contenido, características y funcionalidad de Platyo son propiedad exclusiva de la empresa y están protegidos por leyes de derechos de autor, marcas registradas y otras leyes de propiedad intelectual.',
-    termsSection6Content2: 'Usted conserva todos los derechos sobre el contenido que cargue (menús, productos, imágenes), pero nos otorga una licencia para usarlo en la prestación del servicio.',
-    
-    termsSection7Title: 'Privacidad y Protección de Datos',
-    termsSection7Content: 'Recopilamos y procesamos datos personales de acuerdo con nuestra Política de Privacidad y cumpliendo con:',
-    termsSection7Item1: 'Ley 1581 de 2012 de Protección de Datos Personales en Colombia',
-    termsSection7Item2: 'Decreto 1377 de 2013',
-    termsSection7Item3: 'Principios de legalidad, finalidad, libertad, veracidad, transparencia, acceso y seguridad',
-    termsSection7Content2: 'Sus derechos incluyen: conocer, actualizar, rectificar y suprimir sus datos personales, así como revocar la autorización otorgada.',
-    
-    termsSection8Title: 'Limitación de Responsabilidad',
-    termsSection8Content: 'Platyo se proporciona "tal cual" y "según disponibilidad". No garantizamos que:',
-    termsSection8Item1: 'El servicio será ininterrumpido o libre de errores',
-    termsSection8Item2: 'Los resultados obtenidos serán exactos o confiables',
-    termsSection8Item3: 'Todos los errores serán corregidos',
-    termsSection8Content2: 'No seremos responsables por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo pérdida de beneficios, datos, uso o buena voluntad.',
-    
-    termsSection9Title: 'Indemnización',
-    termsSection9Content: 'Usted acepta indemnizar y mantener indemne a Platyo, sus afiliados, directores, empleados y agentes de cualquier reclamación, daño, obligación, pérdida, responsabilidad, costo o deuda que surja de:',
-    termsSection9Item1: 'Su uso del servicio',
-    termsSection9Item2: 'Violación de estos términos',
-    termsSection9Item3: 'Violación de derechos de terceros',
-    termsSection9Item4: 'Contenido que usted publique o comparta',
-    
-    termsSection10Title: 'Terminación del Servicio',
-    termsSection10Content: 'Podemos suspender o terminar su acceso al servicio inmediatamente, sin previo aviso, por cualquier motivo, incluyendo:',
-    termsSection10Item1: 'Violación de estos términos',
-    termsSection10Item2: 'Solicitud de autoridades legales',
-    termsSection10Item3: 'Discontinuación del servicio',
-    termsSection10Item4: 'Actividad fraudulenta o ilegal',
-    
-    termsSection11Title: 'Modificaciones',
-    termsSection11Content: 'Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación. Su uso continuado del servicio constituye su aceptación de los términos modificados.',
-    
-    termsSection12Title: 'Ley Aplicable y Jurisdicción',
-    termsSection12Content: 'Estos términos se rigen por las leyes de la República de Colombia. Cualquier disputa será resuelta en los tribunales competentes de Colombia, renunciando expresamente a cualquier otro fuero que pudiera corresponder.',
-    
-    termsSection13Title: 'Disposiciones Generales',
-    termsSection13Item1Label: 'Divisibilidad',
-    termsSection13Item1: 'Si alguna disposición es considerada inválida, las demás permanecerán vigentes',
-    termsSection13Item2Label: 'Renuncia',
-    termsSection13Item2: 'La falta de ejercicio de un derecho no constituye renuncia al mismo',
-    termsSection13Item3Label: 'Acuerdo Completo',
-    termsSection13Item3: 'Estos términos constituyen el acuerdo completo entre las partes',
-    termsSection13Item4Label: 'Cesión',
-    termsSection13Item4: 'No puede ceder sus derechos sin nuestro consentimiento previo por escrito',
-    
-    termsSection14Title: 'Contacto',
-    termsSection14Content: 'Para preguntas sobre estos términos, puede contactarnos a través de:',
-    termsSection14Item1: 'Email: admin@digitalfenixpro.com',
-    termsSection14Item2: 'Dentro de la plataforma mediante el sistema de tickets de soporte',
-    
-    termsLastUpdate: 'Última actualización',
-    termsLastUpdateDate: 'Noviembre 2025',
-    termsAcceptDisclaimer: 'Al hacer clic en "Aceptar" o al usar el servicio, usted reconoce que ha leído, entendido y acepta estar legalmente vinculado por estos Términos y Condiciones.',
-    acceptTermsAndConditionsButton: 'Aceptar Términos y Condiciones',
-
-
-    // Auth Context Errors
-    restaurantNotFoundForUser: 'Restaurante no encontrado para este usuario',
-    noRestaurantAssigned: 'No tienes un restaurante asignado. Contacta al administrador.',
-    noAccountFoundWithEmail: 'No se encontró una cuenta con ese email',
-    passwordRecoveryRequest: 'Solicitud de recuperación de contraseña',
-    passwordRecoveryMessage: 'ha solicitado recuperar su contraseña.',
-    userRole: 'Rol del usuario',
-    requestDate: 'Fecha de solicitud',
-    userWithoutRestaurant: 'Usuario sin restaurante',
-    noName: 'Sin nombre',
-    notAvailable: 'No disponible',
-
     
     // Auth
     login: 'Iniciar Sesión',
@@ -962,287 +424,8 @@ const translations: Record<Language, Translations> = {
     statOrdersProcessed: 'Pedidos Procesados',
     statSatisfaction: 'Satisfacción',
     requestSent: '¡Solicitud Enviada!',
-    requestInfo: 'Hemos recibido tu solicitud de recuperación de contraseña.',
+    requestInfo: 'Hemos recibido tu solicitud de recuperación de contraseña.'
     requestResponse: 'Nuestro equipo se contactará contigo al email',
-    recoverPassword: 'Recuperar Contraseña',
-    recoverPasswordInstructions: 'Ingresa tu dirección de email y nos pondremos en contacto contigo para ayudarte a recuperar el acceso a tu cuenta.',
-    helpReactivateAccount: 'para ayudarte a reactivar tu cuenta.',
-    emailPlaceholder: 'tu@email.com',
-    sendRequest: 'Enviar Solicitud',
-    requestSendError: 'Error al enviar la solicitud',
-
-    // Register Form
-    restaurantNameRequired: 'El nombre del restaurante es obligatorio',
-    emailRequired: 'El email es obligatorio',
-    passwordRequired: 'La contraseña es obligatoria',
-    mustAcceptTerms: 'Debes aceptar los términos y condiciones',
-    registerError: 'Error al registrar',
-    contactEmail: 'Email de Contacto',
-    restaurantAddress: 'Dirección del Restaurante',
-    minimumCharacters: 'Mínimo 6 caracteres',
-    repeatPassword: 'Repite tu contraseña',
-    termsAndConditions: 'términos y condiciones',
-    ofService: 'del servicio',
-    createAccount: 'Crear Cuenta',
-    termsModalTitle: 'Términos y Condiciones de Platyo',
-    restaurantNamePlaceholder: 'Mi Restaurante',
-    ownerNamePlaceholder: 'Pepito Perez',
-    contactEmailPlaceholder: 'contacto@mirestaurante.com',
-    phonePlaceholder: '+57 (310) 123-4567',
-    addressPlaceholder: 'Calle 123 No 45-67, Ciudad',
-
-    // Change Password Modal
-    changePasswordRequired: 'Cambio de Contraseña Requerido',
-    provisionalPasswordDetected: 'Contraseña provisional detectada.',
-    securityPasswordChange: 'Por seguridad, debes cambiar tu contraseña antes de continuar. Esta contraseña será permanente y podrás usarla en futuros inicios de sesión.',
-    newPassword: 'Nueva Contraseña',
-    confirmNewPassword: 'Confirmar Nueva Contraseña',
-    changePassword: 'Cambiar Contraseña',
-    writePasswordAgain: 'Escribe la contraseña nuevamente',
-
-    // Tutorial Modal
-    tutorialStepOf: 'de',
-    tutorialStepByStepInstructions: 'Instrucciones Paso a Paso',
-    tutorialImportantInfo: 'Información Importante',
-    tutorialPrevious: 'Anterior',
-    tutorialNext: 'Siguiente',
-    tutorialFinish: 'Finalizar Tutorial',
-    tutorialGoToStep: 'Ir al paso',
-    
-    // Tutorial Steps Titles
-    tutorialStep1Title: 'Paso 1: Crear Categorías',
-    tutorialStep2Title: 'Paso 2: Agregar Productos',
-    tutorialStep3Title: 'Paso 3: Configurar tu Menú',
-    tutorialStep4Title: 'Paso 4: Gestionar Pedidos',
-    tutorialStep5Title: 'Paso 5: Compartir tu Menú',
-    tutorialStep6Title: 'Paso 6: Revisar Estadísticas',
-    tutorialStep7Title: 'Paso 7: Gestión de Clientes',
-    tutorialStep8Title: 'Paso 8: Gestionar Suscripción',
-    
-    // Tutorial Steps Descriptions
-    tutorialStep1Description: 'Primero debes crear las categorías para organizar tu menú',
-    tutorialStep2Description: 'Ahora crea los productos que aparecerán en tu menú',
-    tutorialStep3Description: 'Personaliza la apariencia y configuración de tu menú público',
-    tutorialStep4Description: 'Aprende a recibir y gestionar los pedidos de tus clientes',
-    tutorialStep5Description: 'Comparte el enlace de tu menú con tus clientes',
-    tutorialStep6Description: 'Monitorea el rendimiento de tu negocio con reportes detallados',
-    tutorialStep7Description: 'Consulta y administra tu base de clientes',
-    tutorialStep8Description: 'Mantén tu cuenta activa y administra tu plan',
-    
-    // Step 1: Categories
-    tutorialStep1Item1: 'Haz clic en "Categorías" en el menú lateral izquierdo',
-    tutorialStep1Item2: 'Presiona el botón "+ Nueva Categoría" (esquina superior derecha)',
-    tutorialStep1Item3: 'En el formulario que aparece, ingresa el nombre de la categoría (ej: "Entradas", "Platos Fuertes", "Bebidas")',
-    tutorialStep1Item4: 'Ingrese una descripción para la categoría creada',
-    tutorialStep1Item5: 'Haz clic en "Guardar" para crear la categoría',
-    tutorialStep1Item6: 'Repite estos pasos para crear todas las categorías que necesites',
-    tutorialStep1Detail1: 'El nombre debe ser claro y descriptivo para tus clientes',
-    tutorialStep1Detail2: 'Puedes crear categorías como: Entradas, Platos Principales, Bebidas, Postres, Especialidades, etc.',
-    tutorialStep1Detail3: 'Una vez creada, puedes activar/desactivar la categoría usando el icono de visualización',
-    tutorialStep1Detail4: 'Si desactivas una categoría, esta no se mostrará en el menú público',
-    tutorialStep1Detail5: 'Para editar o eliminar una categoría, usa los iconos de lápiz (editar) o papelera (eliminar) en cada fila',
-    tutorialStep1Image: 'Pantalla de Categorías con lista de categorías creadas, cada una con su imagen y botón "Nueva Categoría" en la esquina superior derecha',
-    
-    // Step 2: Products
-    tutorialStep2Item1: 'Haz clic en "Menú" en el menú lateral izquierdo',
-    tutorialStep2Item2: 'Presiona el botón "+ Nuevo Producto" en la parte superior',
-    tutorialStep2Item3: 'Completa los campos requeridos: Nombre del producto (ej: "Pizza Margarita")',
-    tutorialStep2Item4: 'Escribe una descripción atractiva del producto (ej: "Deliciosa pizza con salsa de tomate, mozzarella fresca y albahaca")',
-    tutorialStep2Item5: 'Selecciona la categoría a la que pertenece de la lista desplegable',
-    tutorialStep2Item6: 'Sube una imagen del producto haciendo clic en "Seleccionar Imagen" (opcional pero recomendado)',
-    tutorialStep2Item7: 'En la sección "Variaciones", agrega al menos una opción: Nombre (ej: "Personal"), Precio (ej: $15000)',
-    tutorialStep2Item8: 'Puedes agregar más variaciones con "+ Agregar Variación" (ej: "Mediana", "Familiar")',
-    tutorialStep2Item9: 'Si aplica, agrega ingredientes opcionales con "+ Agregar Ingrediente" especificando nombre y precio adicional',
-    tutorialStep2Item10: 'Haz clic en "Guardar Producto"',
-    tutorialStep2Detail1: 'Las variaciones son obligatorias: cada producto debe tener al menos una variación (tamaño, sabor, presentación)',
-    tutorialStep2Detail2: 'Ejemplo de variaciones: Pizza → Personal, Mediana, Familiar | Bebida → 300ml, 500ml, 1L',
-    tutorialStep2Detail3: 'Los ingredientes opcionales son adicionales que el cliente puede agregar (ej: Queso extra, Tocino, Aguacate)',
-    tutorialStep2Detail4: 'Las imágenes aumentan significativamente las ventas',
-    tutorialStep2Detail5: 'El orden de los productos en la lista se puede cambiar arrastrándolos',
-    tutorialStep2Detail6: 'Puedes activar/desactivar productos temporalmente sin eliminarlos usando el switch de estado',
-    tutorialStep2Image: 'Formulario de creación de producto con campos: nombre, descripción, categoría, imagen, variaciones (nombre/precio) e ingredientes opcionales',
-    
-    // Step 3: Menu Configuration
-    tutorialStep3Item1: 'Haz clic en "Configuración" en el menú lateral',
-    tutorialStep3Item2: 'En la pestaña "General", completa toda la información de tu restaurante:',
-    tutorialStep3Item3: '• Nombre del restaurante',
-    tutorialStep3Item4: '• Teléfono (formato: +57 3001234567) - importante para recibir pedidos por WhatsApp',
-    tutorialStep3Item5: '• Dirección completa',
-    tutorialStep3Item6: '• Ciudad',
-    tutorialStep3Item7: 'En la pestaña "Personalización", ajusta los colores de tu menú:',
-    tutorialStep3Item8: '• Color primario (color principal de botones y elementos destacados)',
-    tutorialStep3Item9: '• Color secundario (color de fondo y elementos secundarios)',
-    tutorialStep3Item10: '• Color de acento (color para elementos importantes)',
-    tutorialStep3Item11: 'En la pestaña "Domicilio", configura si ofreces servicio a domicilio:',
-    tutorialStep3Item12: '• Activa el switch "Habilitar Domicilio"',
-    tutorialStep3Item13: '• Configura los niveles de precio según el monto del pedido',
-    tutorialStep3Item14: '• Ejemplo: $0-$20000 = $5000 domicilio | $20000-$50000 = $3000 | Más de $50000 = Gratis',
-    tutorialStep3Item15: 'En la misma sección, configura si aceptas pedidos para consumir en mesa',
-    tutorialStep3Item16: 'Establece el tiempo de preparación estimado (ej: "30-45 minutos")',
-    tutorialStep3Item17: 'Guarda todos los cambios',
-    tutorialStep3Detail1: 'El teléfono es crucial: todos los pedidos se enviarán automáticamente a ese número por WhatsApp',
-    tutorialStep3Detail2: 'El formato del teléfono debe incluir el código del país (ej: +57 para Colombia)',
-    tutorialStep3Detail3: 'Los colores personalizados se aplican inmediatamente en el menú público',
-    tutorialStep3Detail4: 'El tiempo de preparación aparece al cliente cuando va a hacer un pedido',
-    tutorialStep3Detail5: 'La configuración de Domicilio permite establecer diferentes costos según el monto del pedido',
-    tutorialStep3Detail6: 'Si desactivas el Domicilio, los clientes solo podrán elegir "Recoger en tienda" o "Mesa"',
-    tutorialStep3Detail7: 'Prueba diferentes combinaciones de colores para que coincidan con tu marca',
-    tutorialStep3Image: 'Panel de Configuración mostrando pestañas: General, Personalización y Domicilio con formularios para cada sección',
-    
-    // Step 4: Orders Management
-    tutorialStep4Item1: 'Cuando un cliente hace un pedido, recibirás un mensaje de WhatsApp automáticamente con todos los detalles',
-    tutorialStep4Item2: 'El pedido también aparecerá en la sección "Pedidos" de la aplicación',
-    tutorialStep4Item3: 'Para ver los pedidos, haz clic en "Pedidos" en el menú lateral',
-    tutorialStep4Item4: 'Verás una lista con todos los pedidos. Los estados son:',
-    tutorialStep4Item5: '• 🟡 Pendiente: Pedido recién recibido, requiere confirmación',
-    tutorialStep4Item6: '• 🔵 Confirmado: Pedido aceptado',
-    tutorialStep4Item7: '• 🟠 Preparando: Pedido en cocina',
-    tutorialStep4Item8: '• 🟢 Listo: Pedido terminado y listo para entregar',
-    tutorialStep4Item9: '• ✅ Entregado: Pedido completado',
-    tutorialStep4Item10: '• 🔴 Cancelado: Pedido cancelado',
-    tutorialStep4Item11: 'Para cambiar el estado de un pedido, haz clic en el botón "Editar" en la tarjeta del pedido',
-    tutorialStep4Item12: 'Selecciona el nuevo estado del menú desplegable',
-    tutorialStep4Item13: 'Para ver todos los detalles de un pedido, haz clic en "Ver Detalles"',
-    tutorialStep4Item14: 'Puedes filtrar pedidos usando los filtros en la parte superior:',
-    tutorialStep4Item15: '• Por estado (Pendientes, En preparación, etc.)',
-    tutorialStep4Item16: '• Por tipo (Domicilio, Recoger, Mesa)',
-    tutorialStep4Item17: '• Por rango de fechas',
-    tutorialStep4Item18: 'Usa la barra de búsqueda para encontrar un pedido específico por número o nombre de cliente',
-    tutorialStep4Item19: 'Puedes utilizar el icono de mensaje para mantener al tanto a tus clientes sobre el estado del pedido a través de WhatsApp',
-    tutorialStep4Detail1: 'El mensaje de WhatsApp incluye: número de pedido, datos del cliente, productos, precios y notas especiales',
-    tutorialStep4Detail2: 'IMPORTANTE: Actualiza el estado del pedido a medida que avanza para mantener informado al cliente',
-    tutorialStep4Detail3: 'Los pedidos "Pendientes" aparecen destacados en amarillo para llamar tu atención',
-    tutorialStep4Detail4: 'En los detalles del pedido verás: información del cliente, dirección (si es Domicilio), lista de productos con variaciones e ingredientes extras, notas especiales del cliente',
-    tutorialStep4Detail5: 'Si necesitas cancelar un pedido, cambia su estado a "Cancelado" y contacta al cliente para explicar',
-    tutorialStep4Detail6: 'Los filtros te ayudan a enfocarte en los pedidos que requieren acción inmediata',
-    tutorialStep4Detail7: 'Mantén organizada tu cocina: primero confirma el pedido, luego marca como "Preparando", después "Listo" y finalmente "Entregado"',
-    tutorialStep4Image: 'Pantalla de Pedidos mostrando tarjetas con información de cada pedido: número, cliente, estado, productos y botones de acción',
-    
-    // Step 5: Public Menu
-    tutorialStep5Item1: 'Tu menú público tiene una URL única que puedes compartir',
-    tutorialStep5Item2: 'La URL tiene el formato: platyo.com/nombre-de-tu-restaurante',
-    tutorialStep5Item3: 'Para compartir tu menú:',
-    tutorialStep5Item4: '• Copia la URL de tu navegador cuando estés en la vista de menú público',
-    tutorialStep5Item5: '• Compártela en redes sociales (Facebook, Instagram, WhatsApp)',
-    tutorialStep5Item6: '• Agrégala a tu biografía de Instagram',
-    tutorialStep5Item7: '• Envíala directamente a tus clientes por WhatsApp',
-    tutorialStep5Item8: '• Imprímela como código QR para colocar en tu local',
-    tutorialStep5Item9: 'Los clientes pueden:',
-    tutorialStep5Item10: '• Ver todos tus productos organizados por categorías',
-    tutorialStep5Item11: '• Agregar productos al carrito',
-    tutorialStep5Item12: '• Personalizar productos (elegir variación, agregar ingredientes opcionales)',
-    tutorialStep5Item13: '• Escribir notas especiales por producto',
-    tutorialStep5Item14: '• Finalizar la compra eligiendo: Recoger en tienda, Domicilio, o Mesa',
-    tutorialStep5Item15: '• Al confirmar el pedido, se abre WhatsApp automáticamente con todos los datos',
-    tutorialStep5Detail1: 'El menú público se actualiza automáticamente cuando agregas o editas productos',
-    tutorialStep5Detail2: 'Los clientes ven el menú con los colores que configuraste en personalización',
-    tutorialStep5Detail3: 'Si un producto está desactivado, no aparecerá en el menú público',
-    tutorialStep5Detail4: 'Si una categoría está desactivada, no aparecerá en el menú público',
-    tutorialStep5Detail5: 'Los productos destacados aparecen primero con un distintivo especial. Puedes configurarlos desde el apartado "Promocional"',
-    tutorialStep5Detail6: 'El carrito de compras se mantiene mientras el cliente navega por el menú',
-    tutorialStep5Detail7: 'Cuando el cliente confirma el pedido, tú recibes toda la información por WhatsApp',
-    tutorialStep5Detail8: 'El mensaje incluye resumen completo: productos, variaciones, ingredientes extras, datos de contacto, dirección de entrega si aplica',
-    tutorialStep5Image: 'Vista del menú público con categorías en la parte superior, productos con imágenes y precios, y carrito de compras flotante',
-    
-    // Step 6: Analytics
-    tutorialStep6Item1: 'Haz clic en "Estadísticas" en el menú lateral',
-    tutorialStep6Item2: 'En la parte superior verás las métricas principales:',
-    tutorialStep6Item3: '• Total de pedidos en el período seleccionado',
-    tutorialStep6Item4: '• Pedidos completados',
-    tutorialStep6Item5: '• Ingresos totales',
-    tutorialStep6Item6: '• Ticket promedio (valor promedio por pedido)',
-    tutorialStep6Item7: 'Usa los "Filtros Avanzados" para analizar datos específicos:',
-    tutorialStep6Item8: '• Haz clic en "Filtros Avanzados" en la esquina superior derecha',
-    tutorialStep6Item9: '• Selecciona un rango de fechas (desde/hasta)',
-    tutorialStep6Item10: '• Filtra por categoría específica',
-    tutorialStep6Item11: '• Filtra por tipo de pedido (Domicilio, Recoger, Mesa)',
-    tutorialStep6Item12: '• Filtra por estado del pedido',
-    tutorialStep6Item13: '• Puedes combinar múltiples filtros',
-    tutorialStep6Item14: 'Revisa los gráficos que se muestran:',
-    tutorialStep6Item15: '• Pedidos por Tipo: cuántos pedidos de cada modalidad',
-    tutorialStep6Item16: '• Pedidos por Mes: tendencia de pedidos a lo largo del tiempo',
-    tutorialStep6Item17: '• Estados de Pedidos: distribución de estados',
-    tutorialStep6Item18: '• Productos Más Vendidos: tu top 5 de productos',
-    tutorialStep6Item19: 'Para exportar los datos, haz clic en "Exportar CSV"',
-    tutorialStep6Item20: 'Se descargará un archivo Excel con información detallada:',
-    tutorialStep6Item21: '• Resumen ejecutivo con todas las métricas',
-    tutorialStep6Item22: '• Distribución por tipo y estado',
-    tutorialStep6Item23: '• Productos más vendidos',
-    tutorialStep6Item24: '• Ventas por categoría',
-    tutorialStep6Item25: '• Ventas por día de la semana',
-    tutorialStep6Item26: '• Detalle completo de cada pedido',
-    tutorialStep6Item27: '• Detalle de items vendidos',
-    tutorialStep6Detail1: 'Los filtros te permiten analizar períodos específicos (ej: ventas del último mes)',
-    tutorialStep6Detail2: 'El reporte CSV es perfecto para llevar a tu contador o hacer análisis detallados',
-    tutorialStep6Detail3: 'Usa las estadísticas para identificar tus productos más rentables',
-    tutorialStep6Detail4: 'Analiza qué días de la semana vendes más para optimizar tu inventario',
-    tutorialStep6Detail5: 'El ticket promedio te ayuda a evaluar estrategias de upselling',
-    tutorialStep6Detail6: 'Si ves productos con pocas ventas, considera mejorar su presentación o precio',
-    tutorialStep6Detail7: 'Las ventas por categoría muestran qué tipo de productos prefieren tus clientes',
-    tutorialStep6Detail8: 'Revisa las estadísticas semanalmente para tomar decisiones informadas',
-    tutorialStep6Image: 'Dashboard de estadísticas con gráficos de barras, métricas clave en tarjetas, filtros avanzados y botón de exportar CSV',
-    
-    // Step 7: Customers
-    tutorialStep7Item1: 'Haz clic en "Clientes" en el menú lateral',
-    tutorialStep7Item2: 'Verás una tabla con todos los clientes que han hecho pedidos',
-    tutorialStep7Item3: 'La información mostrada incluye:',
-    tutorialStep7Item4: '• Nombre del cliente',
-    tutorialStep7Item5: '• Teléfono de contacto',
-    tutorialStep7Item6: '• Email (si lo proporcionó)',
-    tutorialStep7Item7: '• Total de pedidos realizados',
-    tutorialStep7Item8: '• Monto total gastado',
-    tutorialStep7Item9: '• Fecha del último pedido',
-    tutorialStep7Item10: 'Para buscar un cliente específico, usa la barra de búsqueda en la parte superior',
-    tutorialStep7Item11: 'Puedes buscar por: nombre, teléfono o email',
-    tutorialStep7Item12: 'Haz clic en un cliente para ver el detalle completo de su historial de pedidos',
-    tutorialStep7Item13: 'El número de teléfono será la identificación principal del cliente. Si un cliente ya registrado con un número ingresa un nombre diferente, no se creará un nuevo registro, sino que se actualizará la información asociada a ese número de teléfono.',
-    tutorialStep7Item14: 'En la vista de detalle verás:',
-    tutorialStep7Item15: '• Información de contacto completa',
-    tutorialStep7Item16: '• Direcciones de entrega usadas previamente',
-    tutorialStep7Item17: '• Lista completa de todos sus pedidos con fechas',
-    tutorialStep7Item18: '• Productos que más ordena',
-    tutorialStep7Item19: '• Estadísticas de compra',
-    tutorialStep7Detail1: 'Los clientes se registran automáticamente cuando hacen su primer pedido',
-    tutorialStep7Detail2: 'No necesitas crear clientes manualmente. Si necesitas crear clientes de manera masiva, puedes hacerlo importando CSV',
-    tutorialStep7Detail3: 'La información del cliente se guarda para futuras órdenes',
-    tutorialStep7Detail4: 'Puedes identificar a tus clientes más frecuentes por el número de pedidos',
-    tutorialStep7Detail5: 'Usa esta información para crear programas de lealtad o promociones especiales',
-    tutorialStep7Detail6: 'Los clientes con mayor gasto total son tus clientes VIP. Podrás asignarlos manualmente',
-    tutorialStep7Detail7: 'Respeta siempre la privacidad de los datos de tus clientes',
-    tutorialStep7Detail8: 'Puedes exportar la base de datos de clientes para campañas de marketing',
-    tutorialStep7Detail9: 'Si un cliente solicita eliminar sus datos, puedes hacerlo desde esta sección',
-    tutorialStep7Image: 'Tabla de clientes con columnas: nombre, teléfono, email, pedidos totales, gasto total y última compra, con barra de búsqueda',
-    
-    // Step 8: Subscription
-    tutorialStep8Item1: 'Haz clic en "Suscripción" en el menú lateral',
-    tutorialStep8Item2: 'En la parte superior verás tu plan actual con:',
-    tutorialStep8Item3: '• Nombre del plan (Básico, Profesional, Empresarial)',
-    tutorialStep8Item4: '• Estado (Activo/Inactivo/Vencido)',
-    tutorialStep8Item5: '• Fecha de inicio',
-    tutorialStep8Item6: '• Fecha de vencimiento',
-    tutorialStep8Item7: '• Días restantes',
-    tutorialStep8Item8: 'Verás el estado de renovación automática:',
-    tutorialStep8Item9: '• Si está activada, tu plan se renovará automáticamente antes de vencer',
-    tutorialStep8Item10: '• Si está desactivada, tendrás que renovar manualmente',
-    tutorialStep8Item11: '• Para cambiar, usa el switch "Renovación Automática"',
-    tutorialStep8Item12: 'Para ver todos los planes disponibles, revisa la sección "Planes Disponibles"',
-    tutorialStep8Item13: 'Cada plan muestra:',
-    tutorialStep8Item14: '• Precio mensual',
-    tutorialStep8Item15: '• Características incluidas',
-    tutorialStep8Item16: '• Límites (pedidos, productos, etc.)',
-    tutorialStep8Item17: 'Para cambiar de plan:',
-    tutorialStep8Item18: '• Haz clic en "Seleccionar Plan" en el plan que deseas',
-    tutorialStep8Item19: '• Confirma el cambio',
-    tutorialStep8Item20: '• El nuevo plan se activa inmediatamente',
-    tutorialStep8Item21: 'Revisa el historial de pagos en la parte inferior para ver tus transacciones anteriores',
-    tutorialStep8Detail1: 'IMPORTANTE: Si tu suscripción vence, no podrás recibir nuevos pedidos',
-    tutorialStep8Detail2: 'Activa la renovación automática para evitar interrupciones en tu servicio',
-    tutorialStep8Detail3: 'Puedes cambiar de plan en cualquier momento',
-    tutorialStep8Detail4: 'Al cambiar a un plan superior, pagas la diferencia prorrateada',
-    tutorialStep8Detail5: 'Al cambiar a un plan inferior, el cambio se efectúa al final del período actual',
-    tutorialStep8Detail6: 'Si tu negocio está creciendo, considera actualizar a un plan con más capacidad',
-    tutorialStep8Detail7: 'Todos los planes incluyen soporte técnico',
-    tutorialStep8Image: 'Panel de suscripción mostrando plan actual con fecha de vencimiento, switch de renovación automática y tarjetas de planes disponibles',
 
     // Dashboard
     totalProducts: 'Productos',
@@ -1263,20 +446,6 @@ const translations: Record<Language, Translations> = {
     statusTableService: 'Atención en Mesas',
     na: 'N/A',
     orderTable: 'Mesa',
-
-    // Order Product Selector
-    orderProducts: 'Productos del Pedido',
-    selectProduct: 'Seleccionar producto',
-    selectProductOption: 'Selecciona un producto',
-    selectVariation: 'Seleccionar variación',
-    selectVariationOption: 'Selecciona una variación',
-    additionalIngredients: 'Ingredientes adicionales',
-    quantity: 'Cantidad',
-    addProduct: 'Agregar Producto',
-    noProductsAdded: 'No hay productos agregados',
-    selectProductsToAdd: 'Selecciona productos para agregar al pedido',
-    errorSelectProductVariation: 'Selecciona un producto y variación',
-
     
     // Orders
     orderManagement: 'Gestión de Pedidos',
@@ -1284,7 +453,7 @@ const translations: Record<Language, Translations> = {
     customer: 'Cliente',
     orderType: 'Tipo',
     pickup: 'Recoger',
-    Delivery: 'Domicilio',
+    delivery: 'Delivery',
     table: 'Mesa',
     completedToday: 'Completados Hoy',
     inPreparation: 'En Preparación',
@@ -1300,8 +469,6 @@ const translations: Record<Language, Translations> = {
     references: 'Referencias',
     estimatedTime: 'Tiempo estimado',
     thankYouOrder: '¡Gracias por tu pedido!',
-    allDates: 'Todas las fechas',
-    productsSectionTitle: 'Resumen del pedido',
     statusUpdatedTitle: 'Estado Actualizado',
     orderStatusUpdated: 'Estado del pedido actualizado',
     orderTypeTitle: 'Tipo de pedido',
@@ -1467,38 +634,6 @@ const translations: Record<Language, Translations> = {
     productCreated: 'Producto Creado',
     productDeleted: 'Producto Eliminado',
     productArchived: 'Producto Archivado',
-
-    // Product Form
-    enterProductName: 'Ingresa el nombre del producto',
-    selectCategory: 'Selecciona una categoría',
-    enterProductDescription: 'Ingresa la descripción del producto',
-    productSKU: 'SKU del Producto',
-    productImage: 'Imagen del Producto',
-    uploadedImage: 'Imagen cargada',
-    uploadImageFromDevice: 'Subir imagen desde dispositivo',
-    uploadHighQualityImage: 'Sube una imagen de alta calidad de tu producto. Solo se permite una imagen. Máximo 5MB.',
-    productPreview: 'Vista previa del producto',
-    imageWillShowInMenu: 'La imagen se mostrará en el menú público',
-    noImageAdded: 'No hay imagen agregada',
-    uploadImageToShow: 'Sube una imagen para mostrar tu producto',
-    variationName: 'Nombre de la variación',
-    variationNamePlaceholder: 'Nombre de la variación (ej: Pequeño, Mediano, Grande)',
-    priceRequired: 'Precio',
-    comparePrice: 'Precio Comparativo',
-    priceBeforeDiscount: 'Precio antes del descuento',
-    savings: 'Ahorro',
-    ingredientsLabel: 'Ingredientes',
-    ingredientName: 'Nombre del ingrediente',
-    optionalLabel: 'Opcional',
-    noIngredientsAdded: 'No hay ingredientes agregados',
-    ingredientsAreOptional: 'Los ingredientes son opcionales y permiten personalizar el producto',
-    updateProduct: 'Actualizar Producto',
-    createProduct: 'Crear Producto',
-    fillRequiredFields: 'Por favor completa todos los campos requeridos',
-    fileTooLarge: 'es muy grande. Tamaño máximo: 5MB',
-    maxSize5MB: 'Tamaño máximo: 5MB',
-    onlyOneImageAllowed: 'Solo se permite una imagen',
-
     
     // Categories
     viewMenu: 'Ver Menú',
@@ -1509,9 +644,6 @@ const translations: Record<Language, Translations> = {
     createFirstCategory: 'Crea tu primera categoría para organizar tu menú.',
     categoryIcon: 'Icono (Emoji)',
     categoryUpdated: 'Categoría Actualizada',
-    messageCategoryUpdated: 'La categoría se ha actualizado correctamente.',
-    messageCategoryCreated: 'La nueva categoría se ha añadido a tu menú.',
-    messageCategoryDeleted: 'La categoría se ha eliminado de tu menú',
     categoryCreated: 'Categoría Creada',
     categoryDeleted: 'Categoría Eliminada',
     categoryActivated: 'Categoría Activada',
@@ -1534,10 +666,6 @@ const translations: Record<Language, Translations> = {
     catDeleteImg: 'Eliminar imagen',
     categoryActivatedDes: 'La categoría ha sido activada y ahora aparece en su menú público.',
     categoryDeactivatedDes: 'La categoría ha sido desactivada y ya no aparece en su menú público.',
-    deleteCategoryTitle: '¿Eliminar categoría?',
-    deleteCategoryMessage: 'Esta acción eliminará permanentemente la categoría de tu menú. Todos los productos asociados a esta categoría quedarán sin categoría asignada.',
-    deleteCategoryButton: 'Eliminar categoría',
-
     
     // Customers
     deletedSuccessfully: 'Eliminados exitosamente',
@@ -1563,7 +691,7 @@ const translations: Record<Language, Translations> = {
     vip: 'VIP',
     filtersAndSearch: 'Filtros y Búsqueda',
     customerBase: 'Base de clientes',
-    assignedManually: 'Porcentaje asignado',
+    assignedManually: 'Asignados manualmente',
     averageSpending: 'Gasto Promedio',
     perCustomer: 'Por cliente',
     allStatuses: 'Todos los estados',
@@ -1609,7 +737,6 @@ const translations: Record<Language, Translations> = {
     selectActionToPerform: 'Selecciona la acción a realizar:',
     markAsVip: 'Marcar como VIP',
     addVipStatusToSelected: 'Agregar estado VIP a todos los clientes seleccionados',
-    removeVip: 'Eliminar de VIP',
     removeVipStatusFromSelected: 'Quitar estado VIP de todos los clientes seleccionados',
     permanentlyDeleteAllCustomersAndOrders: 'Eliminar permanentemente todos los clientes y sus pedidos',
     importCustomersFromCSV: 'Importar Clientes desde CSV',
@@ -1623,7 +750,7 @@ const translations: Record<Language, Translations> = {
     preview: 'Vista previa',
     line: 'Línea',
     validCustomers: 'cliente(s) válido(s)',
-    searchCustomersPlaceholder: 'Clientes por nombre, teléfono o email...',
+    searchCustomersPlaceholder: 'clientes por nombre, teléfono o email...',
     customersTemplate: 'plantilla_clientes',
     averagePerOrder: 'Promedio por Pedido',
     isVip: 'Es VIP',
@@ -1645,11 +772,11 @@ const translations: Record<Language, Translations> = {
     warningDeleteAction: 'Esta acción eliminará también todos sus pedidos y no se puede deshacer.',
     customerUpdated: 'Cliente Actualizado',
     customerInfoUpdatedSuccessfully: 'La información del cliente ha sido actualizada exitosamente.',
-    customerAndOrdersDeleted: 'El cliente y todos sus pedidos han sido eliminados.',
+    customerAndOrdersDeleted: 'El cliente "{name}" y todos sus pedidos han sido eliminados.',
     noDataToExport: 'Sin datos para exportar',
     noCustomersMatchFilters: 'No hay clientes que coincidan con los filtros actuales.',
     csvExported: 'CSV Exportado',
-    exportedSuccessfullyPlural: 'Se han exportado los cliente(s) exitosamente.',
+    exportedSuccessfullyPlural: 'Se han exportado {count} cliente(s) exitosamente.',
     templateDownloaded: 'Plantilla Descargada',
     useTemplateAsGuide: 'Usa esta plantilla como guía para importar clientes.',
     invalidFile: 'Archivo inválido',
@@ -1700,7 +827,7 @@ const translations: Record<Language, Translations> = {
     language: 'Idioma',
     currency: 'Moneda',
     businessHours: 'Horarios de Atención',
-    deliverySettings: 'Configuración de Domicilio',
+    deliverySettings: 'Configuración de Delivery',
     tableOrders: 'Pedidos en Mesa',
     qrCodes: 'Códigos QR',
     themeSettings: 'Configuración de Tema',
@@ -1711,8 +838,8 @@ const translations: Record<Language, Translations> = {
     businessInfo: 'Información del Negocio',
     operationalSettings: 'Configuración Operacional',
     minimumOrder: 'Pedido Mínimo',
-    deliveryCost: 'Costo de Domicilio',
-    deliveryZones: 'Zonas de Domicilio',
+    deliveryCost: 'Costo de Delivery',
+    deliveryZones: 'Zonas de Delivery',
     numberOfTables: 'Número de Mesas',
     enableQRCodes: 'Habilitar Códigos QR',
     printAll: 'Imprimir Todos',
@@ -1722,7 +849,7 @@ const translations: Record<Language, Translations> = {
     tab_general: 'General',
     tab_hours: 'Horarios',
     tab_social: 'Redes Sociales',
-    tab_delivery: 'Domicilio',
+    tab_delivery: 'Delivery',
     tab_table_orders: 'Pedidos en Mesa',
     tab_promo: 'Promocional',
     tab_theme: 'Tema',
@@ -1762,7 +889,7 @@ const translations: Record<Language, Translations> = {
     closing_time_label: 'Cierre',
     social_media_title: 'Redes Sociales',
     social_media_subtitle: 'Conecta tus redes sociales para aparecer en tu menú público',
-    delivery_rates_title: 'Tarifas de Domicilio',
+    delivery_rates_title: 'Tarifas de Delivery',
     rate_name_label: 'Nombre de la Tarifa',
     coverage_radius_km_label: 'Radio de cobertura (km)',
     shipping_cost_cop_label: 'Costo de envío (COP)',
@@ -2045,7 +1172,7 @@ const translations: Record<Language, Translations> = {
     clearFilters: 'Limpiar Filtros',
     showingDataFrom: 'Mostrando datos desde',
     until: 'hasta',
-    today: 'Hoy',
+    today: 'hoy',
     notEnoughData: 'No hay datos suficientes para mostrar',
     noSalesYet: 'No hay ventas registradas aún',
     sold: 'vendidos',
@@ -2133,8 +1260,8 @@ const translations: Record<Language, Translations> = {
     filterSummaryShowing: "Mostrando",
     filterSummaryOrderPlural: "pedidos",
     filterSummaryOrderSingular: "pedido",
-    filterSummaryMatchingFilters: " que coinciden con los filtros.",
-    filterSummaryInTotal: " en total.",
+    filterSummaryMatchingFilters: "que coinciden con los filtros.",
+    filterSummaryInTotal: "en total.",
     analyticsLastUpdated: "Última actualización",
     statTotalOrders: "Total de Pedidos",
     statCompletedSubtitle: "completados",
@@ -2213,7 +1340,7 @@ const translations: Record<Language, Translations> = {
     productDeletedTitle: 'Producto eliminado',
     productDeletedMessage: 'El producto ha sido eliminado de tu menú.',
     productDuplicatedTitle: 'Producto duplicado',
-    productDuplicatedMessage: 'Se ha creado una copia del producto.',
+    productDuplicatedMessage: 'Se ha creado una copia de "{{name}}".',
     productArchivedTitle: 'Producto archivado',
     productArchivedMessage: 'El producto ha sido archivado y ya no aparece en tu menú público.',
     orderUpdatedMessage: 'La posición del producto ha sido actualizada.',
@@ -2344,11 +1471,7 @@ const translations: Record<Language, Translations> = {
     ready: 'Ready',
     delivered: 'Delivered',
     cancelled: 'Cancelled',
-
-    // Confirm Dialog - Defaults
-    confirmDialogDefaultConfirm: 'Confirm',
-    confirmDialogDefaultCancel: 'Cancel',
-
+    
     // Navigation
     dashboard: 'Dashboard',
     categories: 'Categories',
@@ -2358,113 +1481,6 @@ const translations: Record<Language, Translations> = {
     subscription: 'Subscription',
     settings: 'Settings',
     analytics: 'Analytics',
-
-    // Terms and Conditions
-    termsSection1Title: 'Acceptance of Terms',
-    termsSection1Content: 'By registering and using Platyo, you agree to be legally bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our service.',
-    
-    termsSection2Title: 'Service Description',
-    termsSection2Content: 'Platyo is a restaurant management platform that provides tools for:',
-    termsSection2Item1: 'Digital menu management and product catalog',
-    termsSection2Item2: 'Online ordering system',
-    termsSection2Item3: 'Customer and order administration',
-    termsSection2Item4: 'Sales analysis and reports',
-    termsSection2Item5: 'Inventory and category management',
-    
-    termsSection3Title: 'Registration and Account',
-    termsSection3Content: 'To use Platyo, you must create an account by providing accurate and complete information. You are responsible for:',
-    termsSection3Item1: 'Maintaining the confidentiality of your password',
-    termsSection3Item2: 'All activities that occur under your account',
-    termsSection3Item3: 'Immediately notifying any unauthorized use',
-    termsSection3Item4: 'Providing truthful and updated information',
-    
-    termsSection4Title: 'Subscriptions and Payments',
-    termsSection4Content: 'Platyo offers different subscription plans. By subscribing, you agree to:',
-    termsSection4Item1: 'Pay all fees associated with your selected plan',
-    termsSection4Item2: 'Automatic renewals according to the plan periodicity',
-    termsSection4Item3: 'That prices may change with 30 days prior notice',
-    termsSection4Item4: 'The refund policy according to the contracted plan',
-    
-    termsSection5Title: 'Acceptable Use',
-    termsSection5Content: 'By using Platyo, you agree NOT to:',
-    termsSection5Item1: 'Violate applicable laws or regulations',
-    termsSection5Item2: 'Infringe intellectual property rights',
-    termsSection5Item3: 'Transmit offensive, illegal or inappropriate content',
-    termsSection5Item4: 'Attempt unauthorized access to systems or data',
-    termsSection5Item5: 'Use the service for fraudulent activities',
-    termsSection5Item6: 'Interfere with the operation of the service',
-    
-    termsSection6Title: 'Intellectual Property',
-    termsSection6Content1: 'All content, features and functionality of Platyo are the exclusive property of the company and are protected by copyright laws, trademarks and other intellectual property laws.',
-    termsSection6Content2: 'You retain all rights to the content you upload (menus, products, images), but grant us a license to use it in providing the service.',
-    
-    termsSection7Title: 'Privacy and Data Protection',
-    termsSection7Content: 'We collect and process personal data in accordance with our Privacy Policy and complying with:',
-    termsSection7Item1: 'Law 1581 of 2012 on Personal Data Protection in Colombia',
-    termsSection7Item2: 'Decree 1377 of 2013',
-    termsSection7Item3: 'Principles of legality, purpose, freedom, veracity, transparency, access and security',
-    termsSection7Content2: 'Your rights include: knowing, updating, rectifying and deleting your personal data, as well as revoking the authorization granted.',
-    
-    termsSection8Title: 'Limitation of Liability',
-    termsSection8Content: 'Platyo is provided "as is" and "as available". We do not guarantee that:',
-    termsSection8Item1: 'The service will be uninterrupted or error-free',
-    termsSection8Item2: 'The results obtained will be accurate or reliable',
-    termsSection8Item3: 'All errors will be corrected',
-    termsSection8Content2: 'We will not be liable for indirect, incidental, special, consequential or punitive damages, including loss of profits, data, use or goodwill.',
-    
-    termsSection9Title: 'Indemnification',
-    termsSection9Content: 'You agree to indemnify and hold harmless Platyo, its affiliates, directors, employees and agents from any claim, damage, obligation, loss, liability, cost or debt arising from:',
-    termsSection9Item1: 'Your use of the service',
-    termsSection9Item2: 'Violation of these terms',
-    termsSection9Item3: 'Violation of third party rights',
-    termsSection9Item4: 'Content you post or share',
-    
-    termsSection10Title: 'Service Termination',
-    termsSection10Content: 'We may suspend or terminate your access to the service immediately, without prior notice, for any reason, including:',
-    termsSection10Item1: 'Violation of these terms',
-    termsSection10Item2: 'Request from legal authorities',
-    termsSection10Item3: 'Discontinuation of service',
-    termsSection10Item4: 'Fraudulent or illegal activity',
-    
-    termsSection11Title: 'Modifications',
-    termsSection11Content: 'We reserve the right to modify these terms at any time. Modifications will take effect immediately after publication. Your continued use of the service constitutes your acceptance of the modified terms.',
-    
-    termsSection12Title: 'Applicable Law and Jurisdiction',
-    termsSection12Content: 'These terms are governed by the laws of the Republic of Colombia. Any dispute will be resolved in the competent courts of Colombia, expressly waiving any other jurisdiction that may correspond.',
-    
-    termsSection13Title: 'General Provisions',
-    termsSection13Item1Label: 'Severability',
-    termsSection13Item1: 'If any provision is deemed invalid, the others will remain in effect',
-    termsSection13Item2Label: 'Waiver',
-    termsSection13Item2: 'Failure to exercise a right does not constitute a waiver of it',
-    termsSection13Item3Label: 'Entire Agreement',
-    termsSection13Item3: 'These terms constitute the entire agreement between the parties',
-    termsSection13Item4Label: 'Assignment',
-    termsSection13Item4: 'You may not assign your rights without our prior written consent',
-    
-    termsSection14Title: 'Contact',
-    termsSection14Content: 'For questions about these terms, you can contact us through:',
-    termsSection14Item1: 'Email: admin@digitalfenixpro.com',
-    termsSection14Item2: 'Within the platform through the support ticket system',
-    
-    termsLastUpdate: 'Last Update',
-    termsLastUpdateDate: 'November 2025',
-    termsAcceptDisclaimer: 'By clicking "Accept" or by using the service, you acknowledge that you have read, understood and agree to be legally bound by these Terms and Conditions.',
-    acceptTermsAndConditionsButton: 'Accept Terms and Conditions',
-
-
-    // Auth Context Errors
-    restaurantNotFoundForUser: 'Restaurant not found for this user',
-    noRestaurantAssigned: 'You do not have a restaurant assigned. Contact the administrator.',
-    noAccountFoundWithEmail: 'No account found with that email',
-    passwordRecoveryRequest: 'Password recovery request',
-    passwordRecoveryMessage: 'has requested to recover their password.',
-    userRole: 'User role',
-    requestDate: 'Request date',
-    userWithoutRestaurant: 'User without restaurant',
-    noName: 'No name',
-    notAvailable: 'Not available',
-
     
     // Auth
     login: 'Login',
@@ -2480,7 +1496,7 @@ const translations: Record<Language, Translations> = {
     noAccount: 'Do not have an account?',
     restaurantName: 'Restaurant Name',
     ownerName: 'Owner Name',
-    acceptTerms: 'I accept the terms and conditions ',
+    acceptTerms: 'I accept the terms and conditions',
     backToLogin: 'Back to Login',
     demoAccounts: 'Demo accounts:',
     superadmin: 'Superadmin',
@@ -2507,289 +1523,10 @@ const translations: Record<Language, Translations> = {
     statActiveRestaurants: 'Active Restaurants',
     statOrdersProcessed: 'Orders Processed',
     statSatisfaction: 'Satisfaction',
-    requestSent: 'Request submitted!',
-    requestInfo: 'We have received your password recovery request.',
+    requestSent: '¡Solicitud Enviada!',
+    requestInfo: 'We have received your password recovery request.'
     requestResponse: 'Our team will contact you by email.',
-    recoverPassword: 'Recover Password',
-    recoverPasswordInstructions: 'Enter your email address and we will contact you to help you recover access to your account.',
-    helpReactivateAccount: 'to help you reactivate your account.',
-    emailPlaceholder: 'your@email.com',
-    sendRequest: 'Send Request',
-    requestSendError: 'Error sending the request',
 
-    // Register Form
-    restaurantNameRequired: 'Restaurant name is required',
-    emailRequired: 'Email is required',
-    passwordRequired: 'Password is required',
-    mustAcceptTerms: 'You must accept the terms and conditions',
-    registerError: 'Registration error',
-    contactEmail: 'Contact Email',
-    restaurantAddress: 'Restaurant Address',
-    minimumCharacters: 'Minimum 6 characters',
-    repeatPassword: 'Repeat your password',
-    termsAndConditions: 'terms and conditions',
-    ofService: 'of service',
-    createAccount: 'Create Account',
-    termsModalTitle: 'Platyo Terms and Conditions',
-    restaurantNamePlaceholder: 'My Restaurant',
-    ownerNamePlaceholder: 'John Doe',
-    contactEmailPlaceholder: 'contact@myrestaurant.com',
-    phonePlaceholder: '+1 (555) 123-4567',
-    addressPlaceholder: '123 Main St, City',
-
-    // Change Password Modal
-    changePasswordRequired: 'Password Change Required',
-    provisionalPasswordDetected: 'Provisional password detected.',
-    securityPasswordChange: 'For security reasons, you must change your password before continuing. This password will be permanent and you can use it for future logins.',
-    newPassword: 'New Password',
-    confirmNewPassword: 'Confirm New Password',
-    changePassword: 'Change Password',
-    writePasswordAgain: 'Write the password again',
-
-    // Tutorial Modal
-    tutorialStepOf: 'of',
-    tutorialStepByStepInstructions: 'Step-by-Step Instructions',
-    tutorialImportantInfo: 'Important Information',
-    tutorialPrevious: 'Previous',
-    tutorialNext: 'Next',
-    tutorialFinish: 'Finish Tutorial',
-    tutorialGoToStep: 'Go to step',
-    
-    // Tutorial Steps Titles
-    tutorialStep1Title: 'Step 1: Create Categories',
-    tutorialStep2Title: 'Step 2: Add Products',
-    tutorialStep3Title: 'Step 3: Configure Your Menu',
-    tutorialStep4Title: 'Step 4: Manage Orders',
-    tutorialStep5Title: 'Step 5: Share Your Menu',
-    tutorialStep6Title: 'Step 6: Review Analytics',
-    tutorialStep7Title: 'Step 7: Customer Management',
-    tutorialStep8Title: 'Step 8: Manage Subscription',
-    
-    // Tutorial Steps Descriptions
-    tutorialStep1Description: 'First you must create categories to organize your menu',
-    tutorialStep2Description: 'Now create the products that will appear in your menu',
-    tutorialStep3Description: 'Customize the appearance and configuration of your public menu',
-    tutorialStep4Description: 'Learn how to receive and manage customer orders',
-    tutorialStep5Description: 'Share your menu link with your customers',
-    tutorialStep6Description: 'Monitor your business performance with detailed reports',
-    tutorialStep7Description: 'View and manage your customer base',
-    tutorialStep8Description: 'Keep your account active and manage your plan',
-    
-    // Step 1: Categories
-    tutorialStep1Item1: 'Click "Categories" in the left sidebar menu',
-    tutorialStep1Item2: 'Press the "+ New Category" button (top right corner)',
-    tutorialStep1Item3: 'In the form that appears, enter the category name (e.g., "Appetizers", "Main Courses", "Drinks")',
-    tutorialStep1Item4: 'Enter a description for the created category',
-    tutorialStep1Item5: 'Click "Save" to create the category',
-    tutorialStep1Item6: 'Repeat these steps to create all the categories you need',
-    tutorialStep1Detail1: 'The name should be clear and descriptive for your customers',
-    tutorialStep1Detail2: 'You can create categories like: Appetizers, Main Courses, Drinks, Desserts, Specialties, etc.',
-    tutorialStep1Detail3: 'Once created, you can activate/deactivate the category using the visibility icon',
-    tutorialStep1Detail4: 'If you deactivate a category, it will not be shown in the public menu',
-    tutorialStep1Detail5: 'To edit or delete a category, use the pencil (edit) or trash (delete) icons in each row',
-    tutorialStep1Image: 'Categories screen with list of created categories, each with its image and "New Category" button in the top right corner',
-    
-    // Step 2: Products
-    tutorialStep2Item1: 'Click "Menu" in the left sidebar',
-    tutorialStep2Item2: 'Press the "+ New Product" button at the top',
-    tutorialStep2Item3: 'Complete the required fields: Product name (e.g., "Margarita Pizza")',
-    tutorialStep2Item4: 'Write an attractive product description (e.g., "Delicious pizza with tomato sauce, fresh mozzarella and basil")',
-    tutorialStep2Item5: 'Select the category it belongs to from the dropdown list',
-    tutorialStep2Item6: 'Upload a product image by clicking "Select Image" (optional but recommended)',
-    tutorialStep2Item7: 'In the "Variations" section, add at least one option: Name (e.g., "Personal"), Price (e.g., $15000)',
-    tutorialStep2Item8: 'You can add more variations with "+ Add Variation" (e.g., "Medium", "Family")',
-    tutorialStep2Item9: 'If applicable, add optional ingredients with "+ Add Ingredient" specifying name and additional price',
-    tutorialStep2Item10: 'Click "Save Product"',
-    tutorialStep2Detail1: 'Variations are mandatory: each product must have at least one variation (size, flavor, presentation)',
-    tutorialStep2Detail2: 'Variation examples: Pizza → Personal, Medium, Family | Drink → 300ml, 500ml, 1L',
-    tutorialStep2Detail3: 'Optional ingredients are extras that customers can add (e.g., Extra Cheese, Bacon, Avocado)',
-    tutorialStep2Detail4: 'Images significantly increase sales',
-    tutorialStep2Detail5: 'The order of products in the list can be changed by dragging them',
-    tutorialStep2Detail6: 'You can temporarily activate/deactivate products without deleting them using the status switch',
-    tutorialStep2Image: 'Product creation form with fields: name, description, category, image, variations (name/price) and optional ingredients',
-    
-    // Step 3: Menu Configuration
-    tutorialStep3Item1: 'Click "Settings" in the sidebar',
-    tutorialStep3Item2: 'In the "General" tab, complete all your restaurant information:',
-    tutorialStep3Item3: '• Restaurant name',
-    tutorialStep3Item4: '• Phone (format: +57 3001234567) - important for receiving orders via WhatsApp',
-    tutorialStep3Item5: '• Complete address',
-    tutorialStep3Item6: '• City',
-    tutorialStep3Item7: 'In the "Customization" tab, adjust your menu colors:',
-    tutorialStep3Item8: '• Primary color (main color for buttons and highlighted elements)',
-    tutorialStep3Item9: '• Secondary color (background and secondary elements color)',
-    tutorialStep3Item10: '• Accent color (color for important elements)',
-    tutorialStep3Item11: 'In the "Delivery" tab, configure if you offer delivery service:',
-    tutorialStep3Item12: '• Activate the "Enable Delivery" switch',
-    tutorialStep3Item13: '• Configure price levels according to order amount',
-    tutorialStep3Item14: '• Example: $0-$20000 = $5000 delivery | $20000-$50000 = $3000 | More than $50000 = Free',
-    tutorialStep3Item15: 'In the same section, configure if you accept dine-in orders',
-    tutorialStep3Item16: 'Set the estimated preparation time (e.g., "30-45 minutes")',
-    tutorialStep3Item17: 'Save all changes',
-    tutorialStep3Detail1: 'The phone is crucial: all orders will be sent automatically to that number via WhatsApp',
-    tutorialStep3Detail2: 'The phone format must include the country code (e.g., +57 for Colombia)',
-    tutorialStep3Detail3: 'Custom colors are applied immediately to the public menu',
-    tutorialStep3Detail4: 'The preparation time appears to the customer when placing an order',
-    tutorialStep3Detail5: 'Delivery configuration allows setting different costs based on order amount',
-    tutorialStep3Detail6: 'If you disable delivery, customers can only choose "Pickup" or "Dine-in"',
-    tutorialStep3Detail7: 'Try different color combinations to match your brand',
-    tutorialStep3Image: 'Settings panel showing tabs: General, Customization, and Delivery with forms for each section',
-    
-    // Step 4: Orders Management
-    tutorialStep4Item1: 'When a customer places an order, you will receive a WhatsApp message automatically with all details',
-    tutorialStep4Item2: 'The order will also appear in the "Orders" section of the application',
-    tutorialStep4Item3: 'To view orders, click "Orders" in the sidebar',
-    tutorialStep4Item4: 'You will see a list with all orders. The statuses are:',
-    tutorialStep4Item5: '• 🟡 Pending: Newly received order, requires confirmation',
-    tutorialStep4Item6: '• 🔵 Confirmed: Order accepted',
-    tutorialStep4Item7: '• 🟠 Preparing: Order in kitchen',
-    tutorialStep4Item8: '• 🟢 Ready: Order finished and ready to deliver',
-    tutorialStep4Item9: '• ✅ Delivered: Order completed',
-    tutorialStep4Item10: '• 🔴 Cancelled: Order cancelled',
-    tutorialStep4Item11: 'To change an order status, click the "Edit" button on the order card',
-    tutorialStep4Item12: 'Select the new status from the dropdown menu',
-    tutorialStep4Item13: 'To see all order details, click "View Details"',
-    tutorialStep4Item14: 'You can filter orders using the filters at the top:',
-    tutorialStep4Item15: '• By status (Pending, In preparation, etc.)',
-    tutorialStep4Item16: '• By type (Delivery, Pickup, Dine-in)',
-    tutorialStep4Item17: '• By date range',
-    tutorialStep4Item18: 'Use the search bar to find a specific order by number or customer name',
-    tutorialStep4Item19: 'You can use the message icon to keep your customers updated on the order status via WhatsApp',
-    tutorialStep4Detail1: 'The WhatsApp message includes: order number, customer data, products, prices, and special notes',
-    tutorialStep4Detail2: 'IMPORTANT: Update the order status as it progresses to keep the customer informed',
-    tutorialStep4Detail3: '"Pending" orders appear highlighted in yellow to call your attention',
-    tutorialStep4Detail4: 'In order details you will see: customer information, address (if delivery), product list with variations and extra ingredients, customer special notes',
-    tutorialStep4Detail5: 'If you need to cancel an order, change its status to "Cancelled" and contact the customer to explain',
-    tutorialStep4Detail6: 'Filters help you focus on orders that require immediate action',
-    tutorialStep4Detail7: 'Keep your kitchen organized: first confirm the order, then mark as "Preparing", then "Ready" and finally "Delivered"',
-    tutorialStep4Image: 'Orders screen showing cards with information for each order: number, customer, status, products and action buttons',
-    
-    // Step 5: Public Menu
-    tutorialStep5Item1: 'Your public menu has a unique URL that you can share',
-    tutorialStep5Item2: 'The URL has the format: platyo.com/your-restaurant-name',
-    tutorialStep5Item3: 'To share your menu:',
-    tutorialStep5Item4: '• Copy the URL from your browser when in the public menu view',
-    tutorialStep5Item5: '• Share it on social media (Facebook, Instagram, WhatsApp)',
-    tutorialStep5Item6: '• Add it to your Instagram bio',
-    tutorialStep5Item7: '• Send it directly to your customers via WhatsApp',
-    tutorialStep5Item8: '• Print it as a QR code to place in your venue',
-    tutorialStep5Item9: 'Customers can:',
-    tutorialStep5Item10: '• View all your products organized by categories',
-    tutorialStep5Item11: '• Add products to cart',
-    tutorialStep5Item12: '• Customize products (choose variation, add optional ingredients)',
-    tutorialStep5Item13: '• Write special notes per product',
-    tutorialStep5Item14: '• Complete purchase by choosing: Pickup, Delivery, or Dine-in',
-    tutorialStep5Item15: '• When confirming the order, WhatsApp opens automatically with all data',
-    tutorialStep5Detail1: 'The public menu updates automatically when you add or edit products',
-    tutorialStep5Detail2: 'Customers see the menu with the colors you configured in customization',
-    tutorialStep5Detail3: 'If a product is deactivated, it will not appear in the public menu',
-    tutorialStep5Detail4: 'If a category is deactivated, it will not appear in the public menu',
-    tutorialStep5Detail5: 'Featured products appear first with a special badge. You can configure them from the "Promotional" section',
-    tutorialStep5Detail6: 'The shopping cart is maintained while the customer browses the menu',
-    tutorialStep5Detail7: 'When the customer confirms the order, you receive all information via WhatsApp',
-    tutorialStep5Detail8: 'The message includes complete summary: products, variations, extra ingredients, contact details, delivery address if applicable',
-    tutorialStep5Image: 'Public menu view with categories at the top, products with images and prices, and floating shopping cart',
-    
-    // Step 6: Analytics
-    tutorialStep6Item1: 'Click "Analytics" in the sidebar',
-    tutorialStep6Item2: 'At the top you will see the main metrics:',
-    tutorialStep6Item3: '• Total orders in the selected period',
-    tutorialStep6Item4: '• Completed orders',
-    tutorialStep6Item5: '• Total revenue',
-    tutorialStep6Item6: '• Average ticket (average value per order)',
-    tutorialStep6Item7: 'Use "Advanced Filters" to analyze specific data:',
-    tutorialStep6Item8: '• Click "Advanced Filters" in the top right corner',
-    tutorialStep6Item9: '• Select a date range (from/to)',
-    tutorialStep6Item10: '• Filter by specific category',
-    tutorialStep6Item11: '• Filter by order type (Delivery, Pickup, Dine-in)',
-    tutorialStep6Item12: '• Filter by order status',
-    tutorialStep6Item13: '• You can combine multiple filters',
-    tutorialStep6Item14: 'Review the displayed charts:',
-    tutorialStep6Item15: '• Orders by Type: how many orders of each modality',
-    tutorialStep6Item16: '• Orders by Month: order trend over time',
-    tutorialStep6Item17: '• Order Statuses: status distribution',
-    tutorialStep6Item18: '• Top Selling Products: your top 5 products',
-    tutorialStep6Item19: 'To export data, click "Export CSV"',
-    tutorialStep6Item20: 'An Excel file will download with detailed information:',
-    tutorialStep6Item21: '• Executive summary with all metrics',
-    tutorialStep6Item22: '• Distribution by type and status',
-    tutorialStep6Item23: '• Top selling products',
-    tutorialStep6Item24: '• Sales by category',
-    tutorialStep6Item25: '• Sales by day of the week',
-    tutorialStep6Item26: '• Complete detail of each order',
-    tutorialStep6Item27: '• Detail of items sold',
-    tutorialStep6Detail1: 'Filters allow you to analyze specific periods (e.g., last month sales)',
-    tutorialStep6Detail2: 'The CSV report is perfect for taking to your accountant or doing detailed analysis',
-    tutorialStep6Detail3: 'Use statistics to identify your most profitable products',
-    tutorialStep6Detail4: 'Analyze which days of the week you sell more to optimize your inventory',
-    tutorialStep6Detail5: 'Average ticket helps you evaluate upselling strategies',
-    tutorialStep6Detail6: 'If you see products with few sales, consider improving their presentation or price',
-    tutorialStep6Detail7: 'Sales by category show what type of products your customers prefer',
-    tutorialStep6Detail8: 'Review statistics weekly to make informed decisions',
-    tutorialStep6Image: 'Analytics dashboard with bar charts, key metrics in cards, advanced filters and export CSV button',
-    
-    // Step 7: Customers
-    tutorialStep7Item1: 'Click "Customers" in the sidebar',
-    tutorialStep7Item2: 'You will see a table with all customers who have placed orders',
-    tutorialStep7Item3: 'The displayed information includes:',
-    tutorialStep7Item4: '• Customer name',
-    tutorialStep7Item5: '• Contact phone',
-    tutorialStep7Item6: '• Email (if provided)',
-    tutorialStep7Item7: '• Total orders placed',
-    tutorialStep7Item8: '• Total amount spent',
-    tutorialStep7Item9: '• Date of last order',
-    tutorialStep7Item10: 'To search for a specific customer, use the search bar at the top',
-    tutorialStep7Item11: 'You can search by: name, phone or email',
-    tutorialStep7Item12: 'Click on a customer to see the complete detail of their order history',
-    tutorialStep7Item13: 'The phone number will be the customer\'s primary identification. If an already registered customer with a number enters a different name, a new record will not be created, but the information associated with that phone number will be updated.',
-    tutorialStep7Item14: 'In the detail view you will see:',
-    tutorialStep7Item15: '• Complete contact information',
-    tutorialStep7Item16: '• Delivery addresses used previously',
-    tutorialStep7Item17: '• Complete list of all their orders with dates',
-    tutorialStep7Item18: '• Products they order most',
-    tutorialStep7Item19: '• Purchase statistics',
-    tutorialStep7Detail1: 'Customers are registered automatically when they place their first order',
-    tutorialStep7Detail2: 'You don\'t need to create customers manually. If you need to create customers in bulk, you can do so by importing CSV',
-    tutorialStep7Detail3: 'Customer information is saved for future orders',
-    tutorialStep7Detail4: 'You can identify your most frequent customers by the number of orders',
-    tutorialStep7Detail5: 'Use this information to create loyalty programs or special promotions',
-    tutorialStep7Detail6: 'Customers with the highest total spend are your VIP customers. You can assign them manually',
-    tutorialStep7Detail7: 'Always respect the privacy of your customers\' data',
-    tutorialStep7Detail8: 'You can export the customer database for marketing campaigns',
-    tutorialStep7Detail9: 'If a customer requests to delete their data, you can do so from this section',
-    tutorialStep7Image: 'Customer table with columns: name, phone, email, total orders, total spent and last purchase, with search bar',
-    
-    // Step 8: Subscription
-    tutorialStep8Item1: 'Click "Subscription" in the sidebar',
-    tutorialStep8Item2: 'At the top you will see your current plan with:',
-    tutorialStep8Item3: '• Plan name (Basic, Professional, Business)',
-    tutorialStep8Item4: '• Status (Active/Inactive/Expired)',
-    tutorialStep8Item5: '• Start date',
-    tutorialStep8Item6: '• Expiration date',
-    tutorialStep8Item7: '• Remaining days',
-    tutorialStep8Item8: 'You will see the auto-renewal status:',
-    tutorialStep8Item9: '• If activated, your plan will renew automatically before expiring',
-    tutorialStep8Item10: '• If deactivated, you will have to renew manually',
-    tutorialStep8Item11: '• To change, use the "Auto Renewal" switch',
-    tutorialStep8Item12: 'To see all available plans, check the "Available Plans" section',
-    tutorialStep8Item13: 'Each plan shows:',
-    tutorialStep8Item14: '• Monthly price',
-    tutorialStep8Item15: '• Included features',
-    tutorialStep8Item16: '• Limits (orders, products, etc.)',
-    tutorialStep8Item17: 'To change plan:',
-    tutorialStep8Item18: '• Click "Select Plan" on the plan you want',
-    tutorialStep8Item19: '• Confirm the change',
-    tutorialStep8Item20: '• The new plan activates immediately',
-    tutorialStep8Item21: 'Review the payment history at the bottom to see your previous transactions',
-    tutorialStep8Detail1: 'IMPORTANT: If your subscription expires, you will not be able to receive new orders',
-    tutorialStep8Detail2: 'Activate auto-renewal to avoid service interruptions',
-    tutorialStep8Detail3: 'You can change plan at any time',
-    tutorialStep8Detail4: 'When upgrading to a higher plan, you pay the prorated difference',
-    tutorialStep8Detail5: 'When downgrading to a lower plan, the change takes effect at the end of the current period',
-    tutorialStep8Detail6: 'If your business is growing, consider upgrading to a plan with more capacity',
-    tutorialStep8Detail7: 'All plans include technical support',
-    tutorialStep8Image: 'Subscription panel showing current plan with expiration date, auto-renewal switch and available plan cards',
-    
     // Dashboard
     totalProducts: 'Products',
     activeProducts: 'active',
@@ -2809,27 +1546,14 @@ const translations: Record<Language, Translations> = {
     statusTableService: 'Table Service',
     na: 'N/A',
     orderTable: 'Table',
-
-    // Order Product Selector
-    orderProducts: 'Order Products',
-    selectProduct: 'Select product',
-    selectProductOption: 'Select a product',
-    selectVariation: 'Select variation',
-    selectVariationOption: 'Select a variation',
-    additionalIngredients: 'Additional ingredients',
-    quantity: 'Quantity',
-    addProduct: 'Add Product',
-    noProductsAdded: 'No products added',
-    selectProductsToAdd: 'Select products to add to the order',
-    errorSelectProductVariation: 'Select a product and variation',
-
+    
     // Orders
     orderManagement: 'Order Management',
     orderNumber: 'Order',
     customer: 'Customer',
     orderType: 'Type',
     pickup: 'Pickup',
-    Delivery: 'Delivery',
+    delivery: 'Delivery',
     table: 'Table',
     completedToday: 'Completed Today',
     inPreparation: 'In Preparation',
@@ -2845,8 +1569,6 @@ const translations: Record<Language, Translations> = {
     references: 'References',
     estimatedTime: 'Estimated time',
     thankYouOrder: 'Thank you for your order!',
-    allDates: 'All dates',
-    productsSectionTitle: 'Order summary',
     statusUpdatedTitle: 'Status Updated',
     orderStatusUpdated: 'Order status updated',
     orderTypeTitle: 'Order type',
@@ -3013,38 +1735,6 @@ const translations: Record<Language, Translations> = {
     productCreated: 'Product Created',
     productDeleted: 'Product Deleted',
     productArchived: 'Product Archived',
-
-    // Product Form
-    enterProductName: 'Enter product name',
-    selectCategory: 'Select a category',
-    enterProductDescription: 'Enter product description',
-    productSKU: 'Product SKU',
-    productImage: 'Product Image',
-    uploadedImage: 'Image uploaded',
-    uploadImageFromDevice: 'Upload image from device',
-    uploadHighQualityImage: 'Upload a high quality image of your product. Only one image allowed. Max 5MB.',
-    productPreview: 'Product preview',
-    imageWillShowInMenu: 'The image will be shown in the public menu',
-    noImageAdded: 'No image added',
-    uploadImageToShow: 'Upload an image to show your product',
-    variationName: 'Variation name',
-    variationNamePlaceholder: 'Variation name (e.g., Small, Medium, Large)',
-    priceRequired: 'Price',
-    comparePrice: 'Compare Price',
-    priceBeforeDiscount: 'Price before discount',
-    savings: 'Savings',
-    ingredientsLabel: 'Ingredients',
-    ingredientName: 'Ingredient name',
-    optionalLabel: 'Optional',
-    noIngredientsAdded: 'No ingredients added',
-    ingredientsAreOptional: 'Ingredients are optional and allow product customization',
-    updateProduct: 'Update Product',
-    createProduct: 'Create Product',
-    fillRequiredFields: 'Please fill in all required fields',
-    fileTooLarge: 'is too large. Maximum size: 5MB',
-    maxSize5MB: 'Maximum size: 5MB',
-    onlyOneImageAllowed: 'Only one image allowed',
-
     
     // Categories
     viewMenu: 'View Menu',
@@ -3056,9 +1746,6 @@ const translations: Record<Language, Translations> = {
     categoryIcon: 'Icon (Emoji)',
     categoryUpdated: 'Category Updated',
     categoryCreated: 'Category Created',
-    messageCategoryUpdated: 'The category has been updated successfully.',
-    messageCategoryCreated: 'The new category has been added to your menu.',
-    messageCategoryDeleted: 'The category has been removed from your menu.',
     categoryDeleted: 'Category Deleted',
     categoryActivated: 'Category Activated',
     categoryDeactivated: 'Category Deactivated',
@@ -3080,9 +1767,6 @@ const translations: Record<Language, Translations> = {
     catDeleteImg: 'Delete image',
     categoryActivatedDes: 'The category has been activated and now appears in your public menu.',
     categoryDeactivatedDes: 'The category has been deactivated and no longer appears in your public menu.',
-    deleteCategoryTitle: 'Delete category?',
-    deleteCategoryMessage: 'This action will permanently delete the category from your menu. All products associated with this category will be left without an assigned category.',
-    deleteCategoryButton: 'Delete category',
     
     // Customers
     deletedSuccessfully: 'Deleted successfully',
@@ -3107,7 +1791,7 @@ const translations: Record<Language, Translations> = {
     vip: 'VIP',
     filtersAndSearch: 'Filters and Search',
     customerBase: 'Customer base',
-    assignedManually: 'Percentage assigned',
+    assignedManually: 'Manually assigned',
     frequentCustomers: 'Frequent',
     averageSpending: 'Average Spending',
     perCustomer: 'Per customer',
@@ -3154,7 +1838,6 @@ const translations: Record<Language, Translations> = {
     selectActionToPerform: 'Select the action to perform:',
     markAsVip: 'Mark as VIP',
     addVipStatusToSelected: 'Add VIP status to all selected customers',
-    removeVip: 'Remove from VIP',
     removeVipStatusFromSelected: 'Remove VIP status from all selected customers',
     permanentlyDeleteAllCustomersAndOrders: 'Permanently delete all customers and their orders',
     importCustomersFromCSV: 'Import Customers from CSV',
@@ -3168,7 +1851,7 @@ const translations: Record<Language, Translations> = {
     preview: 'Preview',
     line: 'Line',
     validCustomers: 'valid customer(s)',
-    searchCustomersPlaceholder: 'Customers by name, phone or email...',
+    searchCustomersPlaceholder: 'customers by name, phone or email...',
     customersTemplate: 'customers_template',
     averagePerOrder: 'Average per Order',
     isVip: 'Is VIP',
@@ -3190,11 +1873,11 @@ const translations: Record<Language, Translations> = {
     warningDeleteAction: 'This action will also delete all their orders and cannot be undone.',
     customerUpdated: 'Customer Updated',
     customerInfoUpdatedSuccessfully: 'Customer information has been updated successfully.',
-    customerAndOrdersDeleted: 'Customer and all their orders have been deleted.',
+    customerAndOrdersDeleted: 'Customer "{name}" and all their orders have been deleted.',
     noDataToExport: 'No data to export',
     noCustomersMatchFilters: 'No customers match the current filters.',
     csvExported: 'CSV Exported',
-    exportedSuccessfullyPlural: 'Customer(s) exported successfully.',
+    exportedSuccessfullyPlural: '{count} customer(s) exported successfully.',
     templateDownloaded: 'Template Downloaded',
     useTemplateAsGuide: 'Use this template as a guide to import customers.',
     invalidFile: 'Invalid File',
@@ -3590,7 +2273,7 @@ const translations: Record<Language, Translations> = {
     clearFilters: 'Clear Filters',
     showingDataFrom: 'Showing data from',
     until: 'until',
-    today: 'Today',
+    today: 'today',
     notEnoughData: 'Not enough data to display',
     noSalesYet: 'No sales recorded yet',
     sold: 'sold',
@@ -3678,8 +2361,8 @@ const translations: Record<Language, Translations> = {
     filterSummaryShowing: "Showing",
     filterSummaryOrderPlural: "orders",
     filterSummaryOrderSingular: "order",
-    filterSummaryMatchingFilters: " matching the filters.",
-    filterSummaryInTotal: " in total.",
+    filterSummaryMatchingFilters: "matching the filters.",
+    filterSummaryInTotal: "in total.",
     analyticsLastUpdated: "Last Updated",
     statTotalOrders: "Total Orders",
     statCompletedSubtitle: "completed",
@@ -3759,7 +2442,7 @@ const translations: Record<Language, Translations> = {
     productDeletedTitle: 'Product deleted',
     productDeletedMessage: 'The product has been removed from your menu.',
     productDuplicatedTitle: 'Product duplicated',
-    productDuplicatedMessage: 'A copy of the product has been created.',
+    productDuplicatedMessage: 'A copy of "{{name}}" has been created.',
     productArchivedTitle: 'Product archived',
     productArchivedMessage: 'The product has been archived and no longer appears on your public menu.',
     orderUpdatedTitle: 'Order updated',
