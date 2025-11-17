@@ -61,7 +61,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
               <div className="text-center py-12">
                 <ShoppingBag className="w-16 h-16 mx-auto mb-4" style={{ color: themeColors.secondaryText, opacity: 0.3 }} />
                 <p className="text-lg" style={{ color: themeColors.primaryText, opacity: 0.7, fontFamily: theme.secondary_font || 'Poppins',}}>Tu carrito está vacío</p>
-                <p className="text-sm mt-2" style={{ color: themeColors.secondaryText }}>
+                <p className="text-sm mt-2" style={{ color: themeColors.secondaryText, fontFamily: theme.secondary_font || 'Poppins' }}>
                   Agrega algunos productos para comenzar
                 </p>
               </div>
