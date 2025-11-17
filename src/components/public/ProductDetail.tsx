@@ -293,6 +293,7 @@ onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${primaryColor}4D
                       border: `2px solid ${primaryColor}`,
                       color: primaryColor,
                       transition: 'background-color 0.3s ease',
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${primaryColor}4D`)} // 10% de opacidad
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
@@ -309,7 +310,8 @@ onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${primaryColor}4D
                 style={{
                   backgroundColor: primaryColor,
                   fontSize: '16px',
-                  borderRadius: '8px'
+                  borderRadius: '8px',
+                  fontFamily: theme.secondary_font || 'Poppins'
                 }}
               >
                 Agregar {formatCurrency(calculatePrice(), currency)}
