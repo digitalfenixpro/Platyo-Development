@@ -1031,8 +1031,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   borderRadius: theme.button_style === 'rounded' ? '0.75rem' : '0.25rem',
                 }}
               >
-                <p className="text-sm mb-2" style={{ color: secondaryTextColor, fontFamily: 'var(--primary-font)' }}>Número de pedido</p>
-                <p className="text-2xl font-bold" style={{ color: 'var(--primary-color)', fontFamily: 'var(--primary-font)', }}>
+                <p className="text-sm mb-2" style={{ color: secondaryTextColor, fontFamily: 'var(--secondary-font)' }}>Número de pedido</p>
+                <p className="text-2xl font-bold" style={{ color: 'var(--primary-color)', fontFamily: 'var(--secondary-font)', }}>
                   #{orderNumber}
                 </p>
               </div>
@@ -1044,7 +1044,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                     backgroundColor: `${primaryColor}15`,
                     border: `1px solid ${primaryColor}30`,
                     borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                    fontFamily: 'var(--primary-font)',
+                    fontFamily: 'var(--secondary-font)',
                   }}
                 >
                   <div
@@ -1055,8 +1055,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                     <Clock className="w-5 h-5" style={{ color: secondaryTextColor }} />
                   </div>
                   <div>
-                    <p className="font-semibold" style={{ color: primaryTextColor, fontFamily: 'var(--primary-font)', }}>Estado: Recibido</p>
-                    <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: 'var(--primary-font)', }}>Tu pedido está siendo preparado</p>
+                    <p className="font-semibold" style={{ color: primaryTextColor, fontFamily: 'var(--secondary-font)', }}>Estado: Recibido</p>
+                    <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: 'var(--secondary-font)', }}>Tu pedido está siendo preparado</p>
                   </div>
                 </div>
 
