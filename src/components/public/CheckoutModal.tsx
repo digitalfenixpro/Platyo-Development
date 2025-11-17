@@ -409,7 +409,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                         className="font-semibold mb-1"
                         style={{
                           fontSize: 'var(--font-size-subtitle)',
-                          color: primaryTextColor
+                          color: primaryTextColor,
+                          fontFamily: theme.primary_font || 'Poppins'
                         }}
                       >
                         Retiro en Tienda
