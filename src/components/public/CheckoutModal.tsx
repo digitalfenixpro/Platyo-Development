@@ -519,7 +519,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   {deliveryMode === 'delivery' && <Home className="w-6 h-6" style={{ color: secondaryTextColor }}  />}
                 </div>
                 <div>
-                  <p className="text-sm" style={{ color: secondaryTextColor }}>Modalidad seleccionada</p>
+                  <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>Modalidad seleccionada</p>
                   <p className="font-semibold" style={{ fontSize: 'var(--font-size-normal)' }}>
                     {getDeliveryModeLabel()}
                   </p>
