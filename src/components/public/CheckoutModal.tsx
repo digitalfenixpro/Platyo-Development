@@ -990,7 +990,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                 style={{
                   backgroundColor: 'var(--primary-color)',
                   color: secondaryTextColor,
-                  borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem'
+                  borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                  fontFamily: theme.secondary_font || 'Poppins'
                 }}
               >
                 {loading ? 'Procesando...' : `Confirmar Pedido - ${formatCurrency(getTotal() + (deliveryMode === 'delivery' ? deliveryCost : 0), currency)}`}
