@@ -363,7 +363,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
               className="text-center mb-4"
               style={{
                 fontSize: 'var(--font-size-normal)',
-                color: secondaryTextColor
+                color: secondaryTextColor,
+                fontFamily: theme.secondary_font || 'Poppins'
               }}
             >
               Selecciona cómo deseas recibir tu pedido
@@ -378,10 +379,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
             >
               <Clock className="w-5 h-5 flex-shrink-0" style={{ color: primaryColor }} />
               <div>
-                <p className="font-semibold text-sm" style={{ color: primaryTextColor }}>
+                <p className="font-semibold text-sm" style={{ color: primaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>
                   Tiempo de preparación estimado
                 </p>
-                <p className="text-sm" style={{ color: secondaryTextColor }}>
+                <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>
                   {restaurant.settings.preparation_time || '30-45 minutos'}
                 </p>
               </div>
