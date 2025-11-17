@@ -932,13 +932,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   </div>
                   {deliveryMode === 'delivery' && deliveryCost > 0 && (
                     <div className="flex justify-between">
-                      <span>Costo de Envío:</span>
-                      <span>{formatCurrency(deliveryCost, currency)}</span>
+                      <span style={{fontFamily: theme.secondary_font || 'Poppins'}}>Costo de Envío:</span>
+                      <span style={{fontFamily: theme.secondary_font || 'Poppins'}}>{formatCurrency(deliveryCost, currency)}</span>
                     </div>
                   )}
                   <div className="flex justify-between text-xl font-bold border-t pt-2" style={{ borderColor: primaryColor }}>
-                    <span>Total:</span>
-                    <span style={{ color: 'var(--accent-color)' }}>{formatCurrency(getTotal() + (deliveryMode === 'delivery' ? deliveryCost : 0), currency)}</span>
+                    <span style={{fontFamily: theme.secondary_font || 'Poppins'}}>Total:</span>
+                    <span style={{ color: 'var(--accent-color)', fontFamily: theme.secondary_font || 'Poppins' }}>{formatCurrency(getTotal() + (deliveryMode === 'delivery' ? deliveryCost : 0), currency)}</span>
                   </div>
                 </div>
               </div>
@@ -955,12 +955,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   className="font-semibold mb-3"
                   style={{
                     fontSize: 'var(--font-size-normal)',
-                    color: primaryTextColor
+                    color: primaryTextColor,
+                    fontFamily: theme.primary_font || 'Poppins'
                   }}
                 >
                   Información de Entrega
                 </h4>
-                <div className="space-y-2 text-sm">
+                <div className="space-y-2 text-sm" style={{fontFamily: theme.secondary_font || 'Poppins'}}>
                   <p><strong>Modalidad:</strong> {getDeliveryModeLabel()}</p>
                   <p><strong>Nombre:</strong> {customerInfo.name}</p>
                   <p><strong>Teléfono:</strong> {customerInfo.phone}</p>
