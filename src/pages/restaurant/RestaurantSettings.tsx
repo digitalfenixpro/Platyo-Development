@@ -1287,8 +1287,29 @@ Fecha: ${new Date().toLocaleString()}
                   Configura los colores, tipografía y estilos de tu menú público
                 </p>
               </div>
-              
-            </div>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-50 border rounded-lg p-4">
+              {/* 🔸 Bloque para activar o desactivar PathForms */}
+              <div className="flex flex-col gap-2">
+                <p className="text-sm text-black-800 font-medium">
+                  Activar o desactivar PathForms
+                </p>
+            
+                <div className="flex items-center gap-3">
+                  {/* 🔹 Checkbox controlado */}
+                  <input
+                    type="checkbox"
+                    checked={formData.settings.theme?.pathform || false}
+                    onChange={(e) =>
+                      updateFormData('settings.theme.pathform', e.target.checked)
+                    }
+                    className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  />
+                  <label className="text-sm font-medium text-gray-700">
+                    {formData.settings.theme?.pathform ? 'Activado' : 'Desactivado'}
+                  </label>
+                </div>
+              </div>
+            </div> 
 
               <div className="bg-gradient-to-br from-gray-50 to-gray-50 rounded-lg md:rounded-xl p-4 md:p-6 border border-purple-100">
                 <h4 className="text-sm md:text-md font-semibold text-gray-900 mb-3 md:mb-4">Plantillas de Colores</h4>
