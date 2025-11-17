@@ -96,7 +96,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
                       <div className="flex-1 min-w-0">
                         <h3
                           className="font-semibold text-sm leading-tight mb-1"
-                          style={{ color: themeColors.primaryText,fontFamily: theme.primary_font || 'Poppins' }}
+                          style={{ color: themeColors.primaryText,fontFamily: theme.primary_font || 'Inter' }}
                         >
                           {item.product.name}
                         </h3>
