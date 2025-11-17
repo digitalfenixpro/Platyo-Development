@@ -109,14 +109,14 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
                         {additionalIngredients.length > 0 && (
                           <p
                             className="text-xs mb-1 italic"
-                            style={{ color: primaryColor }}
+                            style={{ color: primaryColor, fontFamily: theme.secondary_font || 'Poppins' }}
                           >
                             + {additionalIngredients.join(', ')}
                           </p>
                         )}
                         <p
                           className="font-bold text-sm"
-                          style={{ color: primaryColor }}
+                          style={{ color: primaryColor, fontFamily: theme.primary_font || 'Poppins' }}
                         >
                           {formatCurrency(itemTotal, currency)}
                         </p>
