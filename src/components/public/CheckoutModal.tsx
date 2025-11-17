@@ -488,7 +488,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                           Te llevamos tu pedido a donde estés
                         </p>
                         {restaurant.settings?.delivery?.pricing_tiers && restaurant.settings.delivery.pricing_tiers.length > 0 && (
-                          <p style={{ fontSize: 'var(--font-size-small)', color: primaryColor, marginTop: '0.25rem' }}>
+                          <p style={{ fontSize: 'var(--font-size-small)', color: primaryColor, marginTop: '0.25rem', fontFamily: theme.secondary_font || 'Poppins' }}>
                             Costo: {formatCurrency(calculateDeliveryCost(getTotal()), currency)}
                           </p>
                         )}
