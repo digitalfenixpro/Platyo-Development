@@ -1004,7 +1004,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
             <div className="text-center py-8">
               <div
                 className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center"
-                style={{ backgroundColor: 'var(--accent-color)' }}
+                style={{ backgroundColor: 'var(--accent-color)', fontFamily: theme.secondary_font || 'Poppins' }}
               >
               <CheckCircle className="w-12 h-12" style={{ color: primaryColor }} />
               </div>
@@ -1013,7 +1013,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                 className="font-bold mb-2"
                 style={{
                   fontSize: 'var(--font-size-title)',
-                  fontFamily: 'var(--secondary-font)',
+                  fontFamily: 'var(--primary-font)',
                   color: primaryTextColor
                 }}
               >
