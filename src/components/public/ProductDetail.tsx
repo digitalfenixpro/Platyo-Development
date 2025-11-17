@@ -280,7 +280,8 @@ onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${primaryColor}4D
                     className="font-bold w-8 text-center"
                     style={{
                       fontSize: '18px',
-                      color: primaryTextColor
+                      color: primaryTextColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                   >
                     {quantity}
