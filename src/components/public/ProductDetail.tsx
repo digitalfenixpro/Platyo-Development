@@ -173,7 +173,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                         borderRadius: '8px'
                       }}
                     >
-                      <div className="font-semibold" style={{ fontSize: '14px', marginBottom: '4px' }}>
+                      <div className="font-semibold" style={{ fontSize: '14px', marginBottom: '4px', fontFamily: theme.secondary_font || 'Poppins' }}>
                         {variation.name}
                       </div>
                       <div className="font-bold" style={{ fontSize: '16px', fontFamily: theme.secondary_font || 'Poppins' }}>
