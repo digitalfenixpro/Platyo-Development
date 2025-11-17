@@ -520,7 +520,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                 </div>
                 <div>
                   <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>Modalidad seleccionada</p>
-                  <p className="font-semibold" style={{ fontSize: 'var(--font-size-normal)' }}>
+                  <p className="font-semibold" style={{ fontSize: 'var(--font-size-normal)', fontFamily: theme.primary_font || 'Inter' }}>
                     {getDeliveryModeLabel()}
                   </p>
                 </div>
