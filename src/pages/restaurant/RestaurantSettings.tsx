@@ -931,7 +931,7 @@ Fecha: ${new Date().toLocaleString()}
                         </svg>
                       </div>
                       <input
-                        type="tel"
+                        type="url"
                         value={formData.settings.social_media?.whatsapp || ''}
                         onChange={(e) => updateFormData('settings.social_media.whatsapp', e.target.value)}
                         placeholder="+1234567890"
