@@ -579,7 +579,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   <label className="block font-medium mb-2"
                       style={{
                       fontSize: 'var(--font-size-normal)',
-                      color: primaryTextColor
+                      color: primaryTextColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}>
                     Teléfono *
                   </label>
