@@ -1020,7 +1020,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                 ¡Pedido Confirmado!
               </h2>
 
-              <p className="text-gray-600 mb-4" style={{ fontSize: 'var(--font-size-normal)' }}>
+              <p className="text-gray-600 mb-4" style={{ fontSize: 'var(--font-size-normal)', fontFamily: 'var(--primary-font)', }}>
                 Tu pedido ha sido recibido exitosamente
               </p>
 
@@ -1031,8 +1031,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   borderRadius: theme.button_style === 'rounded' ? '0.75rem' : '0.25rem',
                 }}
               >
-                <p className="text-sm mb-2" style={{ color: secondaryTextColor }}>Número de pedido</p>
-                <p className="text-2xl font-bold" style={{ color: 'var(--primary-color)' }}>
+                <p className="text-sm mb-2" style={{ color: secondaryTextColor, fontFamily: 'var(--primary-font)' }}>Número de pedido</p>
+                <p className="text-2xl font-bold" style={{ color: 'var(--primary-color)', fontFamily: 'var(--primary-font)', }}>
                   #{orderNumber}
                 </p>
               </div>
