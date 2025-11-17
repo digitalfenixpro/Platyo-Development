@@ -219,7 +219,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                         onChange={() => toggleIngredient(ingredient.id)}
                         disabled={!ingredient.optional}
                         className="w-4 h-4 rounded"
-                        style={{ accentColor: primaryColor }}
+                        style={{ accentColor: primaryColor, fontFamily: theme.secondary_font || 'Poppins' }}
                       />
                       <span
                         className="flex-1"
