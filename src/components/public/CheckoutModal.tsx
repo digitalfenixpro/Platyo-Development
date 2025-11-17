@@ -856,15 +856,15 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   {deliveryMode === 'delivery' && <Home className="w-6 h-6" style={{ color: secondaryTextColor }}  />}
                 </div>
                 <div>
-                  <p className="text-sm" style={{ color: secondaryTextColor }}>Modalidad seleccionada</p>
-                  <p className="font-semibold" style={{ fontSize: 'var(--font-size-normal)' }}>
+                  <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>Modalidad seleccionada</p>
+                  <p className="font-semibold" style={{ fontSize: 'var(--font-size-normal)', fontFamily: theme.secondary_font || 'Poppins' }}>
                     {getDeliveryModeLabel()}
                   </p>
                 </div>
                 <button
                   onClick={() => setStep('delivery')}
                   className="ml-auto text-sm underline"
-                  style={{ color: 'var(--primary-color)' }}
+                  style={{ color: 'var(--primary-color)', fontFamily: theme.secondary_font || 'Poppins' }}
                 >
                   Cambiar
                 </button>
@@ -877,12 +877,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   borderRadius: theme.button_style === 'rounded' ? '0.75rem' : '0.25rem'
                 }}
               >
-                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: primaryColor }} />
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: primaryColor, fontFamily: theme.secondary_font || 'Poppins' }} />
                 <div>
-                  <p className="font-semibold text-sm mb-1" style={{ color: primaryTextColor }}>
+                  <p className="font-semibold text-sm mb-1" style={{ color: primaryTextColor, fontFamily: theme.primary_font || 'Poppins' }}>
                     Revisa tu pedido
                   </p>
-                  <p className="text-xs" style={{ color: secondaryTextColor }}>
+                  <p className="text-xs" style={{ color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>
                     Verifica que toda la información sea correcta antes de confirmar
                   </p>
                 </div>
@@ -893,7 +893,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   className="font-semibold mb-4"
                   style={{
                     fontSize: 'var(--font-size-subtitle)',
-                    color: primaryTextColor
+                    color: primaryTextColor,
+                    fontFamily: theme.primary_font || 'Poppins'
                   }}
                 >
                   Resumen del Pedido
@@ -911,7 +912,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                     }}
                   >
                       <div className="flex-1">
-                        <p className="font-medium">{item.product.name}</p>
+                        <p className="font-medium" style={fontFamily: theme.secondary_font || 'Poppins'{}}>{item.product.name}</p>
                         <p className="text-sm" style={{ color: secondaryTextColor }}>{item.variation.name} x {item.quantity}</p>
                         {item.special_notes && (
                           <p className="text-xs text-gray-500 italic mt-1">Nota: {item.special_notes}</p>
