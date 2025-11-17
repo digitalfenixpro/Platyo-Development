@@ -186,7 +186,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
                 </span>
                 <span
                   className="text-xl font-bold"
-                  style={{ color: themeColors.primaryText }}
+                  style={{ color: themeColors.primaryText, fontFamily: theme.primary_font || 'Poppins' }}
                 >
                   {formatCurrency(getTotal(), currency)}
                 </span>
