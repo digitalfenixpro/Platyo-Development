@@ -1287,7 +1287,7 @@ Fecha: ${new Date().toLocaleString()}
                   Configura los colores, tipografía y estilos de tu menú público
                 </p>
               </div>
-
+              
             </div>
 
               <div className="bg-gradient-to-br from-gray-50 to-gray-50 rounded-lg md:rounded-xl p-4 md:p-6 border border-purple-100">
