@@ -235,7 +235,8 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                           className="font-medium"
                           style={{
                             fontSize: '13px',
-                            color: primaryColor
+                            color: primaryColor,
+                            fontFamily: theme.secondary_font || 'Poppins'
                           }}
                         >
                           +{formatCurrency(ingredient.extra_cost, currency)}
