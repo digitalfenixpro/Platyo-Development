@@ -42,7 +42,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
           <div className="flex items-center justify-between p-6 border-b" style={{ borderColor: '#e5e7eb' }}>
             <h2
               className="text-xl font-bold"
-              style={{ color: themeColors.primaryText }}
+              style={{ color: themeColors.primaryText, fontFamily: theme.primary_font || 'Poppins'}}
             >
               Tu carrito
             </h2>
