@@ -180,7 +180,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
               <div className="flex justify-between items-center mb-4">
                 <span
                   className="text-base font-semibold"
-                  style={{ color: themeColors.primaryText }}
+                  style={{ color: themeColors.primaryText, fontFamily: theme.secondary_font || 'Poppins' }}
                 >
                   Total:
                 </span>
