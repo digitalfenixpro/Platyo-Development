@@ -539,7 +539,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                     className="block font-medium mb-2"
                     style={{
                       fontSize: 'var(--font-size-normal)',
-                      color: primaryTextColor
+                      color: primaryTextColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                   >
                     Nombre completo *
@@ -555,7 +556,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       backgroundColor: 'transparent',
                       color: primaryTextColor,
                       borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                      caretColor: primaryColor
+                      caretColor: primaryColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                     onFocus={(e) => {
                       e.target.style.borderColor = validationErrors.name ? '#ef4444' : primaryColor;
