@@ -925,10 +925,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   ))}
                 </div>
 
-                <div className="border-t pt-4 space-y-2" style={{ borderColor: primaryColor }}>
+                <div className="border-t pt-4 space-y-2" style={{ borderColor: primaryColor, fontFamily: theme.secondary_font || 'Poppins' }}>
                   <div className="flex justify-between">
-                    <span>Subtotal:</span>
-                    <span>{formatCurrency(getTotal(), currency)}</span>
+                    <span style={{fontFamily: theme.secondary_font || 'Poppins'}}>Subtotal:</span>
+                    <span style={{fontFamily: theme.secondary_font || 'Poppins'}}>{formatCurrency(getTotal(), currency)}</span>
                   </div>
                   {deliveryMode === 'delivery' && deliveryCost > 0 && (
                     <div className="flex justify-between">
