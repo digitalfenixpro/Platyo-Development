@@ -595,7 +595,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       backgroundColor: 'transparent',
                       color: primaryTextColor,
                       borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                      caretColor: primaryColor
+                      caretColor: primaryColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                     onFocus={(e) => {
                       e.target.style.borderColor = validationErrors.phone ? '#ef4444' : primaryColor;
@@ -617,7 +618,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   <label className="block font-medium mb-2"
                     style={{
                       fontSize: 'var(--font-size-normal)',
-                      color: primaryTextColor
+                      color: primaryTextColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
+                      
                     }}
                     >
                     Email
@@ -633,7 +636,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       backgroundColor: 'transparent',
                       color: primaryTextColor,
                       borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                      caretColor: primaryColor
+                      caretColor: primaryColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                     onFocus={(e) => {
                       e.target.style.borderColor = validationErrors.email ? '#ef4444' : primaryColor;
@@ -655,7 +659,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                     <label className="block font-medium mb-2"
                       style={{
                         fontSize: 'var(--font-size-normal)',
-                        color: primaryTextColor
+                        color: primaryTextColor,
+                        fontFamily: theme.secondary_font || 'Poppins'
                       }}
                       >
                       Número de Mesa *
@@ -671,7 +676,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                         backgroundColor: 'transparent',
                         color: primaryTextColor,
                         borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                        caretColor: primaryColor
+                        caretColor: primaryColor,
+                        fontFamily: theme.secondary_font || 'Poppins'
                       }}
                       onFocus={(e) => {
                         e.target.style.borderColor = primaryColor;
@@ -693,7 +699,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       <label className="block font-medium mb-2" 
                         style={{
                           fontSize: 'var(--font-size-normal)',
-                          color: primaryTextColor
+                          color: primaryTextColor,
+                          fontFamily: theme.secondary_font || 'Poppins'
                         }}
                         >
                         Dirección *
@@ -709,7 +716,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                           backgroundColor: 'transparent',
                           color: primaryTextColor,
                           borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                          caretColor: primaryColor
+                          caretColor: primaryColor,
+                          fontFamily: theme.secondary_font || 'Poppins'
                         }}
                         onFocus={(e) => {
                           e.target.style.borderColor = primaryColor;
@@ -728,7 +736,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       <label className="block font-medium mb-2" 
                         style={{
                           fontSize: 'var(--font-size-normal)',
-                          color: primaryTextColor
+                          color: primaryTextColor,
+                          fontFamily: theme.secondary_font || 'Poppins'
                         }}
                         >
                         Ciudad *
@@ -744,7 +753,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                           backgroundColor: 'transparent',
                           color: primaryTextColor,
                           borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                          caretColor: primaryColor
+                          caretColor: primaryColor,
+                          fontFamily: theme.secondary_font || 'Poppins'
                         }}
                         onFocus={(e) => {
                           e.target.style.borderColor = primaryColor;
@@ -765,7 +775,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   <label className="block font-medium mb-2" 
                     style={{
                       fontSize: 'var(--font-size-normal)',
-                      color: primaryTextColor
+                      color: primaryTextColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                     >
                     Notas adicionales
@@ -781,7 +792,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       backgroundColor: 'transparent',
                       color: primaryTextColor,
                       borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
-                      caretColor: primaryColor
+                      caretColor: primaryColor,
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                     onFocus={(e) => {
                       e.target.style.borderColor = primaryColor;
@@ -803,7 +815,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   style={{
                     borderColor: 'var(--primary-color)',
                     color: 'var(--primary-color)',
-                    borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem'
+                    borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                    fontFamily: theme.secondary_font || 'Poppins'
                   }}
                 >
                   Atrás
@@ -814,7 +827,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   style={{
                     backgroundColor: 'var(--primary-color)',
                     color: secondaryTextColor,
-                    borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem'
+                    borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                    fontFamily: theme.secondary_font || 'Poppins'
                   }}
                 >
                   Continuar
