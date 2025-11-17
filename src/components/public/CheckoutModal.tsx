@@ -340,7 +340,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
               className="font-bold text-center"
               style={{
                 fontSize: '22px',
-                fontFamily: 'var(--secondary-font)',
+                fontFamily: 'var(--primary-font)',
                 color: primaryTextColor
               }}
             >
