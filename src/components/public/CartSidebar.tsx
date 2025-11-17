@@ -102,7 +102,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
                         </h3>
                         <p
                           className="text-xs mb-1"
-                          style={{ color: themeColors.secondaryText }}
+                          style={{ color: themeColors.secondaryText,fontFamily: theme.secondary_font || 'Poppins' }}
                         >
                           {item.variation.name}
                         </p>
