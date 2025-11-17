@@ -154,7 +154,8 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                   className="font-semibold mb-3"
                   style={{
                     fontSize: '14px',
-                    color: primaryTextColor
+                    color: primaryTextColor,
+                    fontFamily: theme.secondary_font || 'Poppins'
                   }}
                 >
                   Selecciona una opción
@@ -175,7 +176,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                       <div className="font-semibold" style={{ fontSize: '14px', marginBottom: '4px' }}>
                         {variation.name}
                       </div>
-                      <div className="font-bold" style={{ fontSize: '16px' }}>
+                      <div className="font-bold" style={{ fontSize: '16px', fontFamily: theme.secondary_font || 'Poppins' }}>
                         {formatCurrency(variation.price, currency)}
                       </div>
                     </button>
