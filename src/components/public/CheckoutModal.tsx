@@ -1020,7 +1020,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                 ¡Pedido Confirmado!
               </h2>
 
-              <p className="text-gray-600 mb-4" style={{ fontSize: 'var(--font-size-normal)', fontFamily: 'var(--primary-font)', }}>
+              <p className="text-gray-600 mb-4" style={{ fontSize: 'var(--font-size-normal)', fontFamily: 'var(--secondary-font)', }}>
                 Tu pedido ha sido recibido exitosamente
               </p>
 
