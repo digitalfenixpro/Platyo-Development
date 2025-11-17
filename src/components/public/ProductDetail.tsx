@@ -208,6 +208,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                       borderRadius: '8px',
                       opacity: ingredient.optional ? 1 : 0.7,
                       transition: 'background-color 0.3s ease',
+                      fontFamily: theme.secondary_font || 'Poppins'
                     }}
                     onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = primaryColor)}
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
