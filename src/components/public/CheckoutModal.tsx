@@ -1043,7 +1043,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   style={{
                     backgroundColor: `${primaryColor}15`,
                     border: `1px solid ${primaryColor}30`,
-                    borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem'
+                    borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                    fontFamily: 'var(--primary-font)',
                   }}
                 >
                   <div
@@ -1054,8 +1055,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                     <Clock className="w-5 h-5" style={{ color: secondaryTextColor }} />
                   </div>
                   <div>
-                    <p className="font-semibold" style={{ color: primaryTextColor }}>Estado: Recibido</p>
-                    <p className="text-sm" style={{ color: secondaryTextColor }}>Tu pedido está siendo preparado</p>
+                    <p className="font-semibold" style={{ color: primaryTextColor, fontFamily: 'var(--primary-font)', }}>Estado: Recibido</p>
+                    <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: 'var(--primary-font)', }}>Tu pedido está siendo preparado</p>
                   </div>
                 </div>
 
@@ -1082,8 +1083,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       `}
                     </style>
                   
-                    <p className="font-semibold secondaryTextColorImportant">Contacto</p>
-                    <p className="text-sm secondaryTextColorImportant">
+                    <p className="font-semibold secondaryTextColorImportant" style={{fontFamily: theme.secondary_font || 'Poppins'}}>Contacto</p>
+                    <p className="text-sm secondaryTextColorImportant"style={{fontFamily: theme.secondary_font || 'Poppins'}}>
                       Te contactaremos al {customerInfo.phone}
                     </p>
                   </div>
@@ -1096,7 +1097,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                 style={{
                   backgroundColor: 'var(--primary-color)',
                   color: secondaryTextColor,
-                  borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem'
+                  borderRadius: theme.button_style === 'rounded' ? '0.5rem' : '0.25rem',
+                  fontFamily: theme.secondary_font || 'Poppins'
                 }}
               >
                 Cerrar
