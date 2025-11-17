@@ -198,6 +198,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
                 style={{
                   backgroundColor: primaryColor,
                   color: secondaryTextColor,
+                  fontFamily: theme.secondary_font || 'Poppins'
                 }}
               >
                 PAGAR
