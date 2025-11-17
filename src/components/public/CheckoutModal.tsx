@@ -527,7 +527,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                 <button
                   onClick={() => setStep('delivery')}
                   className="ml-auto text-sm underline"
-                  style={{ color: 'var(--primary-color)' }}
+                  style={{ color: 'var(--primary-color)', fontFamily: theme.secondary_font || 'Poppins' }}
                 >
                   Cambiar
                 </button>
