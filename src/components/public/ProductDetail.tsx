@@ -192,7 +192,8 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                   className="font-semibold mb-3"
                   style={{
                     fontSize: '14px',
-                    color: primaryTextColor
+                    color: primaryTextColor,
+                    fontFamily: theme.secondary_font || 'Poppins'
                   }}
                 >
                   Ingredientes
