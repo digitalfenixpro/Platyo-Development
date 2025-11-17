@@ -443,12 +443,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                           className="font-semibold mb-1"
                             style={{
                               fontSize: 'var(--font-size-subtitle)',
-                              color: primaryTextColor
+                              color: primaryTextColor,
+                              fontFamily: theme.primary_font || 'Poppins'
                             }}
                         >
                           Consumir en Restaurante
                         </h3>
-                        <p style={{ fontSize: 'var(--font-size-small)', color: secondaryTextColor }}>
+                        <p style={{ fontSize: 'var(--font-size-small)', color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>
                           Disfruta tu pedido en nuestras instalaciones
                         </p>
                       </div>
