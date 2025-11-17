@@ -913,12 +913,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                   >
                       <div className="flex-1">
                         <p className="font-medium" style={{fontFamily: theme.secondary_font || 'Poppins'}}>{item.product.name}</p>
-                        <p className="text-sm" style={{ color: secondaryTextColor }}>{item.variation.name} x {item.quantity}</p>
+                        <p className="text-sm" style={{ color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>{item.variation.name} x {item.quantity}</p>
                         {item.special_notes && (
-                          <p className="text-xs text-gray-500 italic mt-1">Nota: {item.special_notes}</p>
+                          <p className="text-xs text-gray-500 italic mt-1"style={{fontFamily: theme.secondary_font || 'Poppins'}}>Nota: {item.special_notes}</p>
                         )}
                       </div>
-                      <p className="font-semibold" style={{ color: 'var(--accent-color)' }}>
+                      <p className="font-semibold" style={{ color: 'var(--accent-color)', fontFamily: theme.secondary_font || 'Poppins' }}>
                         {formatCurrency(item.variation.price * item.quantity, currency)}
                       </p>
                     </div>
