@@ -149,7 +149,7 @@ export const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onChe
 
                           <span
                             className="font-semibold text-sm w-6 text-center"
-                            style={{ color: themeColors.primaryText }}
+                            style={{ color: themeColors.primaryText, fontFamily: theme.secondary_font || 'Poppins' }}
                           >
                             {item.quantity}
                           </span>
