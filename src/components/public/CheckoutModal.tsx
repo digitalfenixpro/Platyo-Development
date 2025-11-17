@@ -970,7 +970,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                     <p><strong>Mesa:</strong> {customerInfo.tableNumber}</p>
                   )}
                   {deliveryMode === 'delivery' && (
-                    <p><strong>Dirección:</strong> {customerInfo.address}, {customerInfo.city}</p>
+                    <p style={{fontFamily: theme.secondary_font || 'Poppins'}}><strong>Dirección:</strong> {customerInfo.address}, {customerInfo.city}</p>
                   )}
                   {customerInfo.notes && <p><strong>Notas:</strong> {customerInfo.notes}</p>}
                 </div>
@@ -978,7 +978,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                  <button
                   onClick={() => setStep('info')}
                   className="mb-6 mt-3 text-sm underline"
-                  style={{ color: 'var(--primary-color)' }}
+                  style={{ color: 'var(--primary-color)', fontFamily: theme.secondary_font || 'Poppins' }}
                 >
                   Editar información
                 </button>
