@@ -1758,7 +1758,7 @@ Fecha: ${new Date().toLocaleString()}
                     Activar o desactivar PathForms
                   </h2>
                   <p className="text-sm text-black-800 font-medium">
-                    Activar o desactivar PathForms
+                    Habilita esta opción para mostrar las formas decorativas que aparecen en el fondo de la página. 
                   </p>
               
                   <div className="flex items-center gap-3">
