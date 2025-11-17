@@ -478,12 +478,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                           className="font-semibold mb-1"
                             style={{
                               fontSize: 'var(--font-size-subtitle)',
-                              color: primaryTextColor
+                              color: primaryTextColor,
+                              fontFamily: theme.primary_font || 'Poppins'
                             }}
                         >
                           Entrega a Domicilio
                         </h3>
-                        <p style={{ fontSize: 'var(--font-size-small)', color: secondaryTextColor }}>
+                        <p style={{ fontSize: 'var(--font-size-small)', color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>
                           Te llevamos tu pedido a donde estés
                         </p>
                         {restaurant.settings?.delivery?.pricing_tiers && restaurant.settings.delivery.pricing_tiers.length > 0 && (
