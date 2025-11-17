@@ -415,7 +415,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, r
                       >
                         Retiro en Tienda
                       </h3>
-                      <p style={{ fontSize: 'var(--font-size-small)', color: secondaryTextColor }}>
+                      <p style={{ fontSize: 'var(--font-size-small)', color: secondaryTextColor, fontFamily: theme.secondary_font || 'Poppins' }}>
                         Recoge tu pedido en {restaurant.name}
                       </p>
                     </div>
