@@ -255,7 +255,8 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                   className="font-medium"
                   style={{
                     fontSize: '14px',
-                    color: primaryTextColor
+                    color: primaryTextColor,
+                    fontFamily: theme.secondary_font || 'Poppins'
                   }}
                 >
                   Cantidad:
@@ -268,6 +269,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, restauran
                     border: `2px solid ${primaryColor}`,
                     color: primaryColor,
                     transition: 'background-color 0.3s ease',
+                    fontFamily: theme.secondary_font || 'Poppins'
                   }}
 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${primaryColor}4D`)}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
